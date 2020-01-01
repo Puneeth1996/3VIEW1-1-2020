@@ -15,7 +15,7 @@ export default class newsPage extends Component {
     
     componentDidMount(){
         axios
-            .get('http://localhost/Porting-Admin-Page-to-CodeIgnitor/php-rest/product/read.php')
+            .get('http://localhost/3VIEW1-1-2020/REST-3V/product/read.php')
             .then(res => {
                 this.setState({
                     posts: res.data.records
