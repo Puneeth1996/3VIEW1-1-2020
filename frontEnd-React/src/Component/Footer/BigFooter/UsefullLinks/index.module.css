@@ -1,0 +1,32 @@
+.usefulllinks{
+    margin: 0px 10px 0px 40px;
+}
+.usefulllinks h1{
+    color: #f2f2f2;
+}
+.footerusefullinks{
+    list-style: none;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+.footerusefullinks .usefullinksitem a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c5c5c5;
+    line-height: 3;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.footercoltitle{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.footerusefullinks .usefullinksitem a:hover {
+    color: #fd784f;
+}

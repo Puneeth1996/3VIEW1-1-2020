@@ -1,0 +1,695 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.topnav{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    background-color: rgba(14, 29, 65, 0.95);
+    height: 140px;
+	/* width: 100vw; */
+	width: 100%;
+    position: fixed;
+    z-index: 800;
+}
+.topnav .linkgroup{
+    display: inline-block;
+    margin: 50px 0px 0px 6vw;
+}
+.topnav .linkgroup a{
+    margin: 0px 1vw 0px 1vw;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.topnav .linkgroup a:hover{
+    color: #fd784f;
+}
+.topnav a .item{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    margin-left: 15vw;
+    margin-top: 18px;
+}
+.topnav a .item .caption{
+    display: block;
+    margin: 3px 0px 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.topnav a .item img{
+    margin-top: 5px;
+    width: 64px;
+    height: 52px;
+}
+.contactdiv{
+    display: inline-block;
+    margin-left: 15vw;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 44px;
+    background: #fd784f;
+    padding: 0px 2vw 0px 2vw;
+    margin: 0px 0px 15px 8vw;
+}
+.contactdiv  .contactnumber{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+.topnavscrolled{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    background-color: transparent;
+    height: 140px;
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    border-bottom: solid 1px #aeaead;
+}
+.topnavscrolled .linkgroupscrolled{
+    display: inline-block;
+    margin: 50px 0px 0px 6vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topnavscrolled .linkgroupscrolled a{
+    margin: 0px 1vw 0px 1vw;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.topnavscrolled  .linkgroupscrolled a:hover{
+    color: #fd784f;
+}
+.topnavscrolled a .item{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    margin-left: 15vw;
+    margin-top: 18px;
+}
+.topnavscrolled a .item .caption{
+    display: block;
+    margin: 3px 0px 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.topnavscrolled a .item img{
+    margin-top: 5px;
+    width: 64px;
+    height: 52px;
+}
+.contactdivscrolled{
+    display: inline-block;
+    margin-left: 15vw;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 44px;
+    background: #fd784f;
+    padding: 0px 2vw 0px 2vw;
+    margin: 0px 0px 15px 8vw;
+}
+.contactdivscrolled  .contactnumber{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+
+Lets put that Hamburger symbol
+10. 644px
+11. 539px
+12. 479px
+13. 400px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{	
+	.topnav a .item{
+		margin-left: 12vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 12vw;
+	}
+}
+
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{	
+	.topnav a .item{
+		margin-left: 10vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 10vw;
+	}
+}
+
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{	
+	.topnav a .item{
+		margin-left: 7vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 7vw;
+	}
+}
+
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px)
+{	
+	.topnav a .item{
+		margin-left: 4vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 4vw;
+	}
+
+	.contactdiv {
+		margin: 0px 0px 15px 5vw;
+	}
+
+	.contactdivscrolled {
+		margin: 0px 0px 15px 5vw;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0.75vw 0px 0px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0.75vw 0px 0px;
+	}
+}
+
+
+
+
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{	
+	.topnav a .item{
+		margin-left: 4vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 4vw;
+	}
+
+	.contactdiv {
+		margin: 0px 0px 15px 4vw;
+	}
+
+	.contactdivscrolled {
+		margin: 0px 0px 15px 4vw;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0.75vw 0px 0px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0.75vw 0px 0px;
+	}
+}
+
+
+
+
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{	
+	.topnav a .item{
+		margin-left: 3vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 3vw;
+	}
+
+	.contactdiv {
+		margin: 0px 0px 15px 3vw;
+	}
+
+	.contactdivscrolled {
+		margin: 0px 0px 15px 3vw;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0.5vw 0px 0px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0.5vw 0px 0px;
+	}
+}
+
+
+
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{	
+	.topnav a .item{
+		margin-left: 1.5vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 1.5vw;
+	}
+
+	.topnav .linkgroup {
+		margin: 50px 0px 0px 5vw
+	}
+
+	.topnavscrolled .linkgroupscrolled {
+		margin: 50px 0px 0px 5vw
+	}
+	.contactdiv {
+		margin: 0px 0px 15px 1.5vw;
+	}
+	.contactdiv .contactnumber {
+		font-size: 16px;
+	}
+
+	.contactdivscrolled {
+		margin: 0px 0px 15px 1.5vw;
+	}
+	.contactdivscrolled .contactnumber {
+		font-size: 16px;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0.3vw 0px 0px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0.3vw 0px 0px;
+	}
+}
+
+
+
+
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{	
+	.topnav a .item{
+		margin-left: 0.5vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 0.5vw;
+	}
+
+	.topnav .linkgroup {
+		margin: 50px 0px 0px 0px;
+	}
+
+	.topnavscrolled .linkgroupscrolled {
+		margin: 50px 0px 0px 0px;
+	}
+
+	.topnav a .item .caption {
+		font-size: 16px;
+	}
+	.topnavscrolled a .item .caption {
+		font-size: 16px;
+	}
+
+	.contactdiv {
+		margin: 0px 0px 15px 0.5vw;
+	}
+
+	.contactdiv .contactnumber {
+		font-size: 14px;
+	}	
+	.contactdivscrolled {
+		margin: 0px 0px 15px 0.5vw;
+	}
+
+	.contactdivscrolled .contactnumber {
+		font-size: 14px;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0px 0px 0px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0px 0px 0px;
+	}
+}
+
+
+
+
+
+
+
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+	.topnav a .item{
+		margin-left: 0.5vw;
+	}
+
+	.topnavscrolled a .item {
+		margin-left: 0.5vw;
+	}
+
+	.topnav .linkgroup {
+		margin: 50px 0px 0px 0px;
+	}
+
+	.topnavscrolled .linkgroupscrolled {
+		margin: 50px 0px 0px 0px;
+	}
+
+	.topnav a .item .caption {
+		font-size: 16px;
+	}
+	.topnavscrolled a .item .caption {
+		font-size: 16px;
+	}
+
+	.contactdiv {
+		margin: 0px 0px 15px 2.75vw;
+
+	}
+
+	.contactdiv .contactnumber {
+		font-size: 12px;
+	}	
+	.contactdivscrolled {
+		margin: 0px 0px 15px 0.5vw;
+	}
+
+	.contactdivscrolled .contactnumber {
+		font-size: 12px;
+	}
+
+	.topnav .linkgroup a {
+		margin: 0px 0px 0px 0px;
+		font-size: 12px;
+		padding: 14px 8px;
+	}
+	.topnavscrolled .linkgroupscrolled a {
+		margin: 0px 0px 0px 0px;
+		font-size: 12px;
+		padding: 14px 8px;
+	}
+	
+}
+
+
+
+/* 
+
+Fromm
+	10. 644px
+	11. 539px
+	12. 479px
+	13. 400px
+
+Lets put that Hamburger symbol
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobilenavigationview{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 150px;
+}
+.navmobilescrolled{
+    background-color: transparent;
+    border-bottom: solid 1px #aeaead;
+}
+.navmobile{
+    background-color: rgba(14, 29, 65, 0.95);
+}
+.itemmobile{
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    margin-left: 1vw;
+    margin-top: 30px;
+}
+.itemmobile a{
+    list-style-type: none;
+    text-decoration: none;
+}
+.itemmobile .captionmobile {
+    display: block;
+    margin: 3px 0px 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.itemmobile img{
+    margin-top: 5px;
+    width: 64px;
+    height: 52px;
+}
+.linkgroupmobile {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f2f2f2;
+    font-weight: 600;
+    /* margin-top: 150px; */
+    float: right;
+    width: 100%;
+}
+
+.linkgroupmobile li{
+    display: block;
+}
+
+
+.linkgroupmobile li a{
+    display: block;
+    color: rgba(14, 29, 65, 0.95);
+    padding: 18px 16px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkgroupmobile li a:hover{
+    background-color: #d1cdcd
+}
+
+.iconbars {
+    font-size: 32px;
+    padding: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    margin: 50px 35px 50px 35px;
+}
+
+.iconbars:active{
+    color: #fd784f;
+}
+
+.iconbars:focus{
+    color: #fd784f;
+}
+
+.contactcardmobile{
+    background: #fd784f;
+    padding: 18px 16px;
+    color:#f2f2f2;
+    text-align: center;
+    word-spacing: 2.5px;
+}

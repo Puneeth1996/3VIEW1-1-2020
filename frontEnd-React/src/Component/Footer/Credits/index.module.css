@@ -1,0 +1,19 @@
+.lastfooter{
+    height: 30px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    background: #040b1d;
+    text-align: center;
+}
+.lastfooter span {
+    color: #485165;
+    line-height: 35px;
+}
+.smallfootera{
+    text-decoration: none;
+    display: inline;
+    color: #007bff;
+}
+.smallfootera:hover{
+    color: #ff5100;
+}

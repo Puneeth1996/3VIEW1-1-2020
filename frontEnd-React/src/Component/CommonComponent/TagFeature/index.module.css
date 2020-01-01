@@ -1,0 +1,27 @@
+.tagContainer{
+    margin-top: 42px;
+}
+.tagFeature{
+    display: inline-block;
+    font-size: 12px;
+    background: #fd784f;
+    margin-right: 7px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+.tagText{
+    display: block;
+    color: #FFFFFF;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+
+/* @media only screen and (max-width: 880px)
+{
+	.tagContainer{
+        margin-top: 18px;
+    }
+} */

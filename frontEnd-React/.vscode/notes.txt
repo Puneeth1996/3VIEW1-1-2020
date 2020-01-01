@@ -1,0 +1,18 @@
+  addFormData(evt)
+    {
+      evt.preventDefault();
+    const fd = new FormData();
+      fd.append('myUsername', this.refs.myUsername.value);
+    fd.append('myEmail', this.refs.myEmail.value);
+    var headers = {
+            'Content-Type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*"
+        }
+    axios.post('http://localhost/core_php.php', fd, headers
+    ).then(res=>
+    {
+     alert(res.data.data);
+    }
+    );
+    
+  }

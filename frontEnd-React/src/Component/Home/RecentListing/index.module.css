@@ -1,0 +1,10 @@
+.cardRow{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    margin: 10vh 5vw;
+}
+
+.recentListing{
+    background-image: url("world.png");
+    background-size: cover;
+}

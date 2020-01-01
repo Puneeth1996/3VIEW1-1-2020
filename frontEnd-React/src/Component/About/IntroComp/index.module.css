@@ -1,0 +1,81 @@
+.row {
+    box-sizing: border-box;
+    display: flex;
+    /* height: 80vh;
+    width: 99vw; */
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    /* padding: 80px;
+    height: 100vh; Should be removed. Only for demonstration */
+    padding: 0.5em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.intro_title {
+    font-weight: 700;
+    color: #0e1d41;
+}
+.intro_subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+    color: #0e1d41;
+    margin-top: -1px;
+}
+.intro_text {
+    margin-top: 41px;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+    color: #838383;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.intro_image {
+    padding-left: 18.26%;
+    padding-top: 19px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.intro_image img {
+    max-width: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+@media screen and (max-width: 830px) {
+    .intro_text {
+        line-height: 1.5;
+        font-size: 12;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 780px) {
+    .row {
+        box-sizing: border-box;
+        display: grid!important;
+        grid-gap: 30px;
+    }
+    .column {
+        width: 100%;
+        /* padding: 80px;
+        height: 100vh; Should be removed. Only for demonstration */
+    }
+}
