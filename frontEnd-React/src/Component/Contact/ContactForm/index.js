@@ -26,7 +26,7 @@ export default class ContactForm extends Component {
                     message: this.state.message
                 }),
         })
-        if((await response.json()){
+        if(await response.json()){
             this.setState({successMessage: "Form Submitted"});
             this.setState({
                 name: '',
@@ -94,7 +94,7 @@ export default class ContactForm extends Component {
                     <input type="submit" value="Send Message" id="form_button" className={style.form_button}  onClick={this.contactFormData} />
                 </div>
                 </form>
-                <div>{this.state.successMessage}</div>
+                <div className={style.infoSubmittion}>{this.state.successMessage}</div>
             </div>
         )
     }
