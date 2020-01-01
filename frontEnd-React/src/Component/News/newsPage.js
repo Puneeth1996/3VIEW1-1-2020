@@ -15,10 +15,10 @@ export default class newsPage extends Component {
     
     componentDidMount(){
         axios
-            .get('http://localhost/3VIEW1-1-2020/REST-3V/product/read.php')
+            .get('http://localhost/3VIEW1-1-2020/REST-3V/blog/readAll.php')
             .then(res => {
                 this.setState({
-                    posts: res.data.records
+                    posts: res.data
                 })
             })
             .catch(err => console.log("Error When Try To Fetch Data :" + err ))
