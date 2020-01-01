@@ -18,7 +18,7 @@ export default class newsPage extends Component {
             .get('http://localhost/3VIEW1-1-2020/REST-3V/blog/readAll.php')
             .then(res => {
                 this.setState({
-                    posts: res.data
+                    posts: res.data.Blogs_data
                 })
             })
             .catch(err => console.log("Error When Try To Fetch Data :" + err ))

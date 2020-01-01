@@ -3,7 +3,7 @@ class Database{
 
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "admin_temp";
+    private $db_name = "3view-backend";
     private $username = "root";
     private $password = "";
     public $conn;

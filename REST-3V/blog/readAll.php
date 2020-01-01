@@ -37,7 +37,6 @@ if($num>0){
         array_push($blogs_arr, $blogs_item);
     }
     http_response_code(200);
-    // echo json_encode($blogs_arr);
     $token = array(
         "iss"       => $config['issuer'],
         "aud"       => $config['audience'],
@@ -48,20 +47,12 @@ if($num>0){
 
 
     $jwt = JWT::encode($token, $config['secret-key']);
-    // echo json_encode(
-    //     array(
-    //         "message" => "Encode: Generation of Blog Data JWT.",
-    //         "jwt" => $jwt
-    //     )
-    // );
     if($jwt){
         try {
             $decoded = JWT::decode($jwt, $config['secret-key'], array('HS256'));
             http_response_code(200);
             echo json_encode(array(
-                // "message" => "Decode: Generation of Blog Data JWT.",
-                "data" => $decoded->data,
-                // "all-Data" => $decoded
+                "Blogs_data" => $decoded->data
             ));
         }
         catch (\Exception $e) {
