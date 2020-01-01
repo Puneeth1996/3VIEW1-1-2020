@@ -16,26 +16,8 @@ export default class ContactForm extends Component {
     }
 
     contactFormData = async (event) => {
-        // console.log('Hello Full Form',this.state)
         event.preventDefault();
-
-
-        // axios.post('http://localhost/REST-3V/contactForm/core_php.php', {
-        //     name: this.state.name,
-        //     email: this.state.email,
-        //     telephone: this.state.telephone,
-        //     message: this.state.message
-        // }).then((response) => {
-        //     console.log(response);
-        // }, (error) => {
-        //     console.log(error);
-        // });
-        
-
-
-
-
-        const response = await fetch('http://localhost/REST-3V/contactForm/core_php.php', {
+        const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/contactForm/core_php.php', {
             method: 'POST',
             body: JSON.stringify({ 
                     name: this.state.name,
@@ -44,37 +26,25 @@ export default class ContactForm extends Component {
                     message: this.state.message
                 }),
         })
-        console.log(await response.json())
-
-
-        // // create a new XMLHttpRequest
-        // var xhr = new XMLHttpRequest()
-
-        // // get a callback when the server responds
-        // xhr.addEventListener('load', () => {
-        // // update the state of the component with the result here
-        // // console.log(xhr.responseText)
-        // })
-        // // open the request with the verb and the url
-        // xhr.open('POST', 'http://localhost/REST-3V/conctForm/core_php.php')
-        // // send the request
-        // xhr.send(JSON.stringify({ 
-        //     name: this.state.name,
-        //     email: this.state.email,
-        //     telephone: this.state.telephone,
-        //     message: this.state.message
-        // }))
-
-
-
-
-        this.setState({successMessage: "Form Submitted"});
-        this.setState({
-            name: '',
-            email: '',
-            telephone: '',
-            message: '',
-        });
+        if((await response.json()){
+            this.setState({successMessage: "Form Submitted"});
+            this.setState({
+                name: '',
+                email: '',
+                telephone: '',
+                message: '',
+            });
+        }
+        else{
+            this.setState({successMessage: "Unable To Submit the Form"});
+            this.setState({
+                name: '',
+                email: '',
+                telephone: '',
+                message: '',
+            });
+        }
+        
     }
     
 
@@ -124,7 +94,7 @@ export default class ContactForm extends Component {
                     <input type="submit" value="Send Message" id="form_button" className={style.form_button}  onClick={this.contactFormData} />
                 </div>
                 </form>
-                {this.state.successMessage}
+                <div>{this.state.successMessage}</div>
             </div>
         )
     }
