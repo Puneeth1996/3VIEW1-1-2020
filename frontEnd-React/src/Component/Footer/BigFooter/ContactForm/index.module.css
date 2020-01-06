@@ -64,3 +64,10 @@
     outline: none !important;
     border-color: #fd784f;
 }
+
+
+.infoSubmittion{
+  text-align: center;
+  color: #fd784f;
+  padding-top: 25px;
+}

@@ -17,39 +17,49 @@ export default class ContactForm extends Component {
 
     contactFormData = async (event) => {
         event.preventDefault();
-        const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/contactForm/core_php.php', {
-            method: 'POST',
-            body: JSON.stringify({
-                    name: this.state.name,
-                    email: this.state.email,
-                    telephone: this.state.telephone,
-                    message: this.state.message
-                }),
-        })
-        if(await response.json()){
-            this.setState({successMessage: "Form Submitted"});
-            this.setState({
-                name: '',
-                email: '',
-                telephone: '',
-                message: '',
-            });
+
+        if(this.state.name && this.state.email && this.state.message){
+
+
+          const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/contactForm/core_php.php', {
+              method: 'POST',
+              body: JSON.stringify({
+                      name: this.state.name,
+                      email: this.state.email,
+                      telephone: this.state.telephone,
+                      message: this.state.message
+                  }),
+          })
+          if(await response.json()){
+              this.setState({successMessage: "Form Submitted"});
+              this.setState({
+                  name: '',
+                  email: '',
+                  telephone: '',
+                  message: '',
+              });
+          }
+          else{
+              this.setState({successMessage: "Unable To Submit the Form"});
+              this.setState({
+                  name: '',
+                  email: '',
+                  telephone: '',
+                  message: '',
+              });
+          }
+
+
         }
-        else{
-            this.setState({successMessage: "Unable To Submit the Form"});
-            this.setState({
-                name: '',
-                email: '',
-                telephone: '',
-                message: '',
-            });
+
+        else {
+          this.setState({successMessage: "Fill Out the name - email - message fields!"});
         }
 
     }
 
 
     changeHandler = event => {
-        // console.log(event)
         const name = event.target.name;
         const value = event.target.value;
 
