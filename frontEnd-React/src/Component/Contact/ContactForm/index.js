@@ -5,7 +5,7 @@ import axios from 'axios';
 export default class ContactForm extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
             name: '',
             email: '',
@@ -19,7 +19,7 @@ export default class ContactForm extends Component {
         event.preventDefault();
         const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/contactForm/core_php.php', {
             method: 'POST',
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                     name: this.state.name,
                     email: this.state.email,
                     telephone: this.state.telephone,
@@ -44,15 +44,15 @@ export default class ContactForm extends Component {
                 message: '',
             });
         }
-        
+
     }
-    
+
 
     changeHandler = event => {
-        console.log(event)
+        // console.log(event)
         const name = event.target.name;
         const value = event.target.value;
-    
+
         this.setState({
             [name]: value
         });

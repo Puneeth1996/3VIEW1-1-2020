@@ -29,23 +29,23 @@ $result = mysqli_query($conn, $query);
 
 
 if ($result) {
-    $name = $_POST['name'];
-	$email = $_POST["email"];
-	$subject = "From 3View Emailer Contact Form";
-	$content = 'Contact No:'.$_POST["telephone"].'\n\n\n\n\n\n'.$_POST["message"];
-	$toEmail = "puneeth1996p@gmail.com";
-    $mailHeaders = "From: " . $name . "<". $email .">\r\n";
-    
-    $message = "";
+  //   $name        = $_POST['name'];
+  // 	$email       = $_POST["email"];
+  // 	$subject     = "From 3View Emailer Contact Form";
+  // 	$content     = 'Contact No:'.$_POST["telephone"].'\n\n\n\n\n\n'.$_POST["message"];
+  // 	$toEmail     = "puneeth1996p@gmail.com";
+  //   $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+  //
+  //   $message = "";
 	// if(mail($toEmail, $subject, $content, $mailHeaders)) {
-    //     $message = "Your contact information is received successfully.";
-    //     $type = "success";
-    // }
-
-    mail('puneeth1996p@gmail.com', $subject, $content, $mailHeaders);
-    echo json_encode(["sent" => 1, "message"=> $message ]);
+  //       $message = "Your contact information is received successfully.";
+  //       $type    = "success";
+  //   }
+  //
+  //   mail($toEmail , $subject , $content , $mailHeaders);
+    echo json_encode(["sent" => 1 ]);
 } else {
-    echo json_encode(["sent" => 0, ]);
+    echo json_encode(["sent" => 0 ]);
 }
 
 
