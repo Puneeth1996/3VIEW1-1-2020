@@ -3,7 +3,7 @@
     height: 50vh;
     background-size: cover;
     /* background-image: linear-gradient(rgb(162, 161, 165), rgba(0, 0, 0, 0.5)), url('home_background.jpg'); */
-    background-image: url('home_background.jpg');
+    /* background-image: url('home_background.jpg'); */
     position: relative;
 }
 .bannercontainer .bannertitle{
