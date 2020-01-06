@@ -6,10 +6,10 @@ export default class ContactForm extends Component {
         super(props)
 
         this.state = {
-            name: null,
-            email: null,
-            telephone: null,
-            message: null,
+            name: '',
+            email: '',
+            telephone: '',
+            message: '',
         }
     }
 
