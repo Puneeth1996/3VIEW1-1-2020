@@ -22,3 +22,18 @@ From 12.30 pm onwards
 1.    Its time to wire Front For Single News Page
 
 2.    Its time to implement one search bar type functionality.
+
+
+
+
+
+
+From 2.40 pm
+
+Work on Component for the project to full fill the UI
+
+
+1.    The rolling what we do section only in the HOME Page      What We Do Section
+
+
+2.    The                                                       Meet the Team Section 
