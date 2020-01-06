@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HeaderTitle from '../../CommonComponent/HeaderTitle'
-
+import TextAnimation from './TextAnimation'
 import style from './index.module.css'
 
 export default class WhatWeDo extends Component {
@@ -11,6 +11,8 @@ export default class WhatWeDo extends Component {
                     title='What We Do'
                     subTitle='Possible. Visualize'
                 />
+
+                <TextAnimation />
             </div>
         )
     }
