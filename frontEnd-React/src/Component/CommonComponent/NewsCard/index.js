@@ -7,7 +7,7 @@ export default class NewsCard extends Component {
         const { id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img } = this.props.post
         return (
             <div className={style.newsContainer}>
-                <Link to={`/News/${id}`}><div className={style.newsTitle}>{Main_title}</div> </Link>
+                <Link to={`/News/${Blog_unique_id}`}><div className={style.newsTitle}>{Main_title}</div> </Link>
                 <div className={style.newMeta}>
                     <div className={style.author}>
                         <div className={style.author_icon}>

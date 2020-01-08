@@ -9,7 +9,7 @@ export default class News extends Component {
         return (
             <Switch>
                 <Route exact path='/News' component={newsPage} />
-                <Route path='/News/:number' component={specificNews}/>
+                <Route path='/News/:string' component={specificNews}/>
             </Switch>
         )
     }

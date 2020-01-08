@@ -43,24 +43,33 @@ class Blog{
         return $stmt;
     }
 
+
+
+
+
+
     // read one-blog
-    function readOne(){
-        
-        // $query = "SELECT 
-        //                 id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img
-        //             FROM 
-        //                 ".$this->table_name."
-        //         ";
+    function readOne($Blog_unique_id){
 
-        // // prepare query statement
-        // $stmt = $this->conn->prepare($query);
+        $query = "SELECT 
+                        id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img
+                    
+                    FROM 
+                        ".$this->table_name."
+                    
+                    WHERE Blog_unique_id = ". $Blog_unique_id ."
+                ";
 
-        // // execute query
-        // $stmt->execute();
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
 
-        // return $stmt;
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
     }
 
 
 }
+
 ?>

@@ -7,14 +7,14 @@ export default class Banner extends Component {
     render() {
 
 
-        console.log();
+        // console.log();
         var browserLoc = window.location.href.split("/");
-        console.log(browserLoc[4]);
+        // console.log(browserLoc[4]);
 
 
         var myArray = [1,2,3,4,5,6,7,8];
         var rand = myArray[Math.floor(Math.random() * myArray.length)];
-        console.log(rand);
+        // console.log(rand);
 
         if(browserLoc[3] == 'About'){
           // console.log('we are in about page ');

@@ -1,0 +1,10 @@
+8-1-2019 
+
+
+When working for specificNews.js file 
+
+We should require one row 
+
+Make a post request for the blog_unique_id 
+
+Which returns the values for the News Post and 

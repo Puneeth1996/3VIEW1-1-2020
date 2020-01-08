@@ -11,33 +11,30 @@ export default class specificNews extends Component {
         }
     }
     
-    componentDidMount(){
-        axios
-            .get('http://localhost/3VIEW1-1-2020/REST-3V/product/read.php')
-            .then(res => {
-                this.setState({
-                    NewsData: res.data.records
-                })
+    componentDidMount = async () => {
+        let Blog_unique_id =  this.props.match.params.string
+        console.log(Blog_unique_id)
+        const resp = await fetch('http://localhost:8080/3VIEW1-1-2020/REST-3V/blog/readOne.php', {
+            method: 'POST',
+            body: JSON.stringify({
+                    Blog_unique_id: Blog_unique_id,
+                }),
+        })
+        if(await resp.json()){
+            this.setState({
+                NewsData: resp.data.Blogs_data
             })
-            .catch(err => console.log("Error When Try To Fetch Data :" + err ))
+        }
+        else{
+            console.log('there was no records found with the ' + Blog_unique_id)
+        }
     }
     render() {
-        let ValueNew 
-        // console.log(this.state.NewsData)
-        this.state.NewsData.map( oneNew => {
-            // console.log(oneNew)
-            if(oneNew.id === this.props.match.params.number){
-                ValueNew = oneNew
-            }
-        })
-        const ourNew = ValueNew
-        console.log(ourNew)
         return (
             <div>
                 <Banner >
-                    News - {this.props.match.params.number} 
+                    News
                 </Banner>
-                {/* <h1> 1231{reqNews.Publish_date} </h1> */}
             </div>
         )
     }
