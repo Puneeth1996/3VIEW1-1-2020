@@ -7,12 +7,12 @@
 
 // we would only need     Main_title     img     full_descr         
 
-$config = require __DIR__ . '/config.php';
-require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';
-require __DIR__ . '/php-jwt-master/src/ExpiredException.php';
-require __DIR__ . '/php-jwt-master/src/SignatureInvalidException.php';
-require __DIR__ . '/php-jwt-master/src/JWT.php';
-use \Firebase\JWT\JWT;
+// $config = require __DIR__ . '/config.php';
+// require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';
+// require __DIR__ . '/php-jwt-master/src/ExpiredException.php';
+// require __DIR__ . '/php-jwt-master/src/SignatureInvalidException.php';
+// require __DIR__ . '/php-jwt-master/src/JWT.php';
+// use \Firebase\JWT\JWT;
 
 date_default_timezone_set('Asia/Kolkata');
 header("Access-Control-Allow-Origin: *");
@@ -22,11 +22,14 @@ include_once '../objects/blog.php';
 $database = new Database();
 $db = $database->getConnection();
 
-
 $blog = new Blog($db);
+
+
 $stmt = $blog->readOne($_POST['Blog_unique_id']);
 $num = $stmt->rowCount();
 
+echo("Num count");
+echo($num);
 
 
 if($num){

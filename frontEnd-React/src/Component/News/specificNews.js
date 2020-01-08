@@ -14,7 +14,7 @@ export default class specificNews extends Component {
     componentDidMount = async () => {
         let Blog_unique_id =  this.props.match.params.string
         console.log(Blog_unique_id)
-        const resp = await fetch('http://localhost:8080/3VIEW1-1-2020/REST-3V/blog/readOne.php', {
+        const resp = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/blog/readOne.php', {
             method: 'POST',
             body: JSON.stringify({
                     Blog_unique_id: Blog_unique_id,
