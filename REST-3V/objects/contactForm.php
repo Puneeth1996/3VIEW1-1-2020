@@ -26,7 +26,12 @@ class Blog{
                     '" . $message . "'
                     )";
 
-        $result = mysqli_query($conn, $query);
+
+        // prepare query statement
+        $result = $this->conn->prepare($query);
+
+        // execute query
+        $result->execute();
 
         return $result;
     }
