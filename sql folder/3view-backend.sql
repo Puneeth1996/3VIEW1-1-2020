@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2020 at 12:04 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Jan 09, 2020 at 03:02 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -293,24 +293,8 @@ CREATE TABLE `contactform` (
 --
 
 INSERT INTO `contactform` (`id`, `name`, `email`, `telephone`, `message`, `time`) VALUES
-(60, '', '', 0, '', '2020-01-08 15:01:23'),
-(61, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'adsfasdf asdf asdf a', '2020-01-08 15:01:31'),
-(62, '', '', 0, '', '2020-01-08 15:01:34'),
-(63, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'sdf asdf asdf as', '2020-01-08 15:02:19'),
-(64, '', '', 0, '', '2020-01-08 15:04:02'),
-(65, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'f asdfas asd ', '2020-01-08 15:04:08'),
-(66, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '@$@#$#$$#', '2020-01-08 15:04:47'),
-(67, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'asdf234234', '2020-01-08 15:04:50'),
-(68, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '0--=-=-=', '2020-01-08 15:05:02'),
-(69, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '8978979', '2020-01-08 15:05:53'),
-(70, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '423234 23423424 2', '2020-01-08 15:06:42'),
-(71, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '34', '2020-01-08 15:06:53'),
-(72, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '[[][][\n][][][][]yoiyuio[', '2020-01-08 15:07:26'),
-(73, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'erwa fasdf asfd asfd asdf', '2020-01-08 15:07:54'),
-(74, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'adfsasdfasdfasf', '2020-01-08 15:08:03'),
-(75, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'tyqwe', '2020-01-08 15:08:13'),
-(76, '', '', 0, '', '2020-01-08 15:40:50'),
-(77, '', '', 0, '', '2020-01-08 15:52:07');
+(60, 'PUNEETH P', 'puneeth1996p@gmail.com', 2147483647, 'asdf asdfa )(*)(*())(*)(*()*(*)(*)OIJlkjsdlfkjlkjasdflkjsdlkjfsaf', '2020-01-08 21:20:14'),
+(61, 'PUNEETH P', 'puneeth1996p@gmail.com', 0, 'fasdf asdf asd)U()*&*&(&(^&sfasdfasdf asdf as', '2020-01-08 21:20:30');
 
 -- --------------------------------------------------------
 
@@ -9055,6 +9039,47 @@ INSERT INTO `film_category` (`film_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `listings`
+--
+
+CREATE TABLE `listings` (
+  `property_id` int(11) NOT NULL,
+  `house_name` varchar(40) NOT NULL,
+  `property_visuals` varchar(400) NOT NULL,
+  `date_created` date NOT NULL,
+  `geospacial_data` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `listings_data`
+--
+
+CREATE TABLE `listings_data` (
+  `property_id` int(11) NOT NULL,
+  `area` varchar(40) NOT NULL,
+  `price` varchar(40) NOT NULL,
+  `property_features` varchar(400) NOT NULL,
+  `property_desc` varchar(400) NOT NULL,
+  `property_descfull` varchar(1500) NOT NULL,
+  `addresses` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `listing_authentication`
+--
+
+CREATE TABLE `listing_authentication` (
+  `property_id` int(11) NOT NULL,
+  `sixDigitPIN` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `offices`
 --
 
@@ -12904,6 +12929,17 @@ INSERT INTO `products` (`productCode`, `productName`, `productLine`, `productSca
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `property_file`
+--
+
+CREATE TABLE `property_file` (
+  `property_id` int(11) NOT NULL,
+  `three_D_files` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `view_backend`
 --
 
@@ -12917,7 +12953,7 @@ CREATE TABLE `view_backend` (
   `category` varchar(40) NOT NULL,
   `desp_small` varchar(1500) NOT NULL,
   `desp_full` varchar(5000) NOT NULL,
-  `img` varchar(255) DEFAULT NULL
+  `img` longblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -12925,11 +12961,11 @@ CREATE TABLE `view_backend` (
 --
 
 INSERT INTO `view_backend` (`id`, `Blog_unique_id`, `Publish_date`, `Main_title`, `Sub_title`, `Author`, `category`, `desp_small`, `desp_full`, `img`) VALUES
-(1, 'houseMan', '2019-12-10', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_2.jpg'),
-(3, 'cloths&Senses', '2019-12-08', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_1.jpg'),
-(4, 'food,paper', '2019-12-09', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_3.jpg'),
-(5, 'plane*car*', '2019-12-10', 'dsfsf asdf', 'asdf asdf ', 'sdf ', 'Uncatagorised | Legal', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_1.jpg'),
-(6, 'filthy^ruch', '2019-12-11', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_2.jpg');
+(1, 'houseMan', '2019-12-10', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e642e6a7067),
+(3, 'ManWomen', '2019-12-08', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e3132642e6a7067),
+(4, 'debtCredit', '2019-12-09', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b65717772777167726f756e642e6a7067),
+(5, 'CaliHtown', '2019-12-10', 'dsfsf asdf', 'asdf asdf ', 'sdf ', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', NULL),
+(6, 'CHiTOwnFreeTOwn', '2019-12-11', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e71343331642e6a7067);
 
 --
 -- Indexes for dumped tables
@@ -12972,6 +13008,26 @@ ALTER TABLE `film`
   ADD PRIMARY KEY (`film_id`);
 
 --
+-- Indexes for table `listings`
+--
+ALTER TABLE `listings`
+  ADD PRIMARY KEY (`property_id`),
+  ADD UNIQUE KEY `date_created` (`date_created`);
+
+--
+-- Indexes for table `listings_data`
+--
+ALTER TABLE `listings_data`
+  ADD PRIMARY KEY (`property_id`),
+  ADD UNIQUE KEY `area` (`area`,`price`);
+
+--
+-- Indexes for table `listing_authentication`
+--
+ALTER TABLE `listing_authentication`
+  ADD PRIMARY KEY (`property_id`);
+
+--
 -- Indexes for table `offices`
 --
 ALTER TABLE `offices`
@@ -13008,10 +13064,17 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`productCode`);
 
 --
+-- Indexes for table `property_file`
+--
+ALTER TABLE `property_file`
+  ADD PRIMARY KEY (`property_id`);
+
+--
 -- Indexes for table `view_backend`
 --
 ALTER TABLE `view_backend`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `Blog_unique_id` (`Blog_unique_id`) USING HASH;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -13033,7 +13096,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -13070,6 +13133,28 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `view_backend`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `listings_data`
+--
+ALTER TABLE `listings_data`
+  ADD CONSTRAINT `listings_data_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `listings` (`property_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `listing_authentication`
+--
+ALTER TABLE `listing_authentication`
+  ADD CONSTRAINT `listing_authentication_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `listings` (`property_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_file`
+--
+ALTER TABLE `property_file`
+  ADD CONSTRAINT `property_file_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `listings` (`property_id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
