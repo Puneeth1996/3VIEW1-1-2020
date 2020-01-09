@@ -53,14 +53,14 @@ class Blog{
     // read one-blog
     function readOne($Blog_unique_id){
 
-        echo($Blog_unique_id);
+        // echo($Blog_unique_id);
 
         $query = "SELECT 
                         *
                     
                     FROM 
                         ".$this->table_name."
-                    WHERE Blog_unique_id = ".$Blog_unique_id."
+                    WHERE Blog_unique_id LIKE ?
                 ";
 
         // prepare query statement
@@ -68,17 +68,19 @@ class Blog{
 
         // execute query
         // $stmt->execute([$Blog_unique_id]);
-        $stmt->execute();
+        // $stmt->execute($Blog_unique_id);
+
+        $stmt->execute([$Blog_unique_id]);
 
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $row = $stmt->fetch();
-        echo('$row-----');
-        echo($row['Main_title'].'  and   '.$row['desp_small']);
+        // echo('$row-----');
+        // echo($row['Main_title'].'  and   '.$row['desp_small']);
 
 
 
-        return $stmt;
+        return $row;
     }
 
 

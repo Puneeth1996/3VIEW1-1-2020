@@ -7,12 +7,12 @@
 
 // we would only need     Main_title     img     full_descr         
 
-// $config = require __DIR__ . '/config.php';
-// require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';
-// require __DIR__ . '/php-jwt-master/src/ExpiredException.php';
-// require __DIR__ . '/php-jwt-master/src/SignatureInvalidException.php';
-// require __DIR__ . '/php-jwt-master/src/JWT.php';
-// use \Firebase\JWT\JWT;
+$config = require __DIR__ . '/config.php';
+require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';
+require __DIR__ . '/php-jwt-master/src/ExpiredException.php';
+require __DIR__ . '/php-jwt-master/src/SignatureInvalidException.php';
+require __DIR__ . '/php-jwt-master/src/JWT.php';
+use \Firebase\JWT\JWT;
 
 date_default_timezone_set('Asia/Kolkata');
 header("Access-Control-Allow-Origin: *");
@@ -25,38 +25,41 @@ $db = $database->getConnection();
 $blog = new Blog($db);
 
 
-$stmt = $blog->readOne($_POST['Blog_unique_id']);
-$num = $stmt->rowCount();
+$Blog_unique_id = $_POST['Blog_unique_id'];
+// echo($Blog_unique_id);
 
-echo("Num count");
-echo($num);
+$row = $blog->readOne($Blog_unique_id);
+// echo($row['Main_title']);
 
 
-if($num){
-    $blogs_arr=array();
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        extract($row);
-        $blogs_item=array(
-            "id" => $id,
-            "Blog_unique_id" => $Blog_unique_id,
-            "Publish_date" => $Publish_date,
-            "Main_title" => $Main_title,
-            "Sub_title" => $Sub_title,
-            "Author" => $Author,
-            "category" => $category,
-            "desp_small" =>$desp_small,
-            "desp_full" =>$desp_full,
-            "img" =>$img,
-        );
-        array_push($blogs_arr, $blogs_item);
-    }
+
+
+
+
+// echo('$row-----');
+// echo($row['Main_title'].'  and   '.$row['desp_small']);
+
+if($row){
+    $single_blog_arr=array(
+        "id" => $row['id'],
+        "Blog_unique_id" => $row['Blog_unique_id'],
+        "Publish_date" => $row['Publish_date'],
+        "Main_title" => $row['Main_title'],
+        "Sub_title" => $row['Sub_title'],
+        "Author" => $row['Author'],
+        "category" => $row['category'],
+        "desp_small" => $row['desp_small'],
+        "desp_full" => $row['desp_full'],
+        "img" => $row['img'],
+    );
+
     http_response_code(200);
     $token = array(
         "iss"       => $config['issuer'],
         "aud"       => $config['audience'],
         "iat"       => $config['issued-time'],
         "nbf"       => $config['not-before'],
-        "data"      => $blogs_arr
+        "data"      => $single_blog_arr
     );
 
 
@@ -72,7 +75,7 @@ if($num){
             $decoded = JWT::decode($jwt, $config['secret-key'], array('HS256'));
             http_response_code(200);
             echo json_encode(array(
-                "Blogs_data" => $decoded->data
+                "Blog_data_single" => $decoded->data
             ));
         }
         catch (\Exception $e) {
@@ -87,6 +90,9 @@ else{
         array("message" => "Blog With " . $_POST['Blog_unique_id'] ." Not Found!" )
     );
 }
+
+
+
 
 ?>
 
