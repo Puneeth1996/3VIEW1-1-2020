@@ -9,7 +9,8 @@ export default class specificNews extends Component {
         super(props)
     
         this.state = {
-            NewsData: []
+            NewsData: [],
+            successMessage: ''
         }
     }
     
@@ -25,9 +26,19 @@ export default class specificNews extends Component {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
         // console.log(response.data)
-        this.setState({
-            NewsData: response.data
-        })
+        if(response.data){
+            this.setState({
+                NewsData: response.data,
+                successMessage: 'True'
+            })
+        }
+        else {
+            this.setState({
+                NewsData: [],
+                successMessage: 'False'
+            })
+        }
+        
         // console.log(this.state.NewsData)
     }
     render() {
@@ -36,18 +47,19 @@ export default class specificNews extends Component {
 
                 {
                 
-                (this.state.NewsData.blog_unique_id == this.props.match.params.string) ? 
+                (this.state.successMessage) ? 
                 
-                    <NotFound/>
-                    
-                :
-
                     <>
                         <Banner >
                             News
                         </Banner>
                         <SingleNewPost blog_unique_id={this.props.match.params.string} />
                     </>
+                    
+                :
+
+                    <NotFound/>
+                    
                 }
             </div>
         )
