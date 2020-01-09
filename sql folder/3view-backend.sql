@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 01, 2020 at 11:04 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jan 09, 2020 at 12:04 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -272,6 +272,45 @@ INSERT INTO `category` (`category_id`, `name`) VALUES
 (14, 'Sci-Fi'),
 (15, 'Sports'),
 (16, 'Travel');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactform`
+--
+
+CREATE TABLE `contactform` (
+  `id` int(11) NOT NULL,
+  `name` varchar(35) NOT NULL,
+  `email` varchar(51) NOT NULL,
+  `telephone` int(18) NOT NULL,
+  `message` varchar(1250) NOT NULL,
+  `time` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contactform`
+--
+
+INSERT INTO `contactform` (`id`, `name`, `email`, `telephone`, `message`, `time`) VALUES
+(60, '', '', 0, '', '2020-01-08 15:01:23'),
+(61, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'adsfasdf asdf asdf a', '2020-01-08 15:01:31'),
+(62, '', '', 0, '', '2020-01-08 15:01:34'),
+(63, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'sdf asdf asdf as', '2020-01-08 15:02:19'),
+(64, '', '', 0, '', '2020-01-08 15:04:02'),
+(65, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'f asdfas asd ', '2020-01-08 15:04:08'),
+(66, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '@$@#$#$$#', '2020-01-08 15:04:47'),
+(67, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'asdf234234', '2020-01-08 15:04:50'),
+(68, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '0--=-=-=', '2020-01-08 15:05:02'),
+(69, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '8978979', '2020-01-08 15:05:53'),
+(70, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '423234 23423424 2', '2020-01-08 15:06:42'),
+(71, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '34', '2020-01-08 15:06:53'),
+(72, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '[[][][\n][][][][]yoiyuio[', '2020-01-08 15:07:26'),
+(73, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'erwa fasdf asfd asfd asdf', '2020-01-08 15:07:54'),
+(74, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'adfsasdfasdfasf', '2020-01-08 15:08:03'),
+(75, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'tyqwe', '2020-01-08 15:08:13'),
+(76, '', '', 0, '', '2020-01-08 15:40:50'),
+(77, '', '', 0, '', '2020-01-08 15:52:07');
 
 -- --------------------------------------------------------
 
@@ -12878,7 +12917,7 @@ CREATE TABLE `view_backend` (
   `category` varchar(40) NOT NULL,
   `desp_small` varchar(1500) NOT NULL,
   `desp_full` varchar(5000) NOT NULL,
-  `img` longblob DEFAULT NULL
+  `img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -12886,11 +12925,11 @@ CREATE TABLE `view_backend` (
 --
 
 INSERT INTO `view_backend` (`id`, `Blog_unique_id`, `Publish_date`, `Main_title`, `Sub_title`, `Author`, `category`, `desp_small`, `desp_full`, `img`) VALUES
-(1, 'All the papers you need to own a house', '2019-12-10', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e642e6a7067),
-(3, 'All the papers you need to own a house3243234', '2019-12-08', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e3132642e6a7067),
-(4, 'All the papers you need to own a housefasdf asdf', '2019-12-09', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b65717772777167726f756e642e6a7067),
-(5, 'All the papers you need to own a house33', '2019-12-10', 'dsfsf asdf', 'asdf asdf ', 'sdf ', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', NULL),
-(6, 'd0000132234^&^(*dfg', '2019-12-11', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 0x433a5c78616d70705c6874646f63735c686f6d655f6261636b67726f756e71343331642e6a7067);
+(1, 'houseMan', '2019-12-10', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_2.jpg'),
+(3, 'cloths&Senses', '2019-12-08', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_1.jpg'),
+(4, 'food,paper', '2019-12-09', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_3.jpg'),
+(5, 'plane*car*', '2019-12-10', 'dsfsf asdf', 'asdf asdf ', 'sdf ', 'Uncatagorised | Legal', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_1.jpg'),
+(6, 'filthy^ruch', '2019-12-11', 'All the papers you need to own a house', ' Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, si', 'Puneeth', 'Uncatagorised | Legal', 'ec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, s', 'Donec ullamcorper nulla non metus auctor fringi lla.Curabitur blandit tempus porttitor. Proin quis bibendum mi. Donec luctus vestibulum sapien, sit amet vehicula enim aliquam at. Suspendisse non urna bibendum, dictum quam sit amet, aliquet nisi. In dapibus aliquet porttitor. Pellentesque at malesuada ante.', 'news_2.jpg');
 
 --
 -- Indexes for dumped tables
@@ -12907,6 +12946,12 @@ ALTER TABLE `actor`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `contactform`
+--
+ALTER TABLE `contactform`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customers`
@@ -12983,6 +13028,12 @@ ALTER TABLE `actor`
 --
 ALTER TABLE `category`
   MODIFY `category_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `contactform`
+--
+ALTER TABLE `contactform`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `customers`
