@@ -53,7 +53,7 @@ export default class specificNews extends Component {
                         <Banner >
                             News
                         </Banner>
-                        <SingleNewPost blog_unique_id={this.props.match.params.string} />
+                        <SingleNewPost blog_data={this.state.NewsData} />
                     </>
                     
                 :
