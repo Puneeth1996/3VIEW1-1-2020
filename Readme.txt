@@ -69,3 +69,11 @@ In Admin Page Project
 1 should change the login page correction to incoporate the error message 
 
 2 the serach button from the grcoery curd bootstrap theme is not working 
+
+
+
+
+
+
+From 12.30pm 
+Started to make the new UI serach field for the Listings table 
