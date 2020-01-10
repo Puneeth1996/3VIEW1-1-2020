@@ -25,7 +25,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>Login_v9/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>Login_v9/css/main.css">
 <!--===============================================================================================-->
+
 </head>
+
+
+
+
 <body>
 	
     
@@ -45,30 +50,20 @@
 					<input class="input100" type="password" name="password" placeholder="password">
 					<span class="focus-input100"></span>
                 </div>
-                
+				<div id="infoMessage"><?php echo $message;?></div>
                 
                 <div class="checkbox">
                     <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>Remember Me
                 </div>
                 <br/>
                 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
-                <br/>
-
+                
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn">
                         Login<?php echo form_submit('submit');?>
 					</button>
 				</div>
-				</div>
-
-				<div class="text-center">
-                    <div id="infoMessage"><?php echo $message;?></div>
-				</div>
             </form>
-            
-            
-
-			
 		</div>
 	</div>
 	
