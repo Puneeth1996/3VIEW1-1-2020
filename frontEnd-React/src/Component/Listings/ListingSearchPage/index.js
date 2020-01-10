@@ -26,7 +26,7 @@ export default class ListingSearchPage extends Component {
 
 
         if(this.state.propertyID && this.state.propertyName){
-            const response = await fetch('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
+            const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
                 method: 'POST',
                 body: JSON.stringify({
                         propertyID: this.state.propertyID,
