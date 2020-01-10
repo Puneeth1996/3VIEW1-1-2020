@@ -49,6 +49,12 @@ if($num>0){
     $jwt = JWT::encode($token, $config['secret-key']);
     if($jwt){
         try {
+            // the client can make the post for secret-key
+            //  and the acces to the api is possible 
+            // please change the $config['secret-key']
+            // $_POST['secret-key']
+            // $_POST['secret-key'] this value is sent from the 
+            // client side code making the POST Request 
             $decoded = JWT::decode($jwt, $config['secret-key'], array('HS256'));
             http_response_code(200);
             echo json_encode(array(

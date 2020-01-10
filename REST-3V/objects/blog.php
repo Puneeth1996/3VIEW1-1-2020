@@ -4,7 +4,7 @@ class Blog{
 
     // database connection and table name
     private $conn;
-    private $table_name = "view_backend";
+    private $table_name = "news_table";
     // object properties
     public $id;
     public $Blog_unique_id;
