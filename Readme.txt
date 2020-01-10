@@ -60,3 +60,10 @@ Work on Component for the project to full fill the UI
 
 
 4 Should work on the pagination technique for the new_table.sql REST API And also chages to incoporated on the front end.
+
+
+In Admin Page Project 
+
+1 should change the login page correction to incoporate the error message 
+
+2 the serach button from the grcoery curd bootstrap theme is not working 
