@@ -25,38 +25,38 @@ export default class ListingSearchPage extends Component {
         console.log(this.state.propertyID, this.state.propertyName)
 
 
-        if(this.state.propertyID && this.state.propertyName){
-            const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
-                method: 'POST',
-                body: JSON.stringify({
-                        propertyID: this.state.propertyID,
-                        propertyName: this.state.propertyName,
-                    }),
-            })
-            if(await response.json()){
-                this.setState({
-                    successMessage: "Request Successful",
-                });
+        // if(this.state.propertyID && this.state.propertyName){
+        //     const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
+        //         method: 'POST',
+        //         body: JSON.stringify({
+        //                 propertyID: this.state.propertyID,
+        //                 propertyName: this.state.propertyName,
+        //             }),
+        //     })
+        //     if(await response.json()){
+        //         this.setState({
+        //             successMessage: "Request Successful",
+        //         });
 
-                this.setState({
-                    propertyID: '',
-                    propertyName: '',
-                });
-            }
-            else{
-                this.setState({successMessage: "Unable To Submit the Form"});
-                this.setState({
-                    propertyID: '',
-                    propertyName: '',
-                });
-            }
+        //         this.setState({
+        //             propertyID: '',
+        //             propertyName: '',
+        //         });
+        //     }
+        //     else{
+        //         this.setState({successMessage: "Unable To Submit the Form"});
+        //         this.setState({
+        //             propertyID: '',
+        //             propertyName: '',
+        //         });
+        //     }
 
 
-        }
+        // }
 
-        else {
-        this.setState({successMessage: "Fill Out the name - email - message fields!"});
-        }
+        // else {
+        // this.setState({successMessage: "Fill Out the name - email - message fields!"});
+        // }
 
 
         
