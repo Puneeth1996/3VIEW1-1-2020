@@ -54,6 +54,8 @@ Work on Component for the project to full fill the UI
 
 
 2 iincoporate the pagination from news table
+the below link is super meanigful for our line of work
+https://www.youtube.com/watch?v=S0Getpg3l_A
 
 
 3 should make the front end in listings page so to incoprate the search field as in template and then incoporate the existing listings table
