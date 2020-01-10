@@ -24,6 +24,41 @@ export default class ListingSearchPage extends Component {
         console.log("submitting the listingSearchData")
         console.log(this.state.propertyID, this.state.propertyName)
 
+
+        if(this.state.propertyID && this.state.propertyName){
+            const response = await fetch('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
+                method: 'POST',
+                body: JSON.stringify({
+                        propertyID: this.state.propertyID,
+                        propertyName: this.state.propertyName,
+                    }),
+            })
+            if(await response.json()){
+                this.setState({
+                    successMessage: "Request Successful",
+                });
+
+                this.setState({
+                    propertyID: '',
+                    propertyName: '',
+                });
+            }
+            else{
+                this.setState({successMessage: "Unable To Submit the Form"});
+                this.setState({
+                    propertyID: '',
+                    propertyName: '',
+                });
+            }
+
+
+        }
+
+        else {
+        this.setState({successMessage: "Fill Out the name - email - message fields!"});
+        }
+
+
         
         // Now its all about making the FormData for propertyID & propertyName
         // then making the api call and then testing it out with authentication 
@@ -38,10 +73,7 @@ export default class ListingSearchPage extends Component {
         //     headers: { 'Content-Type': 'multipart/form-data' },
         // })
 
-        this.setState({
-            propertyID: '',
-            propertyName: '',
-        });
+        
     }
 
     changeHandler = (event) => {
