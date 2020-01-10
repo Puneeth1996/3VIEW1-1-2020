@@ -3,33 +3,19 @@ import style from './index.module.css'
 
 export default class ListingsSearchForm extends Component {
 
-
-
-    listingSearchData = (event) => {
-        event.preventDefault()
-        console.log("submitting the listingSearchData")
-    }
-
-    changeHandler = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-
-        console.log(name,value)
-    }
-
-
     render() {
+        const { propertyID,propertyName,dataVerificationMessage } = this.props.searchData
         return (
             <div className={style.ListingsSearchForm}>
 
                 <form action="#" method="post" className={style.listingsForm}>
                     Property ID:<br/>
-                    <input type="text" name="propertyID" value="" onChange={this.changeHandler} />
+                    <input type="text" name="propertyID" value={propertyID} onChange={this.props.changeHandler} />
                     <br/>
                     Property Name:<br/>
-                    <input type="text" name="propertyName" value="" onChange={this.changeHandler} />
+                    <input type="text" name="propertyName" value={propertyName} onChange={this.props.changeHandler} />
                     <br/><br/>
-                    <input type="submit" value="Search Your Home" onClick={this.listingSearchData} />
+                    <input type="submit" value="Search Your Home" onClick={this.props.listingSearchData} />
                 </form> 
                 
             </div>
