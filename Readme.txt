@@ -37,3 +37,26 @@ Work on Component for the project to full fill the UI
 
 
 2.    The                                                       Meet the Team Section 
+
+
+
+
+
+
+
+
+10 Jan 2020 
+
+
+
+1 Secruing of iframe link dynamically changing
+
+
+
+2 iincoporate the pagination from news table
+
+
+3 should make the front end in listings page so to incoprate the search field as in template and then incoporate the existing listings table
+
+
+4 Should work on the pagination technique for the new_table.sql REST API And also chages to incoporated on the front end.
