@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2020 at 06:06 AM
+-- Generation Time: Jan 10, 2020 at 06:51 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -9039,6 +9039,26 @@ INSERT INTO `film_category` (`film_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `groups`
+--
+
+CREATE TABLE `groups` (
+  `id` mediumint(8) UNSIGNED NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO `groups` (`id`, `name`, `description`) VALUES
+(1, 'admin', 'Administrator'),
+(2, 'members', 'General User');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `listings`
 --
 
@@ -9076,6 +9096,19 @@ CREATE TABLE `listing_authentication` (
   `property_id` int(11) NOT NULL,
   `sixDigitPIN` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login_attempts`
+--
+
+CREATE TABLE `login_attempts` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `login` varchar(100) NOT NULL,
+  `time` int(11) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -12970,6 +13003,68 @@ CREATE TABLE `property_file` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `activation_selector` varchar(255) DEFAULT NULL,
+  `activation_code` varchar(255) DEFAULT NULL,
+  `forgotten_password_selector` varchar(255) DEFAULT NULL,
+  `forgotten_password_code` varchar(255) DEFAULT NULL,
+  `forgotten_password_time` int(11) UNSIGNED DEFAULT NULL,
+  `remember_selector` varchar(255) DEFAULT NULL,
+  `remember_code` varchar(255) DEFAULT NULL,
+  `created_on` int(11) UNSIGNED NOT NULL,
+  `last_login` int(11) UNSIGNED DEFAULT NULL,
+  `active` tinyint(1) UNSIGNED DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
+(1, '127.0.0.1', 'administrator', '$2y$12$thCXrBTj/43/.gkspA.RMee7AuRXBWuMUY1hJt/UR29ZHIHPLq.py', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1578635305, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(2, '::1', 'puneeth1996p@gmail.com', '$2y$12$CzlyP7FhiZdRhM5im2ICd.N8gxqj2G2vl/4htp.3F9h/i3gnOP.gW', 'puneeth1996p@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169252, 1578634540, 1, 'Puneeth', 'p', 'Gq', '+919066339217'),
+(3, '::1', 'manju@gmail.com', '$2y$10$95G8BKFQw26HQD20YdKyIuavzhtaHjbE7xobN6fnNRdcd12LsENMa', 'manju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169287, NULL, 1, 'Manju', 'SP', 'gq', '728034802389'),
+(4, '::1', 'raju@gmail.com', '$2y$10$rhRv7h9Eanxev6ofZoOGEOg1pAq8sBbjx8t5dcM/4/V3HrWa/zTKm', 'raju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577947703, 1578634565, 1, 'Raju', 'R', 'GQ', '80247025340');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_groups`
+--
+
+CREATE TABLE `users_groups` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
+  `group_id` mediumint(8) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users_groups`
+--
+
+INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(8, 2, 1),
+(9, 2, 2),
+(6, 3, 2),
+(7, 4, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `view_backend`
 --
 
@@ -13038,6 +13133,12 @@ ALTER TABLE `film`
   ADD PRIMARY KEY (`film_id`);
 
 --
+-- Indexes for table `groups`
+--
+ALTER TABLE `groups`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `listings`
 --
 ALTER TABLE `listings`
@@ -13056,6 +13157,12 @@ ALTER TABLE `listings_data`
 --
 ALTER TABLE `listing_authentication`
   ADD PRIMARY KEY (`property_id`);
+
+--
+-- Indexes for table `login_attempts`
+--
+ALTER TABLE `login_attempts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `news_table`
@@ -13107,6 +13214,25 @@ ALTER TABLE `property_file`
   ADD PRIMARY KEY (`property_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uc_email` (`email`),
+  ADD UNIQUE KEY `uc_activation_selector` (`activation_selector`),
+  ADD UNIQUE KEY `uc_forgotten_password_selector` (`forgotten_password_selector`),
+  ADD UNIQUE KEY `uc_remember_selector` (`remember_selector`);
+
+--
+-- Indexes for table `users_groups`
+--
+ALTER TABLE `users_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
+  ADD KEY `fk_users_groups_users1_idx` (`user_id`),
+  ADD KEY `fk_users_groups_groups1_idx` (`group_id`);
+
+--
 -- Indexes for table `view_backend`
 --
 ALTER TABLE `view_backend`
@@ -13154,6 +13280,18 @@ ALTER TABLE `film`
   MODIFY `film_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 
 --
+-- AUTO_INCREMENT for table `groups`
+--
+ALTER TABLE `groups`
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `login_attempts`
+--
+ALTER TABLE `login_attempts`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `news_table`
 --
 ALTER TABLE `news_table`
@@ -13170,6 +13308,18 @@ ALTER TABLE `offices`
 --
 ALTER TABLE `orders`
   MODIFY `orderNumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10426;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users_groups`
+--
+ALTER TABLE `users_groups`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `view_backend`
@@ -13198,6 +13348,13 @@ ALTER TABLE `listing_authentication`
 --
 ALTER TABLE `property_file`
   ADD CONSTRAINT `property_file_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `listings` (`property_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `users_groups`
+--
+ALTER TABLE `users_groups`
+  ADD CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
