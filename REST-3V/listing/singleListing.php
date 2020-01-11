@@ -1,11 +1,5 @@
 
-<?php
-
-
-// should work on this for displaying the single blog data
-
-
-// we would only need     Main_title     img     full_descr         
+<?php   
 
 $config = require __DIR__ . '/config.php';
 require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';
@@ -22,18 +16,40 @@ include_once '../objects/listings.php';
 $database = new Database();
 $db = $database->getConnection();
 
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+
+echo($_POST['propertyID'].''. $_POST['propertyName']);
+
 $listings = new Listings($db);
-
-
-// $Blog_unique_id = $_POST['Blog_unique_id'];
-// // echo($Blog_unique_id);
-
-// $row = $blog->readOne($Blog_unique_id);
-// echo($row['Main_title']);
+$result = $listings->listingsOne($_POST['propertyID'],$_POST['propertyName']);
 
 
 
-$row = $listings->listingsAll();
+
+if ($result) {
+    //   $name        = $_POST['name'];
+    // 	$email       = $_POST["email"];
+    // 	$subject     = "From 3View Emailer Contact Form";
+    // 	$content     = 'Contact No:'.$_POST["telephone"].'\n\n\n\n\n\n'.$_POST["message"];
+    // 	$toEmail     = "puneeth1996p@gmail.com";
+    //   $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+    //
+    //   $message = "";
+      // if(mail($toEmail, $subject, $content, $mailHeaders)) {
+    //       $message = "Your contact information is received successfully.";
+    //       $type    = "success";
+    //   }
+    //
+    //   mail($toEmail , $subject , $content , $mailHeaders);
+    echo json_encode(["sent" => 1 ]);
+} else {
+    echo json_encode(["sent" => 0 ]);
+}
+
+
+
+?>
 
 
 // echo('$row-----');
