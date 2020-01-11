@@ -24,89 +24,58 @@ echo($_POST['propertyID'].''. $_POST['propertyName']);
 $listings = new Listings($db);
 $result = $listings->listingsOne($_POST['propertyID'],$_POST['propertyName']);
 
-
-
-
+print_r($result);
 if ($result) {
-    //   $name        = $_POST['name'];
-    // 	$email       = $_POST["email"];
-    // 	$subject     = "From 3View Emailer Contact Form";
-    // 	$content     = 'Contact No:'.$_POST["telephone"].'\n\n\n\n\n\n'.$_POST["message"];
-    // 	$toEmail     = "puneeth1996p@gmail.com";
-    //   $mailHeaders = "From: " . $name . "<". $email .">\r\n";
-    //
-    //   $message = "";
-      // if(mail($toEmail, $subject, $content, $mailHeaders)) {
-    //       $message = "Your contact information is received successfully.";
-    //       $type    = "success";
-    //   }
-    //
-    //   mail($toEmail , $subject , $content , $mailHeaders);
-    echo json_encode(["sent" => 1 ]);
-} else {
-    echo json_encode(["sent" => 0 ]);
-}
+    $singleListingData=array(
+        "property_id" => $result['property_id'],
+        "house_name" => $result['house_name'],
+        "property_visuals_type" => $result['property_visuals_type'],
+        "date_created" => $result['date_created'],
+        "geospacial_data" => $result['geospacial_data'],
+        "area" => $result['area'],
+        "price" => $result['price'],
+        "property_features" => $result['property_features'],
+        "property_desc" => $result['property_desc'],
+        "property_descfull" => $result['property_descfull'],
+        "addresses" => $result['addresses'],
+        "sixDigitPIN" => $result['sixDigitPIN'],
+        "mtl_file" => $result['mtl_file'],
+        "obj_file" => $result['obj_file'],
+        "threeJS_iframe_url" => $result['threeJS_iframe_url'],
+        "react360_iframe_url" => $result['react360_iframe_url']
+    );
+
+    http_response_code(200);
+    $token = array(
+        "iss"       => $config['issuer'],
+        "aud"       => $config['audience'],
+        "iat"       => $config['issued-time'],
+        "nbf"       => $config['not-before'],
+        "data"      => $singleListingData
+    );
 
 
-
-?>
-
-
-// echo('$row-----');
-// echo($row['Main_title'].'  and   '.$row['desp_small']);
-
-// if($row){
-//     $single_blog_arr=array(
-//         "id" => $row['id'],
-//         "Blog_unique_id" => $row['Blog_unique_id'],
-//         "Publish_date" => $row['Publish_date'],
-//         "Main_title" => $row['Main_title'],
-//         "Sub_title" => $row['Sub_title'],
-//         "Author" => $row['Author'],
-//         "category" => $row['category'],
-//         "desp_small" => $row['desp_small'],
-//         "desp_full" => $row['desp_full'],
-//         "img" => $row['img'],
-//     );
-
-//     http_response_code(200);
-//     $token = array(
-//         "iss"       => $config['issuer'],
-//         "aud"       => $config['audience'],
-//         "iat"       => $config['issued-time'],
-//         "nbf"       => $config['not-before'],
-//         "data"      => $single_blog_arr
-//     );
-
-
-//     $jwt = JWT::encode($token, $config['secret-key']);
-//     if($jwt){
-//         try {
-//             // the client can make the post for secret-key
-//             //  and the acces to the api is possible 
-//             // please change the $config['secret-key']
-//             // $_POST['secret-key']
-//             // $_POST['secret-key'] this value is sent from the 
-//             // client side code making the POST Request 
-//             $decoded = JWT::decode($jwt, $config['secret-key'], array('HS256'));
-//             http_response_code(200);
-//             echo json_encode(array(
-//                 "Blog_data_single" => $decoded->data
-//             ));
-//         }
-//         catch (\Exception $e) {
-//             echo 'error' . $e;
-//         }
-//     }
-// }
-
-// else{
-//     http_response_code(404);
-//     echo json_encode(
-//         array("message" => "Blog With " . $_POST['Blog_unique_id'] ." Not Found!" )
-//     );
-// }
-
+    $jwt = JWT::encode($token, $config['secret-key']);
+    if($jwt){
+        try {
+            $decoded = JWT::decode($jwt, $config['secret-key'], array('HS256'));
+            http_response_code(200);
+            echo json_encode(array(
+                "singleListingData" => $decoded->data
+            ));
+        }
+        catch (\Exception $e) {
+            echo 'error' . $e;
+        }
+    }
+  }
+  
+  else{
+      http_response_code(404);
+      echo json_encode(
+          array("message" => "Sorry the  " . $_POST['propertyID'] . " and " . $_POST['propertyName'] . " Not Found!" )
+      );
+  }
 
 
 

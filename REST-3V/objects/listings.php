@@ -6,7 +6,7 @@ class Listings{
     private $conn;
     private $table_name = "listings";
     // object properties
-    public $property_id;
+    // public $property_id;
 
 
 
