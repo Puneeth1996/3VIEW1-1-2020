@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2020 at 06:51 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Jan 11, 2020 at 06:43 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -9065,7 +9065,7 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 CREATE TABLE `listings` (
   `property_id` int(11) NOT NULL,
   `house_name` varchar(40) NOT NULL,
-  `property_visuals` varchar(400) NOT NULL,
+  `property_visuals_type` varchar(400) NOT NULL,
   `date_created` date NOT NULL,
   `geospacial_data` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -9109,6 +9109,13 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `login_attempts`
+--
+
+INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
+(13, '::1', 'admin', 1578673218);
 
 -- --------------------------------------------------------
 
@@ -12997,7 +13004,11 @@ INSERT INTO `products` (`productCode`, `productName`, `productLine`, `productSca
 
 CREATE TABLE `property_file` (
   `property_id` int(11) NOT NULL,
-  `three_D_files` varchar(40) NOT NULL
+  `three_D_files` varchar(40) NOT NULL,
+  `mtl_file` varchar(155) NOT NULL,
+  `obj_file` varchar(155) NOT NULL,
+  `threeJS_iframe_url` varchar(155) NOT NULL,
+  `react360_iframe_url` varchar(155) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -13033,7 +13044,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$thCXrBTj/43/.gkspA.RMee7AuRXBWuMUY1hJt/UR29ZHIHPLq.py', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1578635305, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2y$12$thCXrBTj/43/.gkspA.RMee7AuRXBWuMUY1hJt/UR29ZHIHPLq.py', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1578673248, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'puneeth1996p@gmail.com', '$2y$12$CzlyP7FhiZdRhM5im2ICd.N8gxqj2G2vl/4htp.3F9h/i3gnOP.gW', 'puneeth1996p@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169252, 1578634540, 1, 'Puneeth', 'p', 'Gq', '+919066339217'),
 (3, '::1', 'manju@gmail.com', '$2y$10$95G8BKFQw26HQD20YdKyIuavzhtaHjbE7xobN6fnNRdcd12LsENMa', 'manju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169287, NULL, 1, 'Manju', 'SP', 'gq', '728034802389'),
 (4, '::1', 'raju@gmail.com', '$2y$10$rhRv7h9Eanxev6ofZoOGEOg1pAq8sBbjx8t5dcM/4/V3HrWa/zTKm', 'raju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577947703, 1578634565, 1, 'Raju', 'R', 'GQ', '80247025340');
@@ -13259,7 +13270,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -13289,7 +13300,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `news_table`
