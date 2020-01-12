@@ -185,4 +185,24 @@ class Home extends CI_Controller {
 		}
 	}
 
+
+
+
+
+	// 12 Jan 2020 
+	// lets build the table for listings table news table and contact form table
+	public function listings()
+	{	
+		$crud = new grocery_CRUD();
+		$crud->set_table('listings_table');
+
+		$output = $crud->render();
+
+
+		$this->load->view('template/header');
+		$this->_example_output($output);
+		$this->load->view('template/footer');
+
+	}
+
 }

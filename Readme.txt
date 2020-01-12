@@ -70,6 +70,8 @@ In Admin Page Project
 
 2 the serach button from the grcoery curd bootstrap theme is not working 
 
+3 Introduce a view which displays the user logged in and Admin ( if he is an admin )
+
 
 
 
