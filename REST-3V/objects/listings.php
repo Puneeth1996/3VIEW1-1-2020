@@ -4,9 +4,9 @@ class Listings{
 
     // database connection and table name
     private $conn;
-    private $table_name = "listings";
+    private $table_name = "listings_table";
     // object properties
-    // public $property_id;
+    public $property_id;
 
 
 
@@ -16,23 +16,24 @@ class Listings{
     }
 
     // read one-listings
-    function listingsOne($propertyID,$propertyName){
-        echo($propertyID.''.$propertyName);
+    function listingsOne($property_id){
+        // echo($property_id);
         $query = "SELECT 
                 *
             FROM 
                 ".$this->table_name."
-            WHERE propertyID LIKE1 ? AND propertyName LIKE2 ? 
+            WHERE property_id LIKE ? 
         ";
 
-
         // prepare query statement
-        $result = $this->conn->prepare($query);
+        $stmt = $this->conn->prepare($query);
 
-        // execute query
-        $result->execute([$propertyID,$propertyName]);
+        $stmt->execute([$property_id]);
 
-        return $result;
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch();
+        
+        return $row;
     }
 }
 

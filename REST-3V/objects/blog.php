@@ -65,20 +65,11 @@ class Blog{
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
-
-        // execute query
-        // $stmt->execute([$Blog_unique_id]);
-        // $stmt->execute($Blog_unique_id);
-
         $stmt->execute([$Blog_unique_id]);
 
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $row = $stmt->fetch();
-        // echo('$row-----');
-        // echo($row['Main_title'].'  and   '.$row['desp_small']);
-
-
 
         return $row;
     }

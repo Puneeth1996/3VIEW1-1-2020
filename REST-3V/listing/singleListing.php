@@ -16,33 +16,31 @@ include_once '../objects/listings.php';
 $database = new Database();
 $db = $database->getConnection();
 
-$rest_json = file_get_contents("php://input");
-$_POST = json_decode($rest_json, true);
-
-echo($_POST['propertyID'].''. $_POST['propertyName']);
-
 $listings = new Listings($db);
-$result = $listings->listingsOne($_POST['propertyID'],$_POST['propertyName']);
+$row = $listings->listingsOne($_POST['property_id']);
 
-print_r($result);
-if ($result) {
+if ($row) {
     $singleListingData=array(
-        "property_id" => $result['property_id'],
-        "house_name" => $result['house_name'],
-        "property_visuals_type" => $result['property_visuals_type'],
-        "date_created" => $result['date_created'],
-        "geospacial_data" => $result['geospacial_data'],
-        "area" => $result['area'],
-        "price" => $result['price'],
-        "property_features" => $result['property_features'],
-        "property_desc" => $result['property_desc'],
-        "property_descfull" => $result['property_descfull'],
-        "addresses" => $result['addresses'],
-        "sixDigitPIN" => $result['sixDigitPIN'],
-        "mtl_file" => $result['mtl_file'],
-        "obj_file" => $result['obj_file'],
-        "threeJS_iframe_url" => $result['threeJS_iframe_url'],
-        "react360_iframe_url" => $result['react360_iframe_url']
+        "property_id" => $row['property_id'],
+        "house_name" => $row['house_name'],
+        "property_visuals_type" => $row['property_visuals_type'],
+        "date_created" => $row['date_created'],
+        "geospacial_data" => $row['geospacial_data'],
+        "area" => $row['area'],
+        "price" => $row['price'],
+        "property_features" => $row['property_features'],
+        "property_desc" => $row['property_desc'],
+        "property_desc_full" => $row['property_desc_full'],
+        "addresses" => $row['addresses'],
+        "property_id_ref_num" => $row['property_id_ref_num'],
+        "sixDigitPIN" => $row['sixDigitPIN'],
+        "mtl_file_loc" => $row['mtl_file_loc'],
+        "obj_file_loc" => $row['obj_file_loc'],
+        "threeJS_iframe_url" => $row['threeJS_iframe_url'],
+        "react360_iframe_url" => $row['react360_iframe_url'],
+        "property_sale_availablity" => $row['property_sale_availablity'],
+        "property_legal_desc" => $row['property_legal_desc']
+
     );
 
     http_response_code(200);
@@ -68,16 +66,14 @@ if ($result) {
             echo 'error' . $e;
         }
     }
-  }
-  
-  else{
-      http_response_code(404);
-      echo json_encode(
-          array("message" => "Sorry the  " . $_POST['propertyID'] . " and " . $_POST['propertyName'] . " Not Found!" )
-      );
-  }
+}
 
-
+    else{
+        http_response_code(404);
+        echo json_encode(
+            array("message" => "Sorry the  " . $_POST['property_id'] . " Not Found!" )
+        );
+    }
 
 ?>
 

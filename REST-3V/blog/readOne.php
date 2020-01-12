@@ -1,11 +1,5 @@
 
-<?php
-
-
-// should work on this for displaying the single blog data
-
-
-// we would only need     Main_title     img     full_descr         
+<?php        
 
 $config = require __DIR__ . '/config.php';
 require __DIR__ . '/php-jwt-master/src/BeforeValidException.php';

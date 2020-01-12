@@ -13,66 +13,38 @@ export default class ListingSearchPage extends Component {
 
         this.state = {
             propertyID: '',
-            dataVerificationMessage: '',
-            propertyData: '',
+            dataVerificationMessage: 'False',
+            propertyData: [],
         }
     }
 
-    listingSearchData = (event) => {
+    listingSearchData = async (event) => {
         event.preventDefault()
         console.log("submitting the listingSearchData")
         console.log(this.state.propertyID)
 
 
-        // if(this.state.propertyID && this.state.propertyName){
-        //     const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', {
-        //         method: 'POST',
-        //         body: JSON.stringify({
-        //                 propertyID: this.state.propertyID,
-        //                 propertyName: this.state.propertyName,
-        //             }),
-        //     })
-        //     if(await response.json()){
-        //         this.setState({
-        //             successMessage: "Request Successful",
-        //         });
-
-        //         this.setState({
-        //             propertyID: '',
-        //             propertyName: '',
-        //         });
-        //     }
-        //     else{
-        //         this.setState({successMessage: "Unable To Submit the Form"});
-        //         this.setState({
-        //             propertyID: '',
-        //             propertyName: '',
-        //         });
-        //     }
-
-
-        // }
-
-        // else {
-        // this.setState({successMessage: "Fill Out the name - email - message fields!"});
-        // }
-
-
         
-        // Now its all about making the FormData for propertyID & propertyName
-        // then making the api call and then testing it out with authentication 
-        // check for the 6 digit api call once you have the listings card
-
-        //  once everything is verifyied then move to single listings page development
-
-
-        // const form = new FormData()
-        // form.set('propertyID', this.state.propertyID)
-        // const response = await axios.post('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListingData.php', form, {
-        //     headers: { 'Content-Type': 'multipart/form-data' },
-        // })
-
-        
+        const form = new FormData()
+        form.set('propertyID', this.state.propertyID)
+        const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
+            headers: { 'Content-Type': 'multipart/form-data' },
+        })
+        if(response.data){
+            this.setState({
+                propertyID: '',
+                dataVerificationMessage: 'True',
+                propertyData: response.data,
+            })
+        }
+        else {
+            this.setState({
+                propertyID: '',
+                dataVerificationMessage: 'False',
+                propertyData: [],
+            })
+        }
+        console.log(this.state.propertyData)
     }
 
     changeHandler = (event) => {
@@ -90,9 +62,6 @@ export default class ListingSearchPage extends Component {
                 <Banner>
                     Listings
                 </Banner>
-
-                
-
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
             </div>
         )
