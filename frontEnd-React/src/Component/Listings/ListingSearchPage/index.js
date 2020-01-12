@@ -13,7 +13,6 @@ export default class ListingSearchPage extends Component {
 
         this.state = {
             propertyID: '',
-            propertyName: '',
             dataVerificationMessage: '',
             propertyData: '',
         }
@@ -22,7 +21,7 @@ export default class ListingSearchPage extends Component {
     listingSearchData = (event) => {
         event.preventDefault()
         console.log("submitting the listingSearchData")
-        console.log(this.state.propertyID, this.state.propertyName)
+        console.log(this.state.propertyID)
 
 
         // if(this.state.propertyID && this.state.propertyName){

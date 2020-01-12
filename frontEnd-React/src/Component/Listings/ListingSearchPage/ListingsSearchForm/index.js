@@ -11,10 +11,6 @@ export default class ListingsSearchForm extends Component {
                 <form action="#" method="post" className={style.listingsForm}>
                     Property ID:<br/>
                     <input type="text" name="propertyID" value={propertyID} onChange={this.props.changeHandler} />
-                    <br/>
-                    Property Name:<br/>
-                    <input type="text" name="propertyName" value={propertyName} onChange={this.props.changeHandler} />
-                    <br/><br/>
                     <input type="submit" value="Search Your Home" onClick={this.props.listingSearchData} />
                 </form> 
                 
