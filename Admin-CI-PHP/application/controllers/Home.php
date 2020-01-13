@@ -36,10 +36,11 @@ class Home extends CI_Controller {
 	public function index()
 	{	
 
-
+		
 		if (!$this->ion_auth->is_admin())
 		{	
 			$this->load->view('template/header');
+			$this->load->view('template/user_info');
 			$this->load->view('index');
 			$this->load->view('template/footer');
 			
@@ -51,6 +52,7 @@ class Home extends CI_Controller {
 
 		else { 
 			$this->load->view('template/headerAdmin');
+			$this->load->view('template/user_info');
 			$this->load->view('index');
 			$this->load->view('template/footer');
 		}
@@ -67,6 +69,7 @@ class Home extends CI_Controller {
 
 
 		$this->load->view('template/header');
+		$this->load->view('template/user_info');
 		$this->_example_output($output);
 		$this->load->view('template/footer');
 
@@ -82,6 +85,7 @@ class Home extends CI_Controller {
 
 
 		$this->load->view('template/header');
+		$this->load->view('template/user_info');
 		$this->_example_output($output);
 		$this->load->view('template/footer');
 
@@ -96,6 +100,7 @@ class Home extends CI_Controller {
 
 
 		$this->load->view('template/header');
+		$this->load->view('template/user_info');
 		$this->_example_output($output);
 		$this->load->view('template/footer');
 
