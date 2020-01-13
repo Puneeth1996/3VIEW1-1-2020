@@ -26,8 +26,13 @@ export default class ListingSearchPage extends Component {
 
         
         const form = new FormData()
+<<<<<<< HEAD
         form.set('property_id', this.state.propertyID)
         const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
+=======
+        form.set('propertyID', this.state.propertyID)
+        const response = await axios.post('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
+>>>>>>> a0b199670ee2f35f1caeceeee879a081d3fcf716
             headers: { 'Content-Type': 'multipart/form-data' },
         })
         if(response.data){

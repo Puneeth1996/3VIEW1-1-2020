@@ -49,9 +49,9 @@ Work on Component for the project to full fill the UI
 
 
 
+In Front End Project 
+
 1 Secruing of iframe link dynamically changing
-
-
 
 2 iincoporate the pagination from news table
 the below link is super meanigful for our line of work
@@ -79,3 +79,47 @@ In Admin Page Project
 
 From 12.30pm 
 Started to make the new UI serach field for the Listings table 
+
+
+
+
+
+12:32 pm Monday, 13 January 2020 (IST)
+
+
+In Admin Page Project 
+
+1 and 3 task completed 
+
+
+should work on task 2 ` 2 the serach button from the grcoery curd bootstrap theme is not working 
+
+
+
+In Front End Project 
+
+1 Secruing of iframe link dynamically changing
+
+2 iincoporate the pagination from news table
+the below link is super meanigful for our line of work
+https://www.youtube.com/watch?v=S0Getpg3l_A
+
+
+3 should make the front end in listings page so to incoprate the search field as in template and then incoporate the existing listings table
+
+
+4 Should work on the pagination technique for the new_table.sql REST API And also chages to incoporated on the front end.
+
+
+
+
+
+1.    The rolling what we do section only in the HOME Page      What We Do Section
+
+
+2.    The                                                       Meet the Team Section 
+
+
+
+
+
