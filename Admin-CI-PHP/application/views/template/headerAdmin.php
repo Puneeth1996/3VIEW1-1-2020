@@ -68,7 +68,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap2">
                             <div class="logo d-block d-lg-none">
-                                <a href="#">
+                                <a href="<?php echo base_url(); ?>index.php/Home">
                                     <img src="<?php echo base_url(); ?>assets/admin/images/icon/logo-white.png" alt="CoolAdmin" />
                                 </a>
                             </div>
