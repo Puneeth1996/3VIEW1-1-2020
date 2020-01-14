@@ -64,6 +64,7 @@ class Home extends CI_Controller {
 	{	
 		$crud = new grocery_CRUD();
 		$crud->set_table('contactform');
+		// $crud->set_theme('twitter-bootstrap');
 
 		$output = $crud->render();
 
