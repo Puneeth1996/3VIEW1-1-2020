@@ -42,13 +42,14 @@ export default class specificNews extends Component {
         // console.log(this.state.NewsData)
     }
     render() {
+        
         return (
             <div>
 
                 {
                 
                 (this.state.successMessage) ? 
-                
+                    
                     <>
                         <Banner >
                             News
