@@ -84,7 +84,7 @@
         ?></div>
 
  		<div class="row">
-        	<div class="table-section">
+        	<div class="table-section" style="overflow: auto;">
                 <div class="table-label">
                     <div class="floatL l5">
                         <?php echo $subject_plural; ?>
