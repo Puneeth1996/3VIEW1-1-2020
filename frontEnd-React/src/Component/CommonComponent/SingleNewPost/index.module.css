@@ -8,11 +8,19 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+}
+.parallaxContent{
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    display: inline-block;
     align-items: center;
+    color: black;
+    margin:0 auto;
+    margin-top: 15vh;
 }
 .newsTitle{
     text-align: center;
-    margin-top: 25px;
     font-size: 30px;
     font-weight: 600;
     color: #0e1d41;
@@ -56,4 +64,30 @@
     margin-right: 8px;
     width: 18px;
     height: 18px;
+}
+
+.contentDesc{
+    margin: 150px;
+}
+.contentDesc p{
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+    color: #838383;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+
+@media only screen and (max-width: 1600px)
+{	
+    .contentDesc{
+        margin: 60px;
+    }
+    .contentDesc p{
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: 500;
+    }
 }
