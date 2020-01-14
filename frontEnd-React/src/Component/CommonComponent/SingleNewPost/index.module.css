@@ -1,7 +1,27 @@
 .parallax{
     background-color: azure;
-}
+      /* Set a specific height */
+    height: 50vh;
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+.newsTitle{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0e1d41;
+    -webkit-transition: color 200ms ease;
+    -moz-transition: color 200ms ease;
+    -ms-transition: color 200ms ease;
+    -o-transition: color 200ms ease;
+    transition: color 200ms ease;
+}
 .newMeta{
     display: flex;
     margin: 18px 0 18px 0;

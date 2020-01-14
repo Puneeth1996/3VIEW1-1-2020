@@ -8,9 +8,8 @@ export default class SingleNewPost extends Component {
         const { id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img } = this.props.blog_data.Blog_data_single
         return (
             <div className={style.SingleNewPost}>
-                <div className={style.parallax}>
-                    {Main_title}
-                
+                <div className={style.parallax} style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/News/news_1.jpg)"}}>
+                    <div className={style.newsTitle}>{Main_title}</div>             
                     <div className={style.newMeta}>
                         <div className={style.author}>
                             <div className={style.author_icon}>
@@ -29,7 +28,6 @@ export default class SingleNewPost extends Component {
                             <span>On {Publish_date}</span>
                         </div>
                     </div>
-
                 </div>
             </div>
         )
