@@ -15,7 +15,7 @@ export default class newsPage extends Component {
     
     componentDidMount(){
         axios
-            .get('http://localhost/3VIEW1-1-2020/REST-3V/blog/readAll.php')
+            .get('http://localhost:8080/3VIEW1-1-2020/REST-3V/blog/readAll.php')
             .then(res => {
                 this.setState({
                     posts: res.data.Blogs_data
