@@ -1,3 +1,39 @@
-.SingleNewPost{
+.parallax{
     background-color: azure;
+}
+
+.newMeta{
+    display: flex;
+    margin: 18px 0 18px 0;
+    justify-content: center;
+    align-items: baseline;
+}
+.newMeta div{
+    margin-right: 12px;
+}
+.newsTitle{
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0e1d41;
+    -webkit-transition: color 200ms ease;
+    -moz-transition: color 200ms ease;
+    -ms-transition: color 200ms ease;
+    -o-transition: color 200ms ease;
+    transition: color 200ms ease;
+}
+.author_icon img{
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+.category_icon img{
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+.postDate img{
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
 }
