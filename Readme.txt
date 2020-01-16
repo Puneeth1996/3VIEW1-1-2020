@@ -123,3 +123,11 @@ https://www.youtube.com/watch?v=S0Getpg3l_A
 
 
 
+
+
+
+16th Jan 2020 
+
+Should start to make the Google maps component 
+https://dev.to/jessicabetts/how-to-use-google-maps-api-and-react-js-26c2
+
