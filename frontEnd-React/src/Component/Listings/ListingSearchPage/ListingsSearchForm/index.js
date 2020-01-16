@@ -5,7 +5,7 @@ export default class ListingsSearchForm extends Component {
 
     render() {
         const divStyle = {
-            color: 'blue',
+            color: '#07122c',
             boxSizing: 'unset',
             margin: 'unset',
             border: '3px solid #fd784f',
@@ -19,8 +19,7 @@ export default class ListingsSearchForm extends Component {
                         <div className={style.search_box_title_icon}><img src={process.env.PUBLIC_URL + '/listing/search.png'} onClick={this.props.listingSearchData} /></div>
                     </div>
                     <span className={style.searchDescription}>{dataVerificationMessage}</span>
-                </form> 
-                
+                </form>
             </div>
         )
     }
