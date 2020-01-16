@@ -1,6 +1,95 @@
 .ListingsSearchForm{
-    color: black;
+
 }
 .listingsForm{
-    background-color: chartreuse;
+
+}
+
+
+
+.search_box_title{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 43.97%;
+    height: 51px;
+}
+
+.search_box_title_inner{
+    width: 100%;
+    height: 100%;
+    background: #fd784f;
+}
+
+.search_box_title_icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 51px;
+    height: 51px;
+    background: #0e1d41;
+}
+.search_box_title_inner span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 51px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: 7%;
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

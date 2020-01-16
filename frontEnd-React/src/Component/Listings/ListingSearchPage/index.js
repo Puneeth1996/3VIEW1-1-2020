@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Banner from '../../CommonComponent/Banner'
+import HeaderTitle from '../../CommonComponent/HeaderTitle'
 import ListingsSearchForm from './ListingsSearchForm'
 import style from './index.module.css'
 
@@ -64,6 +65,10 @@ export default class ListingSearchPage extends Component {
                 <Banner>
                     Listings
                 </Banner>
+                <HeaderTitle
+                    title='Search Your Home'
+                    subTitle='Enter Your Property Id.'
+                />
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
             </div>
         )
