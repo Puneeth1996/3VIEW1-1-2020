@@ -15,12 +15,13 @@ const bodyStyles = {
     background: "-moz-linear-gradient(left, transparent 0%,red 50%,transparent 100%)",    /* FF3.6+ */
     background: "linear-gradient(to bottom right,#ff5555 40%,#5555ff 100%)",
     width: "100%",
-    height: "100vh",
-    overflowX: "hidden"
+    height: "75vh",
+    overflowX: "hidden",
 }
 const headerStyles = {
     textAlign: "center",
     color:"#fff",
+    marginBottom: '75px'
 }
 const cardContainerStyles = {
     width: "300px",
@@ -63,18 +64,18 @@ const titleStyles = {
     width: "100%",
     textAlign: "center",
     position: "relative",
-    top: "-65px"
+    top: "-90px"
 };
 const subTitleStyles = {
     position: "relative",
-    top: "-55px",
+    top: "-80px",
     textAlign: "center",
     fontWeight: "100",
     color: "#888"
 };
 const bioContainerStyles = {
     position: "relative",
-    top: "-95px"
+    top: "-75px"
 };
 const bioStyles = {
     color: "#444",
@@ -83,7 +84,8 @@ const bioStyles = {
 };
 const iconsContainerStyles = {
     position: "relative",
-    textAlign: "center"
+    textAlign: "center",
+    top: "-60px"
 }
 const iconStyles = {
     margin: "0 10px",
@@ -253,7 +255,7 @@ class Card extends React.Component {
                     <CardImg imgSrc={this.props.imgSrc} />
                     <CardAvatar avatarSrc={this.props.avatarSrc} />
                     <CardTitle targetId={this.props.targetId} title={this.state.title} subTitle={this.state.subTitle} />
-                    {/* <CardBio bio={this.state.bio} /> */}
+                    <CardBio bio={this.state.bio} />
                     <CardSocialIcons />
                 </div>
                 <div style={cardBackStyles} className={style.cardBack}>
