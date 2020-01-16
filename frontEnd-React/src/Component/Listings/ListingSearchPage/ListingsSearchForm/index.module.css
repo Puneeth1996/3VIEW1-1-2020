@@ -19,6 +19,7 @@
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #fd784f;
+    margin-left: 50px;
 }
 
 .ListingsSearchForm{
@@ -26,11 +27,10 @@
 }
 
 .search_box_title_icon{
-    position: absolute;
     left: 0;
     top: 0;
     width: 51px;
-    height: 51px;
+    height: 46px;
     background: #0e1d41;
 }
 
@@ -48,7 +48,10 @@
     margin-left: 7%;
     font-family: 'Open Sans', sans-serif;
 }
+input[type=text]:text {
+    background-color: #fd784f;
+}
 
-
-
-
+input[type=text]:focus {
+    background-color: #fd784f;
+}
