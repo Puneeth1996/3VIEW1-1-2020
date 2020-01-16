@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './index.css'
+import style from './index.module.css'
 
 
 
@@ -63,11 +63,11 @@ const titleStyles = {
     width: "100%",
     textAlign: "center",
     position: "relative",
-    top: "-75px"
+    top: "-65px"
 };
 const subTitleStyles = {
     position: "relative",
-    top: "-95px",
+    top: "-55px",
     textAlign: "center",
     fontWeight: "100",
     color: "#888"
@@ -83,7 +83,6 @@ const bioStyles = {
 };
 const iconsContainerStyles = {
     position: "relative",
-    top: "-85px",
     textAlign: "center"
 }
 const iconStyles = {
@@ -195,9 +194,9 @@ class CardSocialIcons extends React.Component {
     render(){
         return (
         <div style={iconsContainerStyles} className="iconContainer">
-            <span style={iconStyles} className="icons"><i class="fab fa-facebook-square"></i></span>
-            <span style={iconStyles} className="icons"><i class="fab fa-youtube-square"></i></span>
-            <span style={iconStyles} className="icons"><i class="fab fa-twitter-square"></i></span>
+            <span style={iconStyles} className="icons"><i class="fa fa-twitter"></i></span>
+            <span style={iconStyles} className="icons"><i class="fa fa-facebook-f"></i></span>
+            <span style={iconStyles} className="icons"><i class="fa fa-instagram"></i></span>
         </div>
         )
     }
@@ -248,16 +247,16 @@ class Card extends React.Component {
     render(){
         
         return (
-            <div className="flipperContainer">
-            <div className="flipper">
-                <div style={cardContainerStyles} className="cardFront cardContainer">
+            <div className={style.flipperContainer}>
+            <div className={style.flipper}>
+                <div style={cardContainerStyles} className={`${style.cardFront} ${style.cardContainer}`}>
                     <CardImg imgSrc={this.props.imgSrc} />
                     <CardAvatar avatarSrc={this.props.avatarSrc} />
                     <CardTitle targetId={this.props.targetId} title={this.state.title} subTitle={this.state.subTitle} />
-                    <CardBio bio={this.state.bio} />
+                    {/* <CardBio bio={this.state.bio} /> */}
                     <CardSocialIcons />
                 </div>
-                <div style={cardBackStyles} className="cardBack">
+                <div style={cardBackStyles} className={style.cardBack}>
                 <img className="cardBackImg" style={cardBackImgStyles} src={this.props.cardBackImgSrc}/>
                 <p style={madeByStyles} >@AdamTheWizard</p>
                 </div>
@@ -272,17 +271,17 @@ class CardContainer extends React.Component {
     }
     render(){
         return (
-        <div style={bodyStyles} className="body">
-            <h1 style={headerStyles} className="header">Hover to flip</h1>
-            <div className="flex">
+        <div style={bodyStyles} className={style.body}>
+            <h1 style={headerStyles} className="header">Meet Our Team</h1>
+            <div className={style.flex}>
             
             <Card imgSrc="http://1.bp.blogspot.com/-tso_pF4jEdU/UPC4zDXEY6I/AAAAAAAAAhE/Vb2Cd8nRZEo/s1600/a.jpg" avatarSrc="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-avatar-sam-worthington.jpg" cardBackImgSrc="https://i.pinimg.com/564x/1e/7e/4d/1e7e4d11c01e57f32410ece8c1961646.jpg" targetId="navi" />
             
             {/* <Card type="wick" imgSrc="https://orig00.deviantart.net/db12/f/2012/038/5/0/blood_splatter_background_by_pudgey77-d4ozy89.jpg" avatarSrc="https://d3c1jucybpy4ua.cloudfront.net/data/35521/big_picture/John_Wick.jpg?1428558984" cardBackImgSrc="https://i.pinimg.com/736x/b1/2d/9f/b12d9f259a178fc9dc7bfb6447be7a1c.jpg"/>
             
-            <Card type="groot" imgSrc="https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/174849.jpg" avatarSrc="https://i.pinimg.com/originals/74/4d/b3/744db3fd9842133829be6e0182c3d62d.jpg" cardBackImgSrc="https://pre00.deviantart.net/0274/th/pre/i/2014/357/0/d/guardians_of_the_galaxy___groot_poster__acrylic__by_cybergal2013-d8aydlf.jpg"/>
+            <Card type="groot" imgSrc="https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/174849.jpg" avatarSrc="https://i.pinimg.com/originals/74/4d/b3/744db3fd9842133829be6e0182c3d62d.jpg" cardBackImgSrc="https://pre00.deviantart.net/0274/th/pre/i/2014/357/0/d/guardians_of_the_galaxy___groot_poster__acrylic__by_cybergal2013-d8aydlf.jpg"/> */}
             
-            <Card type="hitgirl" imgSrc="https://media.giphy.com/media/Y6pDMTysYTQ2I/giphy.gif" avatarSrc="https://66.media.tumblr.com/dcf6558ccad075ce4cca03cc1d972f97/tumblr_phhrt8PrRE1tc5gvpo4_250.png" cardBackImgSrc="https://i.pinimg.com/564x/22/f1/3e/22f13ea035bc11beeeb1349550fb3170.jpg"/> */}
+            <Card type="hitgirl" imgSrc="https://media.giphy.com/media/Y6pDMTysYTQ2I/giphy.gif" avatarSrc="https://66.media.tumblr.com/dcf6558ccad075ce4cca03cc1d972f97/tumblr_phhrt8PrRE1tc5gvpo4_250.png" cardBackImgSrc="https://i.pinimg.com/564x/22/f1/3e/22f13ea035bc11beeeb1349550fb3170.jpg"/>
             </div>
         </div>
         )
