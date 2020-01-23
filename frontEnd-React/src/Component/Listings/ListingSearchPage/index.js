@@ -6,6 +6,11 @@ import style from './index.module.css'
 
 import axios from 'axios'
 
+
+import ListingsCardDetail from './ListingsCardDetail'
+
+
+
 export default class ListingSearchPage extends Component {
 
 
@@ -70,6 +75,16 @@ export default class ListingSearchPage extends Component {
                     subTitle='Enter Your Property Id.'
                 />
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
+
+                {   
+                    this.state.dataVerificationMessage === "True" ? 
+                        <ListingsCardDetail />
+                    :
+                    <>
+                        <h1>Nothing to Display</h1>
+                    </>
+                }
+                
             </div>
         )
     }
