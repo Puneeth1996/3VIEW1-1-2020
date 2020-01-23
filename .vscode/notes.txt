@@ -8,3 +8,10 @@ We should require one row
 Make a post request for the blog_unique_id 
 
 Which returns the values for the News Post and 
+
+
+
+23-1-2020
+
+Starting to make the single listing component from the propertyID details entered in serach field and the listings Card will be displayed else nothing
+
