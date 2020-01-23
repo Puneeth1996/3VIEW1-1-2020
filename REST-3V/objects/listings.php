@@ -21,7 +21,7 @@ class Listings{
         $query = "SELECT 
                 *
             FROM 
-                ".$this->table_name."
+                '.$this->table_name.'
             WHERE property_id LIKE ? 
         ";
 

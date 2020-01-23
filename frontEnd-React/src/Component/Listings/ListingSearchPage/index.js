@@ -24,17 +24,19 @@ export default class ListingSearchPage extends Component {
         }
     }
 
+
+
+
+    
     listingSearchData = async (event) => {
         event.preventDefault()
-        console.log("submitting the listingSearchData")
-        console.log(this.state.propertyID)
+        // console.log("submitting the listingSearchData")
+        // console.log(this.state.propertyID)
 
 
         
         const form = new FormData()
         form.set('property_id', this.state.propertyID)
-
-        form.set('propertyID', this.state.propertyID)
         const response = await axios.post('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
@@ -52,8 +54,10 @@ export default class ListingSearchPage extends Component {
                 propertyData: [],
             })
         }
-        console.log(this.state.propertyData)
+        // console.log(this.state.propertyData)
     }
+
+
 
     changeHandler = (event) => {
         const name = event.target.name;
@@ -64,7 +68,11 @@ export default class ListingSearchPage extends Component {
         });
     }
 
+
     render() {
+        // console.log(this.state.dataVerificationMessage)
+        // console.log(this.state.propertyID)
+        // console.log(this.state.propertyData)
         return (
             <div>
                 <Banner>
@@ -77,7 +85,7 @@ export default class ListingSearchPage extends Component {
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
 
                 {   
-                    this.state.dataVerificationMessage === "True" ? 
+                    this.state.dataVerificationMessage!='False' ? 
                         <ListingsCardDetail />
                     :
                     <>

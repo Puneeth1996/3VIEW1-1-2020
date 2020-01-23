@@ -17,7 +17,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 $listings = new Listings($db);
-$row = $listings->listingsOne($_POST['property_id']);
+$row = $listings->listingsOne(!isset($_POST['property_id'])? '' :  isset($_POST['property_id']));
 
 if ($row) {
     $singleListingData=array(
@@ -71,7 +71,7 @@ if ($row) {
     else{
         http_response_code(404);
         echo json_encode(
-            array("message" => "Sorry the  " . $_POST['property_id'] . " Not Found!" )
+            array("message" => "Sorry the  " . !isset($_POST['property_id'])? '' :  isset($_POST['property_id']) . " Not Found!" )
         );
     }
 
