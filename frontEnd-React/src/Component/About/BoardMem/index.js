@@ -196,9 +196,9 @@ class CardSocialIcons extends React.Component {
     render(){
         return (
         <div style={iconsContainerStyles} className="iconContainer">
-            <span style={iconStyles} className="icons"><i class="fa fa-twitter"></i></span>
-            <span style={iconStyles} className="icons"><i class="fa fa-facebook-f"></i></span>
-            <span style={iconStyles} className="icons"><i class="fa fa-instagram"></i></span>
+            <span style={iconStyles} className="icons"><i className="fa fa-twitter"></i></span>
+            <span style={iconStyles} className="icons"><i className="fa fa-facebook-f"></i></span>
+            <span style={iconStyles} className="icons"><i className="fa fa-instagram"></i></span>
         </div>
         )
     }
