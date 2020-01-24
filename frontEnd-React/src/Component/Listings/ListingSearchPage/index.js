@@ -88,7 +88,7 @@ export default class ListingSearchPage extends Component {
 
                 {   
                     (this.state.dataVerificationMessage!="False") ? 
-                        <ListingsCardDetail />
+                        <ListingsCardDetail listingData={this.state.propertyData}/>
                     :
                     <>
                         <h1>Nothing to Display</h1>

@@ -23,6 +23,11 @@ export default class HorizontalCard extends Component {
         window.removeEventListener('resize', this.updateUIHeader)
     }
     render() {
+        console.log(this.props.listingData.singleListingData)
+        const { property_id,house_name,property_visuals_type,date_created,geospacial_data,area,price,property_features,property_desc,property_desc_full,addresses,property_id_ref_num,sixDigitPIN,mtl_file_loc,obj_file_loc,threeJS_iframe_url,react360_iframe_url,property_sale_availablity,property_legal_desc } = this.props.listingData.singleListingData
+        // console.log(property_id)
+        // console.log(obj_file_loc)
+        // console.log(geospacial_data)
         return (
             <>
             {
