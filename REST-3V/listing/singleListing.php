@@ -24,7 +24,6 @@ if ($row) {
         "property_id" => $row['property_id'],
         "house_name" => $row['house_name'],
         "property_visuals_type" => $row['property_visuals_type'],
-        "property_img_loc" => $row['property_img_loc'],
         "date_created" => $row['added_time'],
         "geospacial_data" => $row['geospacial_data'],
         "area" => $row['area'],

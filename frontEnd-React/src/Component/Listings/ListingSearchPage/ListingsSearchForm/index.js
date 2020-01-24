@@ -20,7 +20,7 @@ export default class ListingsSearchForm extends Component {
                         <input style={divStyle} className={style.searchTerm} type="text" name="propertyID" value={propertyID} onChange={this.props.changeHandler}/>
                         <div className={style.search_box_title_icon}><img src={process.env.PUBLIC_URL + '/listing/search.png'} onClick={this.props.listingSearchData} /></div>
                     </div>
-                    {/* <span className={style.searchDescription}>{dataVerificationMessage}</span> */}
+                    <span className={style.searchDescription}>{dataVerificationMessage}</span>
                     {/* Using this data verification as to be source for displaying the Listings card  */}
                 </form>
 
