@@ -20,6 +20,10 @@ Starting to make the single listing component from the propertyID details entere
 24-1-2020
 
 1 Now should make the singleListingsComponet Dynamica with the data and should add a small field for veryfication of 6digit pin 
+https://www.npmjs.com/package/react-code-input
+https://www.npmjs.com/package/react-verification-code-input
+
+
 
 2 The serach input makes the post request when enter button is pressed also.
 
