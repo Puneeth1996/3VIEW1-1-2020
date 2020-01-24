@@ -15,3 +15,17 @@ Which returns the values for the News Post and
 
 Starting to make the single listing component from the propertyID details entered in serach field and the listings Card will be displayed else nothing
 
+
+
+24-1-2020
+
+1 Now should make the singleListingsComponet Dynamica with the data and should add a small field for veryfication of 6digit pin 
+
+2 The serach input makes the post request when enter button is pressed also.
+
+
+
+-- Once the above two tasks are done you should start to make out with specificListingPage from the details of the listingsCard and there iframes link which holds all the innerview and outter View 
+
+
+-- After all these there should be a map component that takes lat and long parameter then displays a responsive map component.
