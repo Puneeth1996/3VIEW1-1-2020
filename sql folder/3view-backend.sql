@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 08:46 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jan 24, 2020 at 10:30 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,7 +45,9 @@ INSERT INTO `contactform` (`id`, `name`, `email`, `telephone`, `message`, `time`
 (60, 'PUNEETH P', 'puneeth1996p@gmail.com', 2147483647, 'asdf asdfa )(*)(*())(*)(*()*(*)(*)OIJlkjsdlfkjlkjasdflkjsdlkjfsaf', '2020-01-08 21:20:14'),
 (61, 'PUNEETH P', 'puneeth1996p@gmail.com', 0, 'fasdf asdf asd)U()*&*&(&(^&sfasdfasdf asdf as', '2020-01-08 21:20:30'),
 (63, 'PUNEETH P', 'puneeth1996p@gmail.com', 2147483647, '3443trwsfa', '2020-01-12 13:16:17'),
-(64, 'PUNEETH P', 'puneeth1996p@gmail.com', 0, 'wer wer', '2020-01-12 13:16:21');
+(64, 'PUNEETH P', 'puneeth1996p@gmail.com', 0, 'wer wer', '2020-01-12 13:16:21'),
+(65, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '2342344df asdfa sd', '2020-01-13 12:10:43'),
+(66, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'fad asdf a1234 234', '2020-01-13 12:10:48');
 
 -- --------------------------------------------------------
 
@@ -77,7 +79,7 @@ CREATE TABLE `listings_table` (
   `property_id` int(15) NOT NULL,
   `house_name` varchar(155) NOT NULL,
   `property_visuals_type` varchar(155) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `geospacial_data` varchar(155) NOT NULL,
   `area` varchar(155) NOT NULL,
   `price` varchar(155) NOT NULL,
@@ -100,7 +102,7 @@ CREATE TABLE `listings_table` (
 --
 
 INSERT INTO `listings_table` (`property_id`, `house_name`, `property_visuals_type`, `date_created`, `geospacial_data`, `area`, `price`, `property_features`, `property_desc`, `property_desc_full`, `addresses`, `property_id_ref_num`, `sixDigitPIN`, `mtl_file_loc`, `obj_file_loc`, `threeJS_iframe_url`, `react360_iframe_url`, `property_sale_availablity`, `property_legal_desc`) VALUES
-(1, 'RamaKrishna Nilayam', 'House To Be Visulaised', '2020-01-12 07:28:00', '[123,21]', '1234', '0309-', '[\'Hot Tub\', \'4 car garage\']', 'New And Modern', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 562158, 544589, 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
+(1, 'RamaKrishna Nilayam', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', '[\'Hot Tub\', \'4 car garage\']', 'New And Modern', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 562158, 544589, 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
 
 -- --------------------------------------------------------
 
@@ -114,14 +116,6 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(17, '::1', 'puneethp123@gmail.com', 1578805302),
-(18, '::1', 'admin', 1578814947);
 
 -- --------------------------------------------------------
 
@@ -186,8 +180,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$thCXrBTj/43/.gkspA.RMee7AuRXBWuMUY1hJt/UR29ZHIHPLq.py', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1578814959, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '::1', 'puneeth1996p@gmail.com', '$2y$12$CzlyP7FhiZdRhM5im2ICd.N8gxqj2G2vl/4htp.3F9h/i3gnOP.gW', 'puneeth1996p@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169252, 1578805324, 1, 'Puneeth', 'p', 'Gq', '+919066339217'),
+(1, '127.0.0.1', 'administrator', '$2y$12$thCXrBTj/43/.gkspA.RMee7AuRXBWuMUY1hJt/UR29ZHIHPLq.py', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1578991518, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(2, '::1', 'puneeth1996p@gmail.com', '$2y$12$CzlyP7FhiZdRhM5im2ICd.N8gxqj2G2vl/4htp.3F9h/i3gnOP.gW', 'puneeth1996p@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169252, 1578987650, 1, 'Puneeth', 'p', 'Gq', '+919066339217'),
 (3, '::1', 'manju@gmail.com', '$2y$10$95G8BKFQw26HQD20YdKyIuavzhtaHjbE7xobN6fnNRdcd12LsENMa', 'manju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577169287, NULL, 1, 'Manju', 'SP', 'gq', '728034802389'),
 (4, '::1', 'raju@gmail.com', '$2y$10$rhRv7h9Eanxev6ofZoOGEOg1pAq8sBbjx8t5dcM/4/V3HrWa/zTKm', 'raju@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1577947703, 1578722323, 1, 'Raju', 'R', 'GQ', '80247025340');
 
@@ -277,7 +271,7 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `groups`
@@ -295,7 +289,7 @@ ALTER TABLE `listings_table`
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `news_table`

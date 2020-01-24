@@ -15,7 +15,7 @@ export default class Listings extends Component {
 
             <Switch>
                 <Route exact path='/Listings' component={ListingSearchPage}/>
-                {/* <Route path='/Listings/:number' component={SpecificListing}/> */}
+                <Route path='/Listings/:number' component={SpecificListing}/>
             </Switch>
         )
     }
