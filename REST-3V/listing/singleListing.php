@@ -69,10 +69,13 @@ if ($row) {
 }
 
     else{
-        http_response_code(404);
-        echo json_encode(
-            array("message" => "Sorry the  " . $_POST['property_id'] . " Not Found!" )
-        );
+        // http_response_code(404);
+        // echo json_encode(
+        //     array("message" => "Sorry the  " . $_POST['property_id'] . " Not Found!" )
+        // );
+        echo json_encode(array(
+            "singleListingData" => "" 
+        ));
     }
 
 ?>
