@@ -21,7 +21,7 @@ export default class ContactForm extends Component {
         if(this.state.name && this.state.email && this.state.message){
 
 
-          const response = await fetch('http://localhost/3VIEW1-1-2020/REST-3V/contactForm/core_php2.php', {
+          const response = await fetch('http://localhost:8080/3VIEW1-1-2020/REST-3V/contactForm/core_php2.php', {
               method: 'POST',
               body: JSON.stringify({
                       name: this.state.name,

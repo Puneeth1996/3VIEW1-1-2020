@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2020 at 10:30 AM
+-- Generation Time: Jan 27, 2020 at 06:01 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -76,8 +76,11 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 --
 
 CREATE TABLE `listings_table` (
+  `id` int(11) NOT NULL,
+  `added_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `property_id` int(15) NOT NULL,
   `house_name` varchar(155) NOT NULL,
+  `property_img_loc` varchar(250) NOT NULL,
   `property_visuals_type` varchar(155) NOT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `geospacial_data` varchar(155) NOT NULL,
@@ -101,8 +104,8 @@ CREATE TABLE `listings_table` (
 -- Dumping data for table `listings_table`
 --
 
-INSERT INTO `listings_table` (`property_id`, `house_name`, `property_visuals_type`, `date_created`, `geospacial_data`, `area`, `price`, `property_features`, `property_desc`, `property_desc_full`, `addresses`, `property_id_ref_num`, `sixDigitPIN`, `mtl_file_loc`, `obj_file_loc`, `threeJS_iframe_url`, `react360_iframe_url`, `property_sale_availablity`, `property_legal_desc`) VALUES
-(1, 'RamaKrishna Nilayam', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', '[\'Hot Tub\', \'4 car garage\']', 'New And Modern', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 562158, 544589, 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
+INSERT INTO `listings_table` (`id`, `added_time`, `property_id`, `house_name`, `property_img_loc`, `property_visuals_type`, `date_created`, `geospacial_data`, `area`, `price`, `property_features`, `property_desc`, `property_desc_full`, `addresses`, `property_id_ref_num`, `sixDigitPIN`, `mtl_file_loc`, `obj_file_loc`, `threeJS_iframe_url`, `react360_iframe_url`, `property_sale_availablity`, `property_legal_desc`) VALUES
+(1, '2020-01-24 11:06:01', 1, 'RamaKrishna Nilayam', 'images/Listings/city_3.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 562158, 544589, 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
 
 -- --------------------------------------------------------
 
@@ -229,7 +232,7 @@ ALTER TABLE `groups`
 -- Indexes for table `listings_table`
 --
 ALTER TABLE `listings_table`
-  ADD PRIMARY KEY (`property_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `login_attempts`
@@ -283,7 +286,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `listings_table`
 --
 ALTER TABLE `listings_table`
-  MODIFY `property_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `login_attempts`

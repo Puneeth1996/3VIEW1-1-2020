@@ -24,7 +24,15 @@ export default class ListingsCardDetail extends Component {
     }
     render() {
         console.log(this.props.listingData.singleListingData)
-        const { property_id, house_name, property_visuals_type, date_created, geospacial_data, area, price, property_features, property_desc, property_desc_full, addresses, property_id_ref_num, sixDigitPIN, mtl_file_loc, obj_file_loc, threeJS_iframe_url, react360_iframe_url, property_sale_availablity, property_legal_desc } = this.props.listingData.singleListingData
+        const { property_id, house_name, property_img_loc, property_visuals_type, date_created, geospacial_data, area, price, property_features, property_desc, property_desc_full, addresses, property_id_ref_num, sixDigitPIN, mtl_file_loc, obj_file_loc, threeJS_iframe_url, react360_iframe_url, property_sale_availablity, property_legal_desc } = this.props.listingData.singleListingData
+        
+        
+        
+        // this below split method is used creating a rray from the value from db
+        var arrFeatures = (property_features.split("|"))
+
+
+
         return (
             <>
             {
@@ -32,14 +40,14 @@ export default class ListingsCardDetail extends Component {
                 <>
                     <div className={style.card}>
                         <div className={style.cardImage}>
-                            <img src="images/Listings/city_3.jpg" alt="" />
+                            <img src={property_img_loc} alt="" />
                         </div>
                         <div className={style.container}>
-                            <h3><b>House in West California</b></h3> 
-                            <p style={{marginBottom: 15}}>Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor.</p>
+                            <h3><b>{house_name}</b></h3> 
+                            <p style={{marginBottom: 15}}>{property_desc}</p>
                             <hr/>
                         </div>
-                        <TagFeature tag={['Hot Tub', 'Swimming Pool', 'Garden', 'Patio', 'Hard Wood Floor']} className={style.TagFeature}/>
+                        <TagFeature tag={arrFeatures} className={style.TagFeature}/>
                     </div>
                 </>
                 
@@ -47,13 +55,13 @@ export default class ListingsCardDetail extends Component {
                 <>
                     <div className={style.card}>
                         <div className={style.cardImage}>
-                            <img src="images/Listings/city_3.jpg" alt="" />
+                            <img src={property_img_loc} alt="" />
                         </div>
                         <div className={style.container}>
-                            <h3><b>House in West California</b></h3> 
-                            <p style={{marginBottom: 15}}>Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor.</p>
+                            <h3><b>{house_name}</b></h3> 
+                            <p style={{marginBottom: 15}}>{property_desc}</p>
                             <hr/> 
-                            <TagFeature tag={['Hot Tub', 'Swimming Pool', 'Garden', 'Patio', 'Hard Wood Floor']} />
+                            <TagFeature tag={arrFeatures} />
                         </div>
                     </div>                
                 </>
