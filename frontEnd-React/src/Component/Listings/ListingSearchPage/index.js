@@ -29,34 +29,28 @@ export default class ListingSearchPage extends Component {
 
     
     listingSearchData = async (event) => {
-        event.preventDefault()
-        // console.log("submitting the listingSearchData")
-        // console.log(this.state.propertyID)
-
-
-        
+        event.preventDefault()        
         const form = new FormData()
         form.set('property_id', this.state.propertyID)
-        const response = await axios.post('http://localhost:8080/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
+        const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
-        if(!response.data){
+        // console.log(response.data)
+        if(response.data.singleListingData==""){
             this.setState({
                 propertyID: '',
                 dataVerificationMessage: 'False',
                 propertyData: [],
             })
         }
-        this.setState({
-            propertyID: '',
-            dataVerificationMessage: 'True',
-            propertyData: response.data,
-        })
-        if(this.state.propertyData["singleListingData"]==""){
+        else{
             this.setState({
-                dataVerificationMessage: 'False',
+                propertyID: '',
+                dataVerificationMessage: 'True',
+                propertyData: response.data,
             })
         }
+
     }
 
 
@@ -64,17 +58,14 @@ export default class ListingSearchPage extends Component {
     changeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-
         this.setState({
             [name]: value
         });
     }
 
 
-    render() {        
-        // console.log(this.state.propertyID)
-        // console.log(this.state.propertyData)
-
+    render() {
+        // console.log(this.state)
         return (
             <div>
                 <Banner>
@@ -85,16 +76,17 @@ export default class ListingSearchPage extends Component {
                     subTitle='Enter Your Property Id.'
                 />
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
-
+                
                 {   
-                    (this.state.dataVerificationMessage!="False") ? 
-                        <ListingsCardDetail listingData={this.state.propertyData}/>
+                    (this.state.dataVerificationMessage=="False") ? 
+                        <h1>Nothing to Display</h1>
                     :
                     <>
-                        <h1>Nothing to Display</h1>
+                        <ListingsCardDetail listingData={this.state.propertyData}/>
                     </>
                 }
                 
+
             </div>
         )
     }
