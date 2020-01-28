@@ -10,10 +10,10 @@ import style from './index.module.css'
 
 // Styles
 const bodyStyles = {
-    background: "-webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(50%,red), color-stop(100%,transparent))",
-    background: "-webkit-linear-gradient(left, transparent 0%,red 50%,transparent 100%)", /* Chrome10+, Safari5.1+ */
-    background: "-moz-linear-gradient(left, transparent 0%,red 50%,transparent 100%)",    /* FF3.6+ */
-    background: "linear-gradient(to bottom right,#ff5555 40%,#5555ff 100%)",
+    background: "-webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(50%,#e7a7a7), color-stop(100%,transparent))",
+    background: "-webkit-linear-gradient(left, transparent 0%,#e7a7a7 50%,transparent 100%)", /* Chrome10+, Safari5.1+ */
+    background: "-moz-linear-gradient(left, transparent 0%,#e7a7a7 50%,transparent 100%)",    /* FF3.6+ */
+    background: "linear-gradient(to bottom right,#e7a7a7 40%,#bdbdd6 100%)",
     width: "100%",
     height: "75vh",
     overflowX: "hidden",
