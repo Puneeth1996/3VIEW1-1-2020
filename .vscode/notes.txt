@@ -33,3 +33,13 @@ https://www.npmjs.com/package/react-verification-code-input
 
 
 -- After all these there should be a map component that takes lat and long parameter then displays a responsive map component.
+
+
+
+
+
+
+28 Jan 2020 
+
+
+Should change the UI of the Board Members section in the about page
