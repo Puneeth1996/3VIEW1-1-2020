@@ -1,3 +1,14 @@
+.PersonCardRow{
+    background-color: darkgrey;
+    text-align: center;
+}
+
+
+.PersonCard{
+    margin: 25px;
+    display: inline-block;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -19,25 +30,13 @@
     width: 100%;
 }
 
-.contactBtn {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
 .linkTag {
     text-decoration: none;
     font-size: 22px;
     color: black;
+    margin-right: 35px;
 }
 
-.contactBtn:hover, .linkTag:hover {
+.linkTag:hover {
     opacity: 0.7;
 }
