@@ -60,3 +60,8 @@ Inroducing the 6 digit pin
 
 https://www.npmjs.com/package/react-code-input
 https://www.npmjs.com/package/react-verification-code-input
+
+
+Also Upcomming 
+3 Creating a new map component
+-- After all these there should be a map component that takes lat and long parameter then displays a responsive map component.
