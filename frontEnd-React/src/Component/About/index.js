@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Banner from '../CommonComponent/Banner'
 import IntroComp from './IntroComp'
-import BoardMem from './BoardMem'
-
+import BoardMemb from './BoardMemb'
 export default class About extends Component {
     render() {
         return (
@@ -11,7 +10,7 @@ export default class About extends Component {
                     About
                 </Banner>
                 <IntroComp />
-                <BoardMem />
+                <BoardMemb />
             </div>
         )
     }
