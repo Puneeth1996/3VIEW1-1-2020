@@ -15,9 +15,9 @@ export default class ListingsSearchForm extends Component {
         const { propertyID,dataVerificationMessage } = this.props.searchData
         return (
             <div className={style.ListingsSearchForm}>
-                <form method="POST" className={style.listingsForm}>
+                <form method="POST" onSubmit={this.props.listingSearchData} className={style.listingsForm}>
                     <div className={style.search}>
-                        <input style={divStyle} className={style.searchTerm} type="text" name="propertyID" value={propertyID} onChange={this.props.changeHandler}/>
+                        <input style={divStyle} className={style.searchTerm} type="text" name="propertyID" value={propertyID} onChange={this.props.changeHandler} />
                         <div className={style.search_box_title_icon}><img src={process.env.PUBLIC_URL + '/listing/search.png'} onClick={this.props.listingSearchData} /></div>
                     </div>
                     {/* <span className={style.searchDescription}>{dataVerificationMessage}</span> */}

@@ -32,6 +32,8 @@ https://www.npmjs.com/package/react-verification-code-input
 -- Once the above two tasks are done you should start to make out with specificListingPage from the details of the listingsCard and there iframes link which holds all the innerview and outter View 
 
 
+
+3 Creating a new map component
 -- After all these there should be a map component that takes lat and long parameter then displays a responsive map component.
 
 
@@ -43,3 +45,18 @@ https://www.npmjs.com/package/react-verification-code-input
 
 
 Should change the UI of the Board Members section in the about page
+
+29 Jan 2020 
+Have successfully changed the UI for the Board Members
+
+
+Have fixed the form submittion 
+react-prevent-form-submission-when-enter-is-pressed-inside-input
+https://stackoverflow.com/questions/43750335/react-prevent-form-submission-when-enter-is-pressed-inside-input
+
+
+NeXt 
+Inroducing the 6 digit pin 
+
+https://www.npmjs.com/package/react-code-input
+https://www.npmjs.com/package/react-verification-code-input
