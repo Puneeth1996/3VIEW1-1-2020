@@ -22,7 +22,7 @@ export default class specificNews extends Component {
 
         const form = new FormData()
         form.set('Blog_unique_id', this.props.match.params.string)
-        const response = await axios.post('http://localhost:8080/3VIEW1-1-2020/REST-3V/blog/readOne.php', form, {
+        const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/blog/readOne.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
         // console.log(response.data)
