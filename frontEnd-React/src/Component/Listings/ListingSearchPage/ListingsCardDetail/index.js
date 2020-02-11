@@ -3,6 +3,12 @@ import TagFeature from '../../../CommonComponent/TagFeature'
 
 import style from './index.module.css'
 
+
+
+import ReactCodeInput from 'react-code-input'
+
+
+
 export default class ListingsCardDetail extends Component {
     constructor(props) {
         super(props);
@@ -44,6 +50,7 @@ export default class ListingsCardDetail extends Component {
                             <hr/>
                         </div>
                         <TagFeature tag={arrFeatures} className={style.TagFeature}/>
+                        <ReactCodeInput type='password' fields={6} />
                     </div>
                 </>
                 
@@ -58,6 +65,7 @@ export default class ListingsCardDetail extends Component {
                             <p style={{marginBottom: 15}}>{property_desc}</p>
                             <hr/> 
                             <TagFeature tag={arrFeatures} />
+                            <ReactCodeInput type='password' fields={6} />
                         </div>
                     </div>                
                 </>
