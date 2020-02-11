@@ -78,6 +78,7 @@ Also Upcomming
     "react-code-input": "^3.9.0",
 
 
+
 Having to use this component 
 Now,
             1.Now validate the pin coming from the db through api 
@@ -89,3 +90,9 @@ Now,
 singleListingsComponet will contain the innerview and outerview 
 
 the threeView And ThreeJS code can be embedded from individual source hosted in the server 
+
+
+
+Working from 2.40pm 
+
+The alignment for the tagFeatures and react-code-input  div are not proper when the size of the screen is small.
