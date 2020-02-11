@@ -96,3 +96,6 @@ the threeView And ThreeJS code can be embedded from individual source hosted in 
 Working from 2.40pm 
 
 The alignment for the tagFeatures and react-code-input  div are not proper when the size of the screen is small.
+
+
+Take some time and rebuild the listingsCardDetails component
