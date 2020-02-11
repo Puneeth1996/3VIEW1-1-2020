@@ -65,3 +65,27 @@ https://www.npmjs.com/package/react-verification-code-input
 Also Upcomming 
 3 Creating a new map component
 -- After all these there should be a map component that takes lat and long parameter then displays a responsive map component.
+
+
+
+
+
+
+
+11 Feb 2020 
+
+
+    "react-code-input": "^3.9.0",
+
+
+Having to use this component 
+Now,
+            1.Now validate the pin coming from the db through api 
+
+            2.Once successfully simple put the user to singleListingsComponet 
+
+
+
+singleListingsComponet will contain the innerview and outerview 
+
+the threeView And ThreeJS code can be embedded from individual source hosted in the server 
