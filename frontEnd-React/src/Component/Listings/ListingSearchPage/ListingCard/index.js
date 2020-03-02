@@ -45,11 +45,9 @@ class ListingCard extends Component {
                     </div>
                     {
                         this.state.refire?
-                        <Redirect to='/About' />:
+                        <Redirect to={'/Listings/'+property_id} />:
                         <ReactCodeInput type='password' fields={6} onChange={this.checkValidity} />
-
-                    }
-                    
+                    }                    
                     <TagFeature tag={arrFeatures} className={style.TagFeature}/>
                 </div>
             </div>

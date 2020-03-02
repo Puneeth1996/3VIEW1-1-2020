@@ -112,4 +112,9 @@ before moving towards functionality make sure to redesign the card and make to f
 
 
 12.30pm 
-Can be implementing the functionality for the 6 sixDigitPIN 
+Can be implementing the functionality for the 6 sixDigitPIN
+
+
+Till 2.30pm 
+
+should be making the singleListingsComponet
