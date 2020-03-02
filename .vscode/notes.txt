@@ -125,3 +125,8 @@ Componet tree in SpecificListing
     1, Banner 
     2, switch between inner and out View
     3, Google map component in rect (Think about this again)
+
+
+till 4pm 
+
+Start working on making the iframes component that takes in the url and shows the full view versions of both View.
