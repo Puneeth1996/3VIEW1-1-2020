@@ -118,3 +118,5 @@ Can be implementing the functionality for the 6 sixDigitPIN
 Till 2.30pm 
 
 should be making the singleListingsComponet
+
+Now Commping to SpecificListing
