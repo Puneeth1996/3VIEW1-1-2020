@@ -120,3 +120,8 @@ Till 2.30pm
 should be making the singleListingsComponet
 
 Now Commping to SpecificListing
+
+Componet tree in SpecificListing
+    1, Banner 
+    2, switch between inner and out View
+    3, Google map component in rect (Think about this again)

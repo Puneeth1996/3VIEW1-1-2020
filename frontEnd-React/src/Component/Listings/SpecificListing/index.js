@@ -18,7 +18,8 @@ export default class SpecificListing extends Component {
                         <>  
                             <Banner>
                                 Specific Listing {uniqueURLNo}
-                            </Banner> 
+                            </Banner>
+                            
                         </>
                     ) :
 
