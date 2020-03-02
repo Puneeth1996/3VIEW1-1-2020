@@ -108,3 +108,8 @@ Take some time and rebuild the listingsCardDetails component
 sixDigitPIN from the database should be enetered before the screen is made to redirect to    specificListingPage
 
 before moving towards functionality make sure to redesign the card and make to fit with react-code-input package
+
+
+
+12.30pm 
+Can be implementing the functionality for the 6 sixDigitPIN 
