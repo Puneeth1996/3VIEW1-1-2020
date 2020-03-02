@@ -20,8 +20,8 @@ class ListingCard extends Component {
                         <h4><b>John Doe</b></h4> 
                         <p>Architect and Engineer</p> 
                     </div>
+                    <TagFeature tag={arrFeatures} className={style.TagFeature}/>
                 </div>
-                <TagFeature tag={arrFeatures} className={style.TagFeature}/>
             </div>
         );
     }
