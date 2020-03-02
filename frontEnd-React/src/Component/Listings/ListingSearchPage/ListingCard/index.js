@@ -12,17 +12,17 @@ class ListingCard extends Component {
         var arrFeatures = property_features.split("|")
 
         return (
-            <>
+            <div className={style.Listingcard}>
                 <h2>{house_name}</h2>
-                <div class="card">
-                    <img src={property_img_loc} alt="Avatar" style={{width:'100%',}}/>
-                    <div class="container">
+                <div className={style.card}>
+                    <img src={property_img_loc} alt="Avatar" className={style.cardImage}/>
+                    <div className={style.container}>
                         <h4><b>John Doe</b></h4> 
                         <p>Architect and Engineer</p> 
                     </div>
                 </div>
                 <TagFeature tag={arrFeatures} className={style.TagFeature}/>
-            </>
+            </div>
         );
     }
 }
