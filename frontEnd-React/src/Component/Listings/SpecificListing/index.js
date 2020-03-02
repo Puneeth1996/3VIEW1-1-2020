@@ -4,6 +4,9 @@ import NotFound from '../../NotFound'
 import Banner from '../../CommonComponent/Banner'
 import axios from 'axios'
 
+import InnerView from './InnerView'
+import OuterView from './OuterView'
+
 export default class SpecificListing extends Component {
     constructor(props) {
         super(props)
@@ -58,12 +61,12 @@ export default class SpecificListing extends Component {
                                 Specific Listing {uniqueURLNo}
                             </Banner>
                             <button onClick={this.handleClick}>
-                                {this.state.isToggleOn ? 'ON' : 'OFF'}
+                                {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
                             </button>
                             {
                                 this.state.isToggleOn?
-                                <p>Show Inner View</p>:
-                                <p>Outter View Coorect</p>
+                                <InnerView />:
+                                <OuterView />
                             }
                         </>
                     ) :
