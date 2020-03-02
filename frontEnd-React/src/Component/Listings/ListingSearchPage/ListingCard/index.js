@@ -17,8 +17,11 @@ class ListingCard extends Component {
                 <div className={style.card}>
                     <img src={property_img_loc} alt="Avatar" className={style.cardImage}/>
                     <div className={style.container}>
-                        <h4><b>John Doe</b></h4> 
-                        <p>Architect and Engineer</p> 
+                        <h4><b>{property_visuals_type}</b></h4>
+                        <br/>
+                        <p>{property_desc}</p>
+                        <br/>
+                        <p>{addresses}</p>
                     </div>
                     <TagFeature tag={arrFeatures} className={style.TagFeature}/>
                 </div>
