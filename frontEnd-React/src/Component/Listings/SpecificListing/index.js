@@ -10,9 +10,16 @@ export default class SpecificListing extends Component {
 
         this.state = {
             propertyData: [],
+            isToggleOn: true,
         }
     }
 
+
+    handleClick = () => {
+		this.setState(function(prevState) {
+			return {isToggleOn: !prevState.isToggleOn};
+		});
+	}
 
     async componentDidMount(){
         const form = new FormData()
@@ -39,7 +46,6 @@ export default class SpecificListing extends Component {
         const uniqueURLNo = parseInt(this.props.match.params.number)
         const specListing = ListingsAPI.get(uniqueURLNo)
         console.log(this.state.propertyData)
-
         return (
             <>
                 {
@@ -51,7 +57,14 @@ export default class SpecificListing extends Component {
                             <Banner>
                                 Specific Listing {uniqueURLNo}
                             </Banner>
-                            
+                            <button onClick={this.handleClick}>
+                                {this.state.isToggleOn ? 'ON' : 'OFF'}
+                            </button>
+                            {
+                                this.state.isToggleOn?
+                                <p>Show Inner View</p>:
+                                <p>Outter View Coorect</p>
+                            }
                         </>
                     ) :
 
