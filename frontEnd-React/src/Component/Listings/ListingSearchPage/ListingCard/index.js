@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import TagFeature from '../../../CommonComponent/TagFeature'
-
 import { Redirect } from 'react-router-dom'
-
 import style from './index.module.css'
-
 import ReactCodeInput from 'react-code-input'
 
 
@@ -21,7 +18,6 @@ class ListingCard extends Component {
     checkValidity = (eve) => {
         console.log(eve)
         if(eve==this.state.reqPIN){
-            console.log("its a match")
             this.setState({
                 refire: true,
             })
@@ -29,7 +25,6 @@ class ListingCard extends Component {
     }
 
     componentDidMount(){
-        console.log("Component Didi Mount Method"+this.props.sixDigitPIN)
         this.setState({
             reqPIN: this.props.listingData.singleListingData.sixDigitPIN,
         })
