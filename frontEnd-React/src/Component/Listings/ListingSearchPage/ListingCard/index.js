@@ -3,6 +3,8 @@ import TagFeature from '../../../CommonComponent/TagFeature'
 
 import style from './index.module.css'
 
+import ReactCodeInput from 'react-code-input'
+
 
 class ListingCard extends Component {
 
@@ -24,6 +26,7 @@ class ListingCard extends Component {
                         <p>{addresses}</p>
                     </div>
                     <TagFeature tag={arrFeatures} className={style.TagFeature}/>
+                    <ReactCodeInput type='password' fields={6} />
                 </div>
             </div>
         );
