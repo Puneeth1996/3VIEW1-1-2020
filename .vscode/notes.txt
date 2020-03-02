@@ -99,3 +99,11 @@ The alignment for the tagFeatures and react-code-input  div are not proper when 
 
 
 Take some time and rebuild the listingsCardDetails component
+
+
+
+
+2 March 2020 
+
+sixDigitPIN from the database should be enetered before the screen is made to redirect to    specificListingPage
+
