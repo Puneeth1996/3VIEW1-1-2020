@@ -10,6 +10,9 @@ import axios from 'axios'
 import ListingsCardDetail from './ListingsCardDetail'
 
 
+import ListingCard from './ListingCard'
+
+
 
 export default class ListingSearchPage extends Component {
 
@@ -82,7 +85,7 @@ export default class ListingSearchPage extends Component {
                         <h1>Nothing to Display</h1>
                     :
                     <>
-                        <ListingsCardDetail listingData={this.state.propertyData}/>
+                        <ListingCard listingData={this.state.propertyData}/>
                     </>
                 }
                 
