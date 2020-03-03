@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import style from './index.module.css'
 
+import team2 from '../../../img/about/team2.jpg'
+
 export default class PersonCard extends Component {
     render() {
         return (
@@ -10,7 +12,7 @@ export default class PersonCard extends Component {
 
             <div className={style.PersonCard}>
                 <div className={style.card}>
-                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" className={style.personImg} />
+                    <img src={team2} alt="John" className={style.personImg} />
                     <h1>John Doe</h1>
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>
@@ -28,7 +30,7 @@ export default class PersonCard extends Component {
 
             <div className={style.PersonCard}>
                 <div className={style.card}>
-                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" className={style.personImg} />
+                    <img src={team2} alt="John" className={style.personImg} />
                     <h1>John Doe</h1>
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>
@@ -46,7 +48,7 @@ export default class PersonCard extends Component {
 
             <div className={style.PersonCard}>
                 <div className={style.card}>
-                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" className={style.personImg} />
+                    <img src={team2} alt="John" className={style.personImg} />
                     <h1>John Doe</h1>
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>

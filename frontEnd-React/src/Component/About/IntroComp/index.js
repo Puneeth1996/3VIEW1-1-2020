@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import style from './index.module.css'
 
+
+import intro from '../../../img/about/intro.png'
+
 export default class IntroComp extends Component {
     constructor(props) {
         super(props);
@@ -55,9 +58,9 @@ export default class IntroComp extends Component {
                     <p className={style.intro_text}>Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus eros, placerat quis fermentum et, viverra sit amet lacus. Nam gravida semper augue id sagittis. Cras nec arcu quis velit tempor porttitor sit amet vel risus. Sed vestibulum lectus ut leo molestie, id suscipit magna mattis. Vivamus nisl ligula, varius congue dui sit amet, vestibulum sollicitudin mauris. Vestibulum quis ligula in nunc varius maximus ac et nunc. Nulla sed magna turpis.</p>
                 </div>
                 <div className={style.column} style={style2}>
-                  <div className={style.intro_image}>
-                      <img src={require('./intro.png')} alt=""/>
-                  </div>
+                    <div className={style.intro_image}>
+                        <img src={intro} alt=""/>
+                    </div>
                 </div>
             </div>
         )

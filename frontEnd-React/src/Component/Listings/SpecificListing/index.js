@@ -65,8 +65,8 @@ export default class SpecificListing extends Component {
                             </button>
                             {
                                 this.state.isToggleOn?
-                                <InnerView />:
-                                <OuterView />
+                                <OuterView />:
+                                <InnerView />
                             }
                         </>
                     ) :
