@@ -191,5 +191,14 @@ https://codepen.io/ritchiejacobs/pen/qEJjBM
 
 
 
+At 1.15pm 
+Starting to work on the iframes line for innerView and outerview
+
+
+
+
+
+Further Working
+1. Should be correcting the propertyID    into   	property_id_ref_num
 
 
