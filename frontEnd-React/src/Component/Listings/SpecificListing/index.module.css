@@ -1,4 +1,6 @@
-  /* GENERAL BUTTON STYLING */
+
+
+/* GENERAL BUTTON STYLING */
   button,
   button::after {
     -webkit-transition: all 0.3s;
@@ -13,12 +15,12 @@
     border-radius: 5px;
     color: #fff;
     display: block;
-    font-size: 1.6em;
-    font-weight: bold;
-    margin: 1em auto;
+    font-size: 1.6em !important;
+    font-weight: bold !important;
+    margin: 1em auto !important;
     padding: 2em 6em;
     position: relative;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
   
   button::before,
