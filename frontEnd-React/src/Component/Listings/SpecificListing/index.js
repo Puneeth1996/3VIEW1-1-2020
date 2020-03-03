@@ -7,6 +7,9 @@ import axios from 'axios'
 import InnerView from './InnerView'
 import OuterView from './OuterView'
 
+
+import style from './index.module.css'
+
 export default class SpecificListing extends Component {
     constructor(props) {
         super(props)
@@ -42,6 +45,7 @@ export default class SpecificListing extends Component {
         }
     }
 
+    
 
 
 
@@ -49,6 +53,15 @@ export default class SpecificListing extends Component {
         const uniqueURLNo = parseInt(this.props.match.params.number)
         const specListing = ListingsAPI.get(uniqueURLNo)
         console.log(this.state.propertyData)
+
+
+
+        const classNameBtn = this.state.isToggleOn ? style.innerView : style.outterView
+
+
+
+
+
         return (
             <>
                 {
@@ -60,7 +73,7 @@ export default class SpecificListing extends Component {
                             <Banner>
                                 Specific Listing {uniqueURLNo}
                             </Banner>
-                            <button onClick={this.handleClick}>
+                            <button onClick={this.handleClick} className={classNameBtn} >
                                 {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
                             </button>
                             {
