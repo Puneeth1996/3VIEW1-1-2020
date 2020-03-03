@@ -30,7 +30,7 @@ export default class SpecificListing extends Component {
         const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
-        if(response.data.singleListingData==""){
+        if(response.data.singleListingData===""){
             this.setState({
                 propertyData: [],
             })

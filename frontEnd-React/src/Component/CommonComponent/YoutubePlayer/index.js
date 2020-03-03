@@ -19,7 +19,9 @@ export default class YoutubePlayer extends Component {
         // player.setSize(window.innerWidth, window.innerHeight)
     }
     removeIcons(event){
-        const player = event.target
+        console.log(' _ ')
+        // const player = event.target
+        
         // var element1 = player.getIframe().getElementByXpath('//div[@id="player"]/div/a')
         // element1.removeChild(element1)
     }

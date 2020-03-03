@@ -27,7 +27,7 @@ export default class NewsCard extends Component {
                     </div>
                 </div>
                 <div className={style.imgContainer}>
-                    <img src={require('./news_1.jpg')} />
+                    <img src={require('./news_1.jpg')} alt=""/>
                 </div>
                 <div className={style.newsDescription}>
                     <p>{desp_full} </p>
