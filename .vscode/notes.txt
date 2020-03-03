@@ -179,7 +179,9 @@ Leaving the above warinings which gives the list of all the data comming from ap
 
 
 
-
+At 12.05 pm 
+Task 3
+Styling of the button that toggles between innerView and outerview
 
 
 
