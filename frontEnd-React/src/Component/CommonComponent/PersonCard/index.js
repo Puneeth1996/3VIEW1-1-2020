@@ -17,10 +17,10 @@ export default class PersonCard extends Component {
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>
                     <div className={style.contactLink}>
-                        <a className={style.linkTag} href="#"><i className="fa fa-dribbble"></i></a> 
-                        <a className={style.linkTag} href="#"><i className="fa fa-twitter"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-linkedin"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-facebook"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-dribbble"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-twitter"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-linkedin"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-facebook"></i></a> 
                     </div>
                 </div>
             </div>
@@ -35,10 +35,10 @@ export default class PersonCard extends Component {
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>
                     <div className={style.contactLink}>
-                        <a className={style.linkTag} href="#"><i className="fa fa-dribbble"></i></a> 
-                        <a className={style.linkTag} href="#"><i className="fa fa-twitter"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-linkedin"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-facebook"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-dribbble"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-twitter"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-linkedin"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-facebook"></i></a> 
                     </div>
                 </div>
             </div>
@@ -53,10 +53,10 @@ export default class PersonCard extends Component {
                     <p className={style.title}>CEO & Founder, Example</p>
                     <p>Harvard University</p>
                     <div className={style.contactLink}>
-                        <a className={style.linkTag} href="#"><i className="fa fa-dribbble"></i></a> 
-                        <a className={style.linkTag} href="#"><i className="fa fa-twitter"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-linkedin"></i></a>  
-                        <a className={style.linkTag} href="#"><i className="fa fa-facebook"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-dribbble"></i></a> 
+                        <a className={style.linkTag} href="/#"><i className="fa fa-twitter"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-linkedin"></i></a>  
+                        <a className={style.linkTag} href="/#"><i className="fa fa-facebook"></i></a> 
                     </div>
                 </div>
             </div>
