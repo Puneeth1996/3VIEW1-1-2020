@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link, } from "react-router-dom";
 import Style1 from './index.module.css'
 
+import logo from '../../img/logo.png'
+
 export default class Header extends Component {
     constructor(props) {
         super(props);
@@ -47,7 +49,7 @@ export default class Header extends Component {
                 <div className={`${Style1.mobilenavigationview} ${Style1[className[3]]}`} >
                     <div className={Style1.itemmobile}>
                         <Link to="/">
-                            <img src="images/logo.png" alt=""/>
+                            <img src={logo} alt=""/>
                             <span className={Style1.captionmobile}> 3 View </span>
                         </Link>
                     </div>
@@ -72,7 +74,7 @@ export default class Header extends Component {
                 <div className={Style1[className[0]]}>
                     <Link to="/">
                         <div className={Style1.item}>
-                            <img src="images/logo.png" alt=""/>
+                            <img src={logo} alt=""/>
                             <span className={Style1.caption}> 3 View </span>
                         </div>
                     </Link>

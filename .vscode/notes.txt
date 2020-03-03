@@ -142,6 +142,7 @@ Start working on making the iframes component that takes in the url and shows th
     3,      Styling of the button.
     4,      Correct all the images that are there in the front making them from the import calls 
     5,      build on iframes link for both the outterView and innerView
+    6,      Getting rid of all the console warnings and alerts 
 
 
 

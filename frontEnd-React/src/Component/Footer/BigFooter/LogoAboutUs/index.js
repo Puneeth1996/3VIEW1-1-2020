@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import style from './index.module.css'
 
+import logo from '../../../../img/logo.png'
+
 export default class LogoAboutUs extends Component {
     render() {
         return (
@@ -8,7 +10,7 @@ export default class LogoAboutUs extends Component {
                 <div className={style.imgwithtext}>
                     <a href="#">
                         <div className={style.footericonaboutus}>
-                            <img src="images/logo.png" alt="" />
+                            <img src={logo} alt="" />
                             <p className={style.caption}> 3 View </p>
                         </div>
                     </a>
