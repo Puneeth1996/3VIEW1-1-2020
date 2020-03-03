@@ -5,7 +5,7 @@ export default class SingleNewPost extends Component {
     render() {
         // console.log(this.props.tag)
         // console.log(this.props.blog_data)
-        const { id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img } = this.props.blog_data.Blog_data_single
+        const { Publish_date,Main_title,Author,category,desp_full } = this.props.blog_data.Blog_data_single
         return (
             <div className={style.SingleNewPost}>
                 <div className={style.parallax} style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/News/news_1.jpg)"}}>

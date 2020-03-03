@@ -4,7 +4,7 @@ import style from './index.module.css'
 
 export default class NewsCard extends Component {
     render() {
-        const { id,Blog_unique_id,Publish_date,Main_title,Sub_title,Author,category,desp_small,desp_full,img } = this.props.post
+        const { Blog_unique_id,Publish_date,Main_title,Author,category,desp_full } = this.props.post
         return (
             <div className={style.newsContainer}>
                 <Link to={`/News/${Blog_unique_id}`}><div className={style.newsTitle}>{Main_title}</div></Link>

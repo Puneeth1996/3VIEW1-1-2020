@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import Banner from '../../CommonComponent/Banner'
 import HeaderTitle from '../../CommonComponent/HeaderTitle'
 import ListingsSearchForm from './ListingsSearchForm'
-import style from './index.module.css'
 
 import axios from 'axios'
-
-
-import ListingsCardDetail from './ListingsCardDetail'
 
 
 import ListingCard from './ListingCard'
@@ -39,7 +35,7 @@ export default class ListingSearchPage extends Component {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
         // console.log(response.data)
-        if(response.data.singleListingData==""){
+        if(response.data.singleListingData===""){
             this.setState({
                 propertyID: '',
                 dataVerificationMessage: 'False',
@@ -81,7 +77,7 @@ export default class ListingSearchPage extends Component {
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
                 
                 {   
-                    (this.state.dataVerificationMessage=="False") ? 
+                    (this.state.dataVerificationMessage==="False") ? 
                         <h1>Nothing to Display</h1>
                     :
                     <>

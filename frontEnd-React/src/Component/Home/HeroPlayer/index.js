@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import YoutubePlayer from '../../CommonComponent/YoutubePlayer'
-import style from  './index.module.css'
 
 // the above css is responsive and sufficient
 
