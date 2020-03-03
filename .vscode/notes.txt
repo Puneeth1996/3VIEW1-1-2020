@@ -130,3 +130,50 @@ Componet tree in SpecificListing
 till 4pm 
 
 Start working on making the iframes component that takes in the url and shows the full view versions of both View.
+
+
+
+3 March 2020
+
+    10.30am 
+
+    1,      Correcting on the innerView And OutterView Buttons 
+    2,      Check on how to add the iframes and switch between them on button
+    3,      Styling of the button.
+    4,      Correct all the images that are there in the front making them from the import calls 
+    5,      build on iframes link for both the outterView and innerView
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
