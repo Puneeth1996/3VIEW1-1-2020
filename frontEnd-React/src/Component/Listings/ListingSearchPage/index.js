@@ -64,7 +64,7 @@ export default class ListingSearchPage extends Component {
 
 
     render() {
-        // console.log(this.state)
+        console.log(this.state)
         return (
             <div>
                 <Banner>
