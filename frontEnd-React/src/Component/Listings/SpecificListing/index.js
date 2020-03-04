@@ -27,9 +27,9 @@ export default class SpecificListing extends Component {
 		});
 	}
 
-    async componentDidMount(){
+    async componentWillMount(){
         const form = new FormData()
-        form.set('property_id', this.props.match.params.number)
+        form.set('property_id_ref_num', this.props.match.params.number)
         const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
@@ -40,7 +40,7 @@ export default class SpecificListing extends Component {
         }
         else{
             this.setState({
-                propertyData: response.data,
+                propertyData: response.data.singleListingData,
             })
         }
     }
@@ -50,15 +50,15 @@ export default class SpecificListing extends Component {
 
 
     render() {
-        const uniqueURLNo = parseInt(this.props.match.params.number)
-        const specListing = ListingsAPI.get(uniqueURLNo)
-        console.log(this.state.propertyData)
-
+        // const uniqueURLNo = parseInt(this.props.match.params.number)
+        // const specListing = ListingsAPI.get(uniqueURLNo)
+        // console.log(this.state.propertyData)
+        const specListing = this.state.propertyData
 
 
         const classNameBtn = this.state.isToggleOn ? style.innerView : style.outterView
 
-
+        
 
 
 
@@ -66,12 +66,12 @@ export default class SpecificListing extends Component {
             <>
                 {
                 
-                    specListing ? 
+                    specListing.property_id_ref_num === this.props.match.params.number ? 
 
                     (
                         <>  
                             <Banner>
-                                Specific Listing {uniqueURLNo}
+                                Specific Listing
                             </Banner>
                             <button onClick={this.handleClick} className={classNameBtn} >
                                 {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
