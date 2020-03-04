@@ -203,4 +203,7 @@ Further Working
 4 March 2020
 
 Will be working on implementing the property_id_ref_num
+The Navigation side menu when small size the click on side nav should also close the side nav.
 
+
+Done the above two tasks

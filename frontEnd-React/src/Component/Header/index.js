@@ -57,14 +57,14 @@ export default class Header extends Component {
                     { 
                         this.state.showSideNav ? 
                             <ul className={Style1.linkgroupmobile}>
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/About">About Us</Link></li>
-                                <li><Link to="/Listings">Listings</Link></li>
-                                <li><Link to="/News">News</Link></li>
-                                <li><Link to="/Contact">Contact</Link></li>
+                                <li><Link to="/" onClick={(e) => this.handleClick(e)}>Home</Link></li>
+                                <li><Link to="/About" onClick={(e) => this.handleClick(e)}>About Us</Link></li>
+                                <li><Link to="/Listings" onClick={(e) => this.handleClick(e)}>Listings</Link></li>
+                                <li><Link to="/News" onClick={(e) => this.handleClick(e)}>News</Link></li>
+                                <li><Link to="/Contact" onClick={(e) => this.handleClick(e)}>Contact</Link></li>
                                 <li>
                                     <div className={Style1.contactcardmobile}>
-                                        <span className={Style1.contactnumber}>+0080 234 567 84441</span>
+                                        <span className={Style1.contactnumber} onClick={(e) => this.handleClick(e)}>+0080 234 567 84441</span>
                                     </div>
                                 </li>
                             </ul> :
