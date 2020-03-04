@@ -207,3 +207,6 @@ The Navigation side menu when small size the click on side nav should also close
 
 
 Done the above two tasks
+
+
+        Building a New Frame Component which uses the https://www.npmjs.com/package/react-iframe 
