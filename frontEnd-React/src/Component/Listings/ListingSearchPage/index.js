@@ -17,7 +17,7 @@ export default class ListingSearchPage extends Component {
         super(props)
 
         this.state = {
-            propertyID: '',
+            property_id_ref_num: '',
             dataVerificationMessage: 'False',
             propertyData: [],
         }
@@ -30,21 +30,21 @@ export default class ListingSearchPage extends Component {
     listingSearchData = async (event) => {
         event.preventDefault()        
         const form = new FormData()
-        form.set('property_id', this.state.propertyID)
+        form.set('property_id_ref_num', this.state.property_id_ref_num)
         const response = await axios.post('http://localhost/3VIEW1-1-2020/REST-3V/listing/singleListing.php', form, {
             headers: { 'Content-Type': 'multipart/form-data' },
         })
         // console.log(response.data)
         if(response.data.singleListingData===""){
             this.setState({
-                propertyID: '',
+                property_id_ref_num: '',
                 dataVerificationMessage: 'False',
                 propertyData: [],
             })
         }
         else{
             this.setState({
-                propertyID: '',
+                property_id_ref_num: '',
                 dataVerificationMessage: 'True',
                 propertyData: response.data,
             })

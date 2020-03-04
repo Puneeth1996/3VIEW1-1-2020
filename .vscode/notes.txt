@@ -195,10 +195,12 @@ At 1.15pm
 Starting to work on the iframes line for innerView and outerview
 
 
-
-
-
 Further Working
 1. Should be correcting the propertyID    into   	property_id_ref_num
 
+
+
+4 March 2020
+
+Will be working on implementing the property_id_ref_num
 

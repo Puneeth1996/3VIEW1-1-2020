@@ -17,7 +17,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 $listings = new Listings($db);
-$row = $listings->listingsOne($_POST['property_id']);
+$row = $listings->listingsOne($_POST['property_id_ref_num']);
 
 if ($row) {
     $singleListingData=array(

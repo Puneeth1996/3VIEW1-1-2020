@@ -16,19 +16,19 @@ class Listings{
     }
 
     // read one-listings
-    function listingsOne($property_id){
+    function listingsOne($property_id_ref_num){
         // echo($property_id);
         $query = "SELECT 
                 *
             FROM 
                 ".$this->table_name."
-            WHERE property_id LIKE ? 
+            WHERE property_id_ref_num LIKE ? 
         ";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
 
-        $stmt->execute([$property_id]);
+        $stmt->execute([$property_id_ref_num]);
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $row = $stmt->fetch();
