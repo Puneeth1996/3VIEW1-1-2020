@@ -46,7 +46,7 @@
     font-weight: 600;
     line-height: 51px;
     color: #0e1d41;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-left: 7%;
     font-family: 'Open Sans', sans-serif;
 }
