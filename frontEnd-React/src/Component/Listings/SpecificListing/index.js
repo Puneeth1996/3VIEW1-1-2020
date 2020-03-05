@@ -73,7 +73,8 @@ export default class SpecificListing extends Component {
                             <Banner>
                                 Specific Listing
                             </Banner>
-                            <button onClick={this.handleClick} className={classNameBtn} >
+                            <h1 className={style.proptyName}>{specListing.house_name}</h1>
+                            <button onClick={this.handleClick} className={style.classNameBtn} >
                                 {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
                             </button>
                             {
@@ -81,6 +82,7 @@ export default class SpecificListing extends Component {
                                 <OuterView />:
                                 <InnerView />
                             }
+                            
                         </>
                     ) :
 
