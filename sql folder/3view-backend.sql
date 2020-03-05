@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2020 at 12:55 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Mar 05, 2020 at 05:37 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -47,7 +47,11 @@ INSERT INTO `contactform` (`id`, `name`, `email`, `telephone`, `message`, `time`
 (63, 'PUNEETH P', 'puneeth1996p@gmail.com', 2147483647, '3443trwsfa', '2020-01-12 13:16:17'),
 (64, 'PUNEETH P', 'puneeth1996p@gmail.com', 0, 'wer wer', '2020-01-12 13:16:21'),
 (65, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '2342344df asdfa sd', '2020-01-13 12:10:43'),
-(66, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'fad asdf a1234 234', '2020-01-13 12:10:48');
+(66, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'fad asdf a1234 234', '2020-01-13 12:10:48'),
+(67, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, 'sadf ', '2020-03-03 11:24:38'),
+(68, 'Puneeth p', 'puneeth1996p@gmail.com', 0, 'asf af ', '2020-03-03 11:24:42'),
+(69, 'Puneeth p', 'puneeth1996p@gmail.com', 0, '8956562', '2020-03-03 12:03:03'),
+(70, 'Puneeth p', 'puneeth1996p@gmail.com', 2147483647, '2', '2020-03-03 12:03:16');
 
 -- --------------------------------------------------------
 
@@ -90,8 +94,8 @@ CREATE TABLE `listings_table` (
   `property_desc` varchar(250) NOT NULL,
   `property_desc_full` varchar(1025) NOT NULL,
   `addresses` varchar(250) NOT NULL,
-  `property_id_ref_num` int(12) NOT NULL,
-  `sixDigitPIN` int(6) NOT NULL,
+  `property_id_ref_num` varchar(12) NOT NULL,
+  `sixDigitPIN` varchar(6) NOT NULL,
   `mtl_file_loc` varchar(150) NOT NULL,
   `obj_file_loc` varchar(150) NOT NULL,
   `threeJS_iframe_url` varchar(150) NOT NULL,
@@ -105,7 +109,7 @@ CREATE TABLE `listings_table` (
 --
 
 INSERT INTO `listings_table` (`id`, `added_time`, `property_id`, `house_name`, `property_img_loc`, `property_visuals_type`, `date_created`, `geospacial_data`, `area`, `price`, `property_features`, `property_desc`, `property_desc_full`, `addresses`, `property_id_ref_num`, `sixDigitPIN`, `mtl_file_loc`, `obj_file_loc`, `threeJS_iframe_url`, `react360_iframe_url`, `property_sale_availablity`, `property_legal_desc`) VALUES
-(1, '2020-01-24 11:06:01', 1, 'RamaKrishna Nilayam', 'images/Listings/city_3.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 562158, 544589, 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
+(1, '2020-03-04 05:13:29', 1, 'RamaKrishna Nilayam', 'city_4.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 'ASD123', '123asd', 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
 
 -- --------------------------------------------------------
 
@@ -274,7 +278,7 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `contactform`
 --
 ALTER TABLE `contactform`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `groups`
