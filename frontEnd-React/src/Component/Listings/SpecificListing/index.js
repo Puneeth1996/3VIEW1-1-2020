@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ListingsAPI from '../../../API/ListingsAPI'
+
 import NotFound from '../../NotFound'
 import Banner from '../../CommonComponent/Banner'
 import axios from 'axios'
@@ -59,7 +59,6 @@ export default class SpecificListing extends Component {
 
         const classNameBtn = this.state.isToggleOn ? style.innerView : style.outterView
 
-        console.log(specListing.property_features)
         var arrFeatures = specListing.property_features
 
 
@@ -75,7 +74,7 @@ export default class SpecificListing extends Component {
                                 Specific Listing
                             </Banner>
                             <h1 className={style.proptyName}>{specListing.house_name}</h1>
-                            <button onClick={this.handleClick} className={style.classNameBtn} >
+                            <button onClick={this.handleClick} className={`${style.classNameBtn} ${style.buttonGeneral}`} >
                                 {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
                             </button>
                             {
