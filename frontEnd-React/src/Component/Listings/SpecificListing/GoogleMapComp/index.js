@@ -1,24 +1,33 @@
-import React, { Component } from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
- 
-class GoogleMapComp extends Component {
+
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+
+
+class GoogleMapComp extends Component {   
 
     render() {
+        const mystyle = {
+            height: '40vh',
+            width: '100%',
+            color: "white",
+            backgroundColor: "DodgerBlue",
+            padding: "10px",
+            fontFamily: "Arial"
+        };
+        const position = [51.505, -0.09]
         return (
-            <Map google={this.props.google} zoom={14}>
- 
-                <Marker onClick={this.onMarkerClick}
-                        name={'Current location'} />
-        
-                <InfoWindow onClose={this.onInfoWindowClose}>
-                    <div>
-                    <h1>The House</h1>
-                    </div>
-                </InfoWindow>
+            <Map center={position} zoom={13} style={mystyle}>
+                <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                />
+                <Marker position={position}>
+                    <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+                </Marker>
             </Map>
-        );
+        )
     }
 }
-export default GoogleApiWrapper({
-    apiKey: (AIzaSyDUef3NP-MmXCyZ9x-nr3thUAoli3V7Smc)
-})(MapContainer)
+
+export default GoogleMapComp;

@@ -84,13 +84,14 @@ export default class SpecificListing extends Component {
                                 <OuterView />:
                                 <InnerView />
                             }
+                            
+                            <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
                             <div>
-                                <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
                                 <p>
                                     {specListing.property_desc_full}
                                 </p>
-                                <GoogleMapComp />
                             </div>
+                            <GoogleMapComp />
                         </>
                     ) :
 
