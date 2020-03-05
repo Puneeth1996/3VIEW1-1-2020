@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import style from './index.module.css'
 
 
 class GoogleMapComp extends Component {   
@@ -12,7 +13,7 @@ class GoogleMapComp extends Component {
             width: '100%',
             color: "white",
             backgroundColor: "#07122c",
-            padding: "10px",
+            margin: "0 5vw 0 0",
             fontFamily: "Arial"
         };
         const position = [51.505, -0.09]
