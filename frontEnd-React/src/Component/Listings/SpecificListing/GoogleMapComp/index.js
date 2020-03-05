@@ -11,7 +11,7 @@ class GoogleMapComp extends Component {
             height: '40vh',
             width: '100%',
             color: "white",
-            backgroundColor: "DodgerBlue",
+            backgroundColor: "#07122c",
             padding: "10px",
             fontFamily: "Arial"
         };
