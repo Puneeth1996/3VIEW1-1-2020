@@ -225,3 +225,5 @@ Done the above two tasks
 
 
 
+        The outter-view-react helps in building out the each individual reactproduction build file which
+        Integrated-inn-otttt-MDB folder helps in creating the innerView with React 360 code 
