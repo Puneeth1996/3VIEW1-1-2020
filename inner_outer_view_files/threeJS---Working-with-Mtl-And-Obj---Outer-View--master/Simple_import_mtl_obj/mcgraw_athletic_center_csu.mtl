@@ -1,0 +1,123 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl eastface
+Ka 0.000000 0.000000 0.000000
+Kd 0.725490 0.713725 0.713725
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/eastface.jpg
+
+newmtl westface
+Ka 0.000000 0.000000 0.000000
+Kd 0.674510 0.678431 0.678431
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/westface.jpg
+
+newmtl roof
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof.jpg
+
+newmtl cnocrete
+Ka 0.000000 0.000000 0.000000
+Kd 0.564706 0.552941 0.545098
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/cnocrete.jpg
+
+newmtl brick
+Ka 0.000000 0.000000 0.000000
+Kd 0.627451 0.556863 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/brick.jpg
+
+newmtl southface
+Ka 0.000000 0.000000 0.000000
+Kd 0.549020 0.552941 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/southface.jpg
+
+newmtl northface
+Ka 0.000000 0.000000 0.000000
+Kd 0.717647 0.705882 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/northface.jpg
+
+newmtl westface1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.674510 0.678431 0.678431
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/westface1_.jpg
+
+newmtl westface2_
+Ka 0.000000 0.000000 0.000000
+Kd 0.674510 0.678431 0.678431
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/westface2_.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl westface3_
+Ka 0.000000 0.000000 0.000000
+Kd 0.674510 0.678431 0.678431
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/westface3_.jpg
+
+newmtl southface1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.549020 0.552941 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/southface1_.jpg
+
+newmtl northface1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.717647 0.705882 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/northface1_.jpg
+
+newmtl roof1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof1_.jpg
+
+newmtl roof2_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof2_.jpg
+
+newmtl roof3_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof3_.jpg
+
+newmtl roof4_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof4_.jpg
+
+newmtl roof5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof5_.jpg
+
+newmtl roof6_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof6_.jpg
+
+newmtl roof7_
+Ka 0.000000 0.000000 0.000000
+Kd 0.454902 0.411765 0.356863
+Ks 0.330000 0.330000 0.330000
+map_Kd mcgraw_athletic_center_csu/roof7_.jpg
+

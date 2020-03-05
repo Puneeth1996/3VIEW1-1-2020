@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>OBJ MTL</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            /* Have set the background color in script using setClearColor() */
+            /* background-color: #bfe3dd; */
+            /*We can also make the canvas opacaque and use z-index to push towards the user */
+            /* z-index: 998;
+            opacity: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <script src="js/three.min.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/MTLLoader.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script>
+		var obj = "";
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
+		camera.position.z = 10;
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        renderer.setClearColor(0xbfe3dd, 1);
+
+        window.addEventListener('resize', function () {
+            var WIDTH = window.innerWidth;
+            var HEIGHT = window.innerHeight;
+            renderer.setSize(WIDTH, HEIGHT);
+            camera.aspect = WIDTH / HEIGHT;
+            camera.updateProjectionMatrix();
+        });
+
+		controls = new THREE.OrbitControls(camera, renderer.domElement);
+		controls.enableZoom = false;
+        var meshObject = new THREE.MTLLoader()
+            .load('mcgraw_athletic_center_csu.mtl', function (materials) {
+                materials.preload();
+                var objObject = new THREE.OBJLoader()
+                    .setMaterials(materials)
+                    .load('mcgraw_athletic_center_csu.obj',
+						function (object) {
+							var scaleValue = 0.5;
+							object.scale.set(scaleValue,scaleValue,scaleValue);
+							object.rotation.y += 90;
+							object.translateZ( 700 );
+							object.translateY( -100 );
+							obj = object;
+							scene.add(object);
+						});
+            });
+
+        var ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.7);
+        scene.add(ambientLight);
+		
+		var update = function () {
+			obj.rotation.y += 0.001;
+		};
+		
+		var render = function() {
+			renderer.render(scene, camera);
+		};
+		
+        var animate = function () {
+            requestAnimationFrame(animate);
+			update();
+			render();
+        };
+
+        animate();
+    </script>
+</body>
+
+</html>
