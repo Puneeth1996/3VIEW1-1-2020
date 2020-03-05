@@ -11,6 +11,8 @@ import TagFeature from '../../CommonComponent/TagFeature'
 
 import style from './index.module.css'
 
+import GoogleMapComp from './GoogleMapComp'
+
 export default class SpecificListing extends Component {
     constructor(props) {
         super(props)
@@ -84,6 +86,10 @@ export default class SpecificListing extends Component {
                             }
                             <div>
                                 <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
+                                <p>
+                                    {specListing.property_desc_full}
+                                </p>
+                                <GoogleMapComp />
                             </div>
                         </>
                     ) :

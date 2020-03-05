@@ -220,7 +220,8 @@ Done the above two tasks
         In making of the property single page 
             1.  Make the tagFeatures component in first line.
             2.  property_desc_full as the middle para.
-            3.  build a google map compent with [lat,long] given as the input props.
+            3.  build a google map compent <GoogleMapComp /> with [lat,long] given as the input props.
+            https://www.npmjs.com/package/google-maps-react
 
 
 
