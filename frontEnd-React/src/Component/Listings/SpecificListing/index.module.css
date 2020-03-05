@@ -11,9 +11,9 @@
 
 .buttonGeneral {
   background: none;
-  border: 3px solid #fff;
+  border: 3px solid #fd784f;
   border-radius: 5px;
-  color: #fff;
+  color: #fd784f;
   display: block;
   font-size: 1.6em !important;
   font-weight: bold !important;
@@ -25,14 +25,14 @@
 
 .buttonGeneral::before,
 .buttonGeneral::after {
-  background: #fff;
+  background: #07122c;
   content: '';
   position: absolute;
   z-index: -1;
 }
 
 .buttonGeneral:hover {
-  color: #2ecc71;
+  color: #fd784f;
 }
 
 
@@ -47,8 +47,8 @@
 
 
 .outterView{
-  background: #2ecc71;
-  color:  #fff;
+  background: #07122c;
+  color:  #fd784f;
 }
 
 .outterView:hover{
