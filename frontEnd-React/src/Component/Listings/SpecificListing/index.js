@@ -82,7 +82,9 @@ export default class SpecificListing extends Component {
                                 <OuterView />:
                                 <InnerView />
                             }
-                            
+                            <div>
+                                
+                            </div>
                         </>
                     ) :
 

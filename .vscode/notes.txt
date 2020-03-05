@@ -210,3 +210,14 @@ Done the above two tasks
 
 
         Building a New Frame Component which uses the https://www.npmjs.com/package/react-iframe 
+
+
+
+
+
+5 March 2020
+
+        In making of the property single page 
+            1.  Make the tagFeatures component in first line.
+            2.  property_desc_full as the middle para.
+            3.  build a google map compent with [lat,long] given as the input props.
