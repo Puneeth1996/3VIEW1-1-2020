@@ -7,6 +7,7 @@ import axios from 'axios'
 import InnerView from './InnerView'
 import OuterView from './OuterView'
 
+import TagFeature from '../../CommonComponent/TagFeature'
 
 import style from './index.module.css'
 
@@ -58,8 +59,8 @@ export default class SpecificListing extends Component {
 
         const classNameBtn = this.state.isToggleOn ? style.innerView : style.outterView
 
-        
-
+        console.log(specListing.property_features)
+        var arrFeatures = specListing.property_features
 
 
         return (
@@ -83,7 +84,7 @@ export default class SpecificListing extends Component {
                                 <InnerView />
                             }
                             <div>
-                                
+                                <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
                             </div>
                         </>
                     ) :
