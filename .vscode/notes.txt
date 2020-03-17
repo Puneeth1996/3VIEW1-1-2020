@@ -232,3 +232,27 @@ Done the above two tasks
         1.20pm 
 
         Have some introduced some of the previous work can be used for Inner and outer view with react360 and threejs respectively
+
+
+
+
+
+
+
+
+
+
+
+
+17 Mar 2020
+
+
+    Some good reference from typnus 
+
+	https://connect-homes.com/models
+    https://zen.ly/
+
+
+    https://codyhouse.co/demo-tutorials/stacking-cards/index.html
+    https://tympanus.net/codrops/2020/03/02/ui-interactions-animations-roundup-4/
+    https://tympanus.net/codrops/2020/02/10/ui-interactions-animations-roundup-3/
