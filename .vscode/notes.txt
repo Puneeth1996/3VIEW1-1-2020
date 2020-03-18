@@ -263,4 +263,8 @@ Done the above two tasks
 18 Mar 2020
 
     Think about the authorization to the only if there  is a props comming from ListingSearchPage with 6 sixDigitPIN code 
-    
+
+
+    Redirect with auth allow this action 
+
+        https://reacttraining.com/react-router/web/example/auth-workflow
