@@ -268,3 +268,5 @@ Done the above two tasks
     Redirect with auth allow this action 
 
         https://reacttraining.com/react-router/web/example/auth-workflow
+
+        Make a asyncronus fake_Auth method that is set to true when there is correct validation of the 6digitpin and when there is no authentication redirect the user back home 
