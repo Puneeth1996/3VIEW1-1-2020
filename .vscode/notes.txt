@@ -256,3 +256,11 @@ Done the above two tasks
     https://codyhouse.co/demo-tutorials/stacking-cards/index.html
     https://tympanus.net/codrops/2020/03/02/ui-interactions-animations-roundup-4/
     https://tympanus.net/codrops/2020/02/10/ui-interactions-animations-roundup-3/
+
+
+
+
+18 Mar 2020
+
+    Think about the authorization to the only if there  is a props comming from ListingSearchPage with 6 sixDigitPIN code 
+    
