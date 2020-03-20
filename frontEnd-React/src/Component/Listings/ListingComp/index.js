@@ -9,6 +9,12 @@ import ListingCard from './ListingCard'
 
 import axios from 'axios'
 
+
+import InnerView from './InnerView'
+import OuterView from './OuterView'
+
+
+
 // import style from './index.module.css'
 
 
@@ -25,6 +31,7 @@ export default class ListingComp extends Component {
             dataVerificationMessage: 'False',
             propertyData: [],
             showInnerOutter : 'False',
+            isToggleOn: true,
         }
     }
 
@@ -70,15 +77,13 @@ export default class ListingComp extends Component {
 
 
     checkValidity = (eve) => {
-        console.log(eve)
-        console.log(this.state.propertyData.singleListingData)
         if(eve.length===6){
             if(eve===this.state.propertyData.singleListingData.sixDigitPIN)
             this.setState({
                 showInnerOutter : !this.state.showInnerOutter,
             })
             else{
-                alert("Work Pin!")
+                alert("Workin on solving Pin . . . ?")
             }
         }
         
@@ -112,8 +117,23 @@ export default class ListingComp extends Component {
                     </div>
 
                     :
+                    <>
+                        <HeaderTitle
+                            title={this.state.propertyData.singleListingData.house_name}
+                            subTitle={this.state.propertyData.singleListingData.property_desc_full}
+                        />
+                        <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
 
-                    <h1>Show showInnerOutter</h1>
+                        <button onClick={this.handleClick} className={`${style.classNameBtn} ${style.buttonGeneral}`} >
+                            {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
+                        </button>
+                        {
+                            this.state.isToggleOn ?
+                            <OuterView />:
+                            <InnerView />
+                        }
+                        <GoogleMapComp />
+                    </>
 
                 }
             </div>
