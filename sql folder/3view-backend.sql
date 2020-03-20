@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2020 at 08:12 AM
+-- Generation Time: Mar 20, 2020 at 10:55 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -109,7 +109,8 @@ CREATE TABLE `listings_table` (
 --
 
 INSERT INTO `listings_table` (`id`, `added_time`, `property_id`, `house_name`, `property_img_loc`, `property_visuals_type`, `date_created`, `geospacial_data`, `area`, `price`, `property_features`, `property_desc`, `property_desc_full`, `addresses`, `property_id_ref_num`, `sixDigitPIN`, `mtl_file_loc`, `obj_file_loc`, `threeJS_iframe_url`, `react360_iframe_url`, `property_sale_availablity`, `property_legal_desc`) VALUES
-(1, '2020-03-04 05:13:29', 1, 'RamaKrishna Nilayam', 'city_4.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 'ASD123', '123asd', 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
+(1, '2020-03-20 09:33:45', 1, 'RamaKrishna Nilayam', 'city_4.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 'ASD123', '123asd', 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf'),
+(2, '2020-03-20 09:33:45', 2, 'VNR', 'city_3.jpg', 'House To Be Visulaised', '2020-01-12 12:58:00', '[123,21]', '1234', '0309-', 'Hot Tub|4 car garage|Luxury Villa ', 'New And Modern located in the heart of Bangalore, this is a short description', 'New And Modern home situated at the heart of Bangalore\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\n\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore\r\n\r\n\r\nNew And Modern home situated at the heart of Bangalore', '#20,Ramakrishna Nilaya,Subbanna Layout,nr st philomenas english school', 'qwerty', 'qwerty', 'asfd', 'sdf as', 'sf asd', 'sdf sa', 'sadf sa', 'sff sadf asdf');
 
 -- --------------------------------------------------------
 
@@ -290,7 +291,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `listings_table`
 --
 ALTER TABLE `listings_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `login_attempts`
