@@ -15,14 +15,7 @@ class ListingCard extends Component {
         }
     }
 
-    checkValidity = (eve) => {
-        console.log(eve)
-        if(eve==this.state.reqPIN){
-            this.setState({
-                refire: true,
-            })
-        }
-    }
+
 
     componentDidMount(){
         this.setState({
@@ -44,10 +37,7 @@ class ListingCard extends Component {
                         <br/><p>{property_desc}</p><br/>
                         <p>{addresses}</p>
                     </div>
-                    {
-                        
-                        <ReactCodeInput type='password' fields={6} onChange={this.checkValidity} />
-                    }                    
+                    <ReactCodeInput type='password' fields={6} onChange={this.props.checkValidity} />              
                     <TagFeature tag={arrFeatures} className={style.TagFeature}/>
                 </div>
             </div>

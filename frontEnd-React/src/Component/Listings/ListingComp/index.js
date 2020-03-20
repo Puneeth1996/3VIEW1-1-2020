@@ -69,7 +69,15 @@ export default class ListingComp extends Component {
 
 
 
-
+    checkValidity = (eve) => {
+        console.log(eve)
+        console.log(this.state.propertyData.singleListingData)
+        if(eve==this.state.propertyData.singleListingData.sixDigitPIN){
+            this.setState({
+                showInnerOutter : !this.state.showInnerOutter,
+            })
+        }
+    }
 
 
 
@@ -84,24 +92,35 @@ export default class ListingComp extends Component {
 
 
                 {
-
-                }
-
-
-
-                <HeaderTitle
+                    this.state.showInnerOutter=="False" ? 
+                    <div>
+                    <HeaderTitle
                     title='Search Your Home'
                     subTitle='Enter Your Property Id.'
-                />
-                <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
-                {   
-                    (this.state.dataVerificationMessage==="False") ? 
-                        <h1>Nothing to Display</h1>
+                    />
+                    <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
+                    {   
+                        (this.state.dataVerificationMessage==="False") ? 
+                            <h1>Nothing to Display</h1>
+                        :
+                        <>
+                            <ListingCard listingData={this.state.propertyData} checkValidity={this.checkValidity} />
+                        </>
+                    }
+                    
+                    
+                    </div>
                     :
-                    <>
-                        <ListingCard listingData={this.state.propertyData}/>
-                    </>
+
+
+
+
+                    <h1>Show showInnerOutter</h1>
                 }
+
+
+
+                
 
 
 
