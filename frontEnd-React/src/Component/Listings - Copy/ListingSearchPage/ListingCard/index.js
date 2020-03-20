@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import TagFeature from '../../../CommonComponent/TagFeature'
-import {  Route, Redirect, useHistory, useLocation } from "react-router-dom";
-
+import { Redirect } from 'react-router-dom'
 import style from './index.module.css'
 import ReactCodeInput from 'react-code-input'
-
-
-
 
 
 class ListingCard extends Component {
@@ -19,22 +15,8 @@ class ListingCard extends Component {
         }
     }
 
-    
-
-    componentDidMount(){
-        this.setState({
-            reqPIN: this.props.listingData.singleListingData.sixDigitPIN,
-        })
-    }
-
-
-
-
-
-
-
     checkValidity = (eve) => {
-    
+        console.log(eve)
         if(eve==this.state.reqPIN){
             this.setState({
                 refire: true,
@@ -42,14 +24,15 @@ class ListingCard extends Component {
         }
     }
 
-
-
+    componentDidMount(){
+        this.setState({
+            reqPIN: this.props.listingData.singleListingData.sixDigitPIN,
+        })
+    }
 
     render() {
         const { property_id, house_name, property_img_loc, property_visuals_type, date_created, geospacial_data, area, price, property_features, property_desc, property_desc_full, addresses, property_id_ref_num, sixDigitPIN, mtl_file_loc, obj_file_loc, threeJS_iframe_url, react360_iframe_url, property_sale_availablity, property_legal_desc } = this.props.listingData.singleListingData
         var arrFeatures = property_features.split("|")
-
-
 
         return (
             <div className={style.Listingcard}>
@@ -62,7 +45,7 @@ class ListingCard extends Component {
                         <p>{addresses}</p>
                     </div>
                     {
-                        this.state.refire  ?
+                        this.state.refire?
                         <Redirect to={'/Listings/'+property_id_ref_num} />:
                         <ReactCodeInput type='password' fields={6} onChange={this.checkValidity} />
                     }                    
