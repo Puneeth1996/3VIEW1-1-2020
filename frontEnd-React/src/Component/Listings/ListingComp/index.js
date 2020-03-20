@@ -94,7 +94,6 @@ export default class ListingComp extends Component {
                     subTitle='Enter Your Property Id.'
                 />
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
-                
                 {   
                     (this.state.dataVerificationMessage==="False") ? 
                         <h1>Nothing to Display</h1>
