@@ -12,10 +12,11 @@ import axios from 'axios'
 
 import InnerView from './InnerView'
 import OuterView from './OuterView'
+import TagFeature from '../../CommonComponent/TagFeature'
+import GoogleMapComp from './GoogleMapComp'
 
 
-
-// import style from './index.module.css'
+import style from './index.module.css'
 
 
 export default class ListingComp extends Component {
@@ -92,6 +93,8 @@ export default class ListingComp extends Component {
 
 
     render() {
+        const classNameBtn = this.state.isToggleOn ? style.innerView : style.outterView
+        // var arrFeatures = 
         return (
             <div>
                 <Banner>
@@ -122,7 +125,7 @@ export default class ListingComp extends Component {
                             title={this.state.propertyData.singleListingData.house_name}
                             subTitle={this.state.propertyData.singleListingData.property_desc_full}
                         />
-                        <TagFeature tag={arrFeatures.split("|")} className={style.TagFeature}/>
+                        <TagFeature tag={this.state.propertyData.singleListingData.property_features.split("|")} className={style.TagFeature}/>
 
                         <button onClick={this.handleClick} className={`${style.classNameBtn} ${style.buttonGeneral}`} >
                             {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
