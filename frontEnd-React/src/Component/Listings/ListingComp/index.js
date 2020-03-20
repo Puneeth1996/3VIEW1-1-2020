@@ -72,11 +72,16 @@ export default class ListingComp extends Component {
     checkValidity = (eve) => {
         console.log(eve)
         console.log(this.state.propertyData.singleListingData)
-        if(eve===this.state.propertyData.singleListingData.sixDigitPIN){
+        if(eve.length===6){
+            if(eve===this.state.propertyData.singleListingData.sixDigitPIN)
             this.setState({
                 showInnerOutter : !this.state.showInnerOutter,
             })
+            else{
+                alert("Work Pin!")
+            }
         }
+        
     }
 
 

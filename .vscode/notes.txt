@@ -283,3 +283,8 @@ Done the above two tasks
 
 
     Have made great design and 0 warnigns and errors in the current code 
+
+
+    3pm 
+
+    Just create a specificListingPage which works consistent with input as the proertyData 
