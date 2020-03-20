@@ -72,7 +72,7 @@ export default class ListingComp extends Component {
     checkValidity = (eve) => {
         console.log(eve)
         console.log(this.state.propertyData.singleListingData)
-        if(eve==this.state.propertyData.singleListingData.sixDigitPIN){
+        if(eve===this.state.propertyData.singleListingData.sixDigitPIN){
             this.setState({
                 showInnerOutter : !this.state.showInnerOutter,
             })
@@ -92,7 +92,7 @@ export default class ListingComp extends Component {
 
 
                 {
-                    this.state.showInnerOutter=="False" ? 
+                    this.state.showInnerOutter==="False" ? 
                     <div>
                     <HeaderTitle
                     title='Search Your Home'

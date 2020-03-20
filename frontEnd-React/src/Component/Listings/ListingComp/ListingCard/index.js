@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TagFeature from '../../../CommonComponent/TagFeature'
-import { Redirect } from 'react-router-dom'
 import style from './index.module.css'
 import ReactCodeInput from 'react-code-input'
 
@@ -24,7 +23,8 @@ class ListingCard extends Component {
     }
 
     render() {
-        const { property_id, house_name, property_img_loc, property_visuals_type, date_created, geospacial_data, area, price, property_features, property_desc, property_desc_full, addresses, property_id_ref_num, sixDigitPIN, mtl_file_loc, obj_file_loc, threeJS_iframe_url, react360_iframe_url, property_sale_availablity, property_legal_desc } = this.props.listingData.singleListingData
+        // const { property_id, house_name, property_img_loc, property_visuals_type, date_created, geospacial_data, area, price, property_features, property_desc, property_desc_full, addresses, property_id_ref_num, sixDigitPIN, mtl_file_loc, obj_file_loc, threeJS_iframe_url, react360_iframe_url, property_sale_availablity, property_legal_desc } = this.props.listingData.singleListingData
+        const { house_name, property_img_loc, property_visuals_type, property_features, property_desc,addresses, } = this.props.listingData.singleListingData
         var arrFeatures = property_features.split("|")
 
         return (
