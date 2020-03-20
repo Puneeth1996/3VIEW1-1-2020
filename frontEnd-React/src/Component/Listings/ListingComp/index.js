@@ -66,6 +66,13 @@ export default class ListingComp extends Component {
     }
 
 
+    handleClick = () => {
+		this.setState(function(prevState) {
+			return {isToggleOn: !prevState.isToggleOn};
+		});
+	}
+
+
 
     changeHandler = (event) => {
         const name = event.target.name;
