@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import style from './index.module.css'
+
 
 
 import Banner from '../../CommonComponent/Banner'
 import HeaderTitle from '../../CommonComponent/HeaderTitle'
 import ListingsSearchForm from './ListingsSearchForm'
+import ListingCard from './ListingCard'
 
 import axios from 'axios'
 
-
+import style from './index.module.css'
 
 
 export default class ListingComp extends Component {
@@ -92,10 +93,16 @@ export default class ListingComp extends Component {
                     title='Search Your Home'
                     subTitle='Enter Your Property Id.'
                 />
-
-
                 <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
-
+                
+                {   
+                    (this.state.dataVerificationMessage==="False") ? 
+                        <h1>Nothing to Display</h1>
+                    :
+                    <>
+                        <ListingCard listingData={this.state.propertyData}/>
+                    </>
+                }
 
 
 

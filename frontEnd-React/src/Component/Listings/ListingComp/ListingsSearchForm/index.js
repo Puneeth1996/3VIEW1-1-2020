@@ -21,8 +21,6 @@ export default class ListingsSearchForm extends Component {
                         <div className={style.search_box_title_icon}><img src={search} onClick={this.props.listingSearchData} alt='' /></div>
                     </div>
                 </form>
-
-
             </div>
         )
     }
