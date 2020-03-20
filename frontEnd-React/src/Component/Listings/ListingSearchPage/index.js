@@ -83,10 +83,10 @@ export default class ListingSearchPage extends Component {
                     :
                     <>
                         {
-                            (this.state.dataVerificationMessage==="False") ? 
-                            <ListingCard listingData={this.state.propertyData} />
+                            (this.state.showInnerOutter==="False") ? 
+                                <ListingCard listingData={this.state.propertyData} />
                             :
-                            <h1>the inner and outter view </h1>
+                                <h1>the inner and outter view </h1>
                         }
                         
                     </>
