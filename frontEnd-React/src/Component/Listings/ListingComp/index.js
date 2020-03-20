@@ -9,7 +9,7 @@ import ListingCard from './ListingCard'
 
 import axios from 'axios'
 
-import style from './index.module.css'
+// import style from './index.module.css'
 
 
 export default class ListingComp extends Component {
