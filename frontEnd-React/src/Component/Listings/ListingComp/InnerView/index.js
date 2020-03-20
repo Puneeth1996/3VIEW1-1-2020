@@ -5,7 +5,7 @@ class InnerView extends Component {
 
     render() {
         return (
-            <Frame/>
+            <Frame urlMapProp={this.props.urlMapProp}/>
         );
     }
 }

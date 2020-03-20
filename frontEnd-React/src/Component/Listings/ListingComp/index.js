@@ -138,8 +138,8 @@ export default class ListingComp extends Component {
                         </button>
                         {
                             this.state.isToggleOn ?
-                            <OuterView />:
-                            <InnerView />
+                            <OuterView urlMapProp={this.state.propertyData.singleListingData.threeJS_iframe_url} />:
+                            <InnerView urlMapProp={this.state.propertyData.singleListingData.react360_iframe_url}/>
                         }
                         <GoogleMapComp />
                     </>

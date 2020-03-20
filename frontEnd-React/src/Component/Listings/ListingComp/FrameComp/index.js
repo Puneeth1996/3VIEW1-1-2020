@@ -6,7 +6,7 @@ class FrameComp extends Component {
     render() {
         return (
             <Iframe 
-                url="http://thepuneeth1996p.tech/new_project/Creating%20the%20Mouse%20Control/"
+                url={this.props.urlMapProp}
                 id="frameViewID"
                 className={style.frameView}
                 display="initial"

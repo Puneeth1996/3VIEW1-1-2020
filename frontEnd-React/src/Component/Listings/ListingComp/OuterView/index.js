@@ -4,7 +4,7 @@ class OuterView extends Component {
 
     render() {
         return (
-            <p>OuterView</p>
+            <p>OuterView{this.props.urlMapProp}</p>
         );
     }
 }
