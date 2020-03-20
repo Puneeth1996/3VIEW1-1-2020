@@ -269,4 +269,14 @@ Done the above two tasks
 
         https://reacttraining.com/react-router/web/example/auth-workflow
 
-        Make a asyncronus fake_Auth method that is set to true when there is correct validation of the 6digitpin and when there is no authentication redirect the user back home 
+        Make a asyncronus fake_Auth method that is set to true when there is correct validation of the 6digitpin and when there is no authentication redirect the user back home
+        
+
+
+
+20 Mar 2020 
+
+    If the lsiting card data is being correctly entered than the making of the ineerView and outerView instead of ListingCard
+
+
+    this means there should be total redesign of the Listings Component

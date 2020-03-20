@@ -20,6 +20,7 @@ export default class ListingSearchPage extends Component {
             property_id_ref_num: '',
             dataVerificationMessage: 'False',
             propertyData: [],
+            showInnerOutter : 'False',
         }
     }
 
@@ -81,7 +82,13 @@ export default class ListingSearchPage extends Component {
                         <h1>Nothing to Display</h1>
                     :
                     <>
-                        <ListingCard listingData={this.state.propertyData}/>
+                        {
+                            (this.state.dataVerificationMessage==="False") ? 
+                            <ListingCard listingData={this.state.propertyData} />
+                            :
+                            <h1>the inner and outter view </h1>
+                        }
+                        
                     </>
                 }
                 
