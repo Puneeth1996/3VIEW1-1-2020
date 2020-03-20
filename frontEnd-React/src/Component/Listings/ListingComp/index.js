@@ -73,7 +73,6 @@ export default class ListingComp extends Component {
 
 
 
-
     render() {
         return (
             <div>
@@ -84,8 +83,9 @@ export default class ListingComp extends Component {
 
 
 
+                {
 
-
+                }
 
 
 
