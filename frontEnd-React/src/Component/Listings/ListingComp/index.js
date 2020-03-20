@@ -133,7 +133,6 @@ export default class ListingComp extends Component {
                             subTitle={this.state.propertyData.singleListingData.property_desc_full}
                         />
                         <TagFeature tag={this.state.propertyData.singleListingData.property_features.split("|")} className={style.TagFeature}/>
-
                         <button onClick={this.handleClick} className={`${style.classNameBtn} ${style.buttonGeneral}`} >
                             {this.state.isToggleOn ? 'Inner View' : 'Outter View'}
                         </button>
