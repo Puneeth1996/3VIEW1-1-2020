@@ -1,0 +1,59 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+    justify-content: center;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    width: 60%;
+    position: relative;
+    display: flex;
+    margin-left: 20vw;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #fd784f;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #fd784f;
+    margin-left: 50px;
+}
+
+.ListingsSearchForm{
+    font-size: 24px;
+}
+
+.search_box_title_icon{
+    left: 0;
+    top: 0;
+    width: 51px;
+    height: 46px;
+    background: #0e1d41;
+}
+
+.search_box_title_icon img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.searchDescription {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 51px;
+    color: #0e1d41;
+    /* text-transform: uppercase; */
+    margin-left: 7%;
+    font-family: 'Open Sans', sans-serif;
+}
+input[type=text] {
+    font-size: 34px;
+}
+
+input[type=text]:focus {
+    background-color: #fd784f;
+}

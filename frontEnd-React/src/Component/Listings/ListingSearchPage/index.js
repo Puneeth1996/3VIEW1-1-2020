@@ -1,20 +1,16 @@
 import React, { Component } from 'react'
-
-
-
 import Banner from '../../CommonComponent/Banner'
 import HeaderTitle from '../../CommonComponent/HeaderTitle'
 import ListingsSearchForm from './ListingsSearchForm'
-import ListingCard from './ListingCard'
 
 import axios from 'axios'
 
-// import style from './index.module.css'
+
+import ListingCard from './ListingCard'
 
 
-export default class ListingComp extends Component {
 
-
+export default class ListingSearchPage extends Component {
 
 
     constructor(props) {
@@ -24,7 +20,6 @@ export default class ListingComp extends Component {
             property_id_ref_num: '',
             dataVerificationMessage: 'False',
             propertyData: [],
-            showInnerOutter : 'False',
         }
     }
 
@@ -68,49 +63,29 @@ export default class ListingComp extends Component {
     }
 
 
-
-    checkValidity = (eve) => {
-        console.log(eve)
-        console.log(this.state.propertyData.singleListingData)
-        if(eve===this.state.propertyData.singleListingData.sixDigitPIN){
-            this.setState({
-                showInnerOutter : !this.state.showInnerOutter,
-            })
-        }
-    }
-
-
-
     render() {
+        console.log(this.state)
         return (
             <div>
                 <Banner>
                     Listings
                 </Banner>
-                {
-                    this.state.showInnerOutter==="False" ? 
-
-                    <div>
-                        <HeaderTitle
-                            title='Search Your Home'
-                            subTitle='Enter Your Property Id.'
-                        />
-                        <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
-                        {   
-                            (this.state.dataVerificationMessage==="False") ? 
-                                <h1>Nothing to Display</h1>
-                            :
-                            <>
-                                <ListingCard listingData={this.state.propertyData} checkValidity={this.checkValidity} />
-                            </>
-                        }
-                    </div>
-
+                <HeaderTitle
+                    title='Search Your Home'
+                    subTitle='Enter Your Property Id.'
+                />
+                <ListingsSearchForm searchData={this.state} changeHandler={this.changeHandler} listingSearchData={this.listingSearchData} />
+                
+                {   
+                    (this.state.dataVerificationMessage==="False") ? 
+                        <h1>Nothing to Display</h1>
                     :
-
-                    <h1>Show showInnerOutter</h1>
-
+                    <>
+                        <ListingCard listingData={this.state.propertyData}/>
+                    </>
                 }
+                
+
             </div>
         )
     }

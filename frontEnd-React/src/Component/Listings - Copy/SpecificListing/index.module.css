@@ -1,0 +1,110 @@
+
+
+/* GENERAL .buttonGeneral STYLING */
+.buttonGeneral,
+.buttonGeneral::after {
+  -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.buttonGeneral {
+  background: none;
+  border: 3px solid #fd784f;
+  border-radius: 5px;
+  color: #fd784f;
+  display: block;
+  font-size: 1.6em !important;
+  font-weight: bold !important;
+  margin: 1em auto !important;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase !important;
+}
+
+.buttonGeneral::before,
+.buttonGeneral::after {
+  background: #07122c;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.buttonGeneral:hover {
+  color: #fd784f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.outterView{
+  background: #07122c;
+  color:  #fd784f;
+}
+
+.outterView:hover{
+  color:  rgb(0, 0, 0);
+}
+
+/* .buttonGeneral 3 */
+.outterView::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.outterView:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* .buttonGeneral 4 */
+.innerView::before {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.innerView::after {
+  background: #2ecc71;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.innerView:hover:after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+
+
+
+.proptyName{
+  padding-top: 2.5vh;
+  padding-bottom: 1.5vh;
+  letter-spacing: 10px;
+}
+
+
+
+.TagFeature{
+  background-color: rgb(241, 231, 231);
+  margin-left: 10vw;
+}
