@@ -9,21 +9,6 @@ import ReactCodeInput from 'react-code-input'
 
 
 
-const fakeAuth = {
-    isAuthenticated: false,
-    authenticate(cb) {
-        fakeAuth.isAuthenticated = true;
-        setTimeout(cb, 100); // fake async
-    },
-    signout(cb) {
-        fakeAuth.isAuthenticated = false;
-        setTimeout(cb, 100);
-    }
-};
-
-
-
-
 class ListingCard extends Component {
 
     constructor(props) {
@@ -49,22 +34,12 @@ class ListingCard extends Component {
 
 
     checkValidity = (eve) => {
-
-        let history = useHistory()
-        let location = useLocation()
     
-        let { from } = location.state || { from: { pathname: "/" } }
-        
-    
-        console.log(eve)
         if(eve==this.state.reqPIN){
             this.setState({
                 refire: true,
             })
         }
-        fakeAuth.authenticate(() => {
-            history.replace(from);
-        });
     }
 
 
@@ -76,13 +51,6 @@ class ListingCard extends Component {
 
 
 
-
-
-
-
-
-
-    
         return (
             <div className={style.Listingcard}>
                 <h2>{house_name}</h2>
@@ -94,7 +62,7 @@ class ListingCard extends Component {
                         <p>{addresses}</p>
                     </div>
                     {
-                        this.state.refire & fakeAuth.isAuthenticated ?
+                        this.state.refire  ?
                         <Redirect to={'/Listings/'+property_id_ref_num} />:
                         <ReactCodeInput type='password' fields={6} onChange={this.checkValidity} />
                     }                    

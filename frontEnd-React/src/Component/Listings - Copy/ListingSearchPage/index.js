@@ -67,9 +67,18 @@ export default class ListingSearchPage extends Component {
     render() {
         console.log(this.state)
         return (
+            
             <div>
+
+
+                
+
+
                 <Banner>
                     Listings
+                    {
+                        (this.state.showInnerOutter=="False" ? <p>False</p> : <p>True</p>)
+                    }
                 </Banner>
                 <HeaderTitle
                     title='Search Your Home'
@@ -83,10 +92,10 @@ export default class ListingSearchPage extends Component {
                     :
                     <>
                         {
-                            (this.state.dataVerificationMessage==="False") ? 
-                            <ListingCard listingData={this.state.propertyData} />
+                            (this.state.showInnerOutter==="False") ? 
+                                <ListingCard listingData={this.state.propertyData} />
                             :
-                            <h1>the inner and outter view </h1>
+                                <h1>Ther Was Error with ^ Digit Pin</h1>
                         }
                         
                     </>

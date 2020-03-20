@@ -51,13 +51,6 @@ class ListingCard extends Component {
 
 
 
-
-
-
-
-
-
-    
         return (
             <div className={style.Listingcard}>
                 <h2>{house_name}</h2>
