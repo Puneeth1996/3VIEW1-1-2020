@@ -288,3 +288,16 @@ Done the above two tasks
     3pm 20 Mar 2020
 
         Just create a specificListingPage which works consistent with input as the proertyData 
+
+
+23 Mar 2020
+
+    MAking the work for new Threejs and react360 code with the new models then hosting them individually using the iframes
+
+    https://www.cgtrader.com/free-3d-models/exterior/house/modern-house-1-fb651848-c6b5-446a-8552-36dbb2dd0825
+
+    https://www.cgtrader.com/free-3d-models/exterior/house/modern-house-3-ae18e9d1-910c-4ddd-8a5a-ef8e744e2980
+
+
+
+    
