@@ -27,8 +27,8 @@ export default class example extends React.Component {
         <Entity
           style={{
             transform: [
-              {translate: [0, -500, -100]},
-              {scale: 1},
+              {translate: [10, -100, -10]},
+              {scale: 0.01},
             ],
           }}
           source={{
