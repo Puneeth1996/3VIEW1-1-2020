@@ -28,12 +28,12 @@ export default class example extends React.Component {
           style={{
             transform: [
               {translate: [10, -100, -10]},
-              {scale: 0.01},
+              {scale: 1},
             ],
           }}
           source={{
-            obj: asset('uploads_files_1004327_house_6.obj'),
-            mtl: asset('uploads_files_1004327_house_6.mtl')
+            obj: asset('Modern House_1_obj.obj'),
+            mtl: asset('Modern House_1_obj.mtl')
           }}
           lit={true}
         />
