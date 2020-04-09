@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Text,
   View,
-  asset
+  asset,
+  AmbientLight,
 } from 'react-360';
 import Entity from 'Entity';
 
@@ -12,16 +13,27 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
+
+
+        <AmbientLight intensity={0.7}
+          style={{
+            color: 'white',
+            transform: [
+              {translate: [0, 0, 0]},
+            ]
+          }}
+        />
+
         <Entity
           style={{
             transform: [
-              {translate: [0, 0, 0]},
-              {scale: 1000},
+              {translate: [0, -500, -100]},
+              {scale: 1},
             ],
           }}
           source={{
-            obj: asset('Modern House_1_obj.obj'),
-            mtl: asset('Modern House_1_obj.mtl')
+            obj: asset('uploads_files_1004327_house_6.obj'),
+            mtl: asset('uploads_files_1004327_house_6.mtl')
           }}
           lit={true}
         />

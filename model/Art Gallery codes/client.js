@@ -29,7 +29,7 @@ r360.renderToSurface(
   myFlatSurface
 );
 
-  const customLocation = new Location([-5,4,0]);
+  const customLocation = new Location([0,0,0]);
 
  
 
