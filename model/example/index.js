@@ -6,6 +6,7 @@ import {
   View,
   asset,
   AmbientLight,
+  PointLight,
 } from 'react-360';
 import Entity from 'Entity';
 
@@ -23,17 +24,20 @@ export default class example extends React.Component {
             ]
           }}
         />
+        <PointLight 
 
+        
+        />
         <Entity
           style={{
             transform: [
-              {translate: [10, -100, -10]},
+              {translate: [0, -10, -20]},
               {scale: 1},
             ],
           }}
           source={{
-            obj: asset('Modern House_1_obj.obj'),
-            mtl: asset('Modern House_1_obj.mtl')
+            obj: asset('Bambo_House.obj'),
+            mtl: asset('Bambo_House.mtl')
           }}
           lit={true}
         />
