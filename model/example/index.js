@@ -24,20 +24,17 @@ export default class example extends React.Component {
             ]
           }}
         />
-        <PointLight 
 
-        
-        />
         <Entity
           style={{
             transform: [
-              {translate: [0, -10, -20]},
-              {scale: 1},
+              {translate: [0, 50, 100]},
+              {scale: 5},
             ],
           }}
           source={{
-            obj: asset('Bambo_House.obj'),
-            mtl: asset('Bambo_House.mtl')
+            obj: asset('3d-model.obj'),
+            mtl: asset('3d-model.mtl')
           }}
           lit={true}
         />
