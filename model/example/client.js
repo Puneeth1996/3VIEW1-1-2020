@@ -10,7 +10,7 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
   
-  const customLocation = new Location([-1, -0.5, -3.5]);
+  const customLocation = new Location([-1, -0.65, -3.5]);
   r360.renderToLocation(
     r360.createRoot('example'),
     customLocation
