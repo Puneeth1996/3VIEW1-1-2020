@@ -8,6 +8,12 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
+
+
+
+        
+
+
         <Lights />
         <Model />
       </View>
