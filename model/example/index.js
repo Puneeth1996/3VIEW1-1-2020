@@ -43,31 +43,33 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
-
-        <VrButton
-          onClick={() => {
-            this.state.xTarPos = -5;
-            this.state.zTarPos = 0;
-          }}
+        <View
           style={{
-              opacity: 0,
+              opacity: 0.1,
           }}
-        > 
-          <Entity
-            style={{
-                transform: [
-                { translate: [0, -20, 0]},
-                { rotateX: 180 },
-                {scale: 0.007},
-                ],
+        >
+          <VrButton
+            onClick={() => {
+              this.state.xTarPos = -5;
+              this.state.zTarPos = 0;
             }}
-            source={{
-                obj: asset('3d-model.obj'),
-                mtl: asset('3d-model.mtl')
-            }}
-            lit={true}
-          />
-        </VrButton>
+          > 
+            <Entity
+              style={{
+                  transform: [
+                  { translate: [0, 0, 5]},
+                  {scale: 1},
+                  ],
+              }}
+              source={{
+                  obj: asset('uploads_files_67386_carpet.obj'),
+                  mtl: asset('uploads_files_67386_carpet.mtl')
+              }}
+              lit={true}
+              color={'red'}
+            />
+          </VrButton>
+        </View>
 
         <Lights />
         <Model />
