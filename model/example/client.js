@@ -28,7 +28,7 @@ function init(bundle, parent, options = {}) {
 
 function onMessage(e, r360, customLocation) {
   if(e.data.type === 'newPosition') {
-    customLocation.setWorldPosition(e.data.x, 4, e.data.z);
+    customLocation.setWorldPosition(e.data.x, 0, e.data.z);
   }
 }
 
