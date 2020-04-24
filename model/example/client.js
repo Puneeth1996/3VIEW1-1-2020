@@ -16,8 +16,20 @@ function init(bundle, parent, options = {}) {
     customLocation
   );
 
+
+  r360.runtime.executor._worker.addEventListener(
+    'message',
+    (e) => onMessage(e, r360, customLocation, myFlatSurface)
+  );
+  
   // Load the initial environment
   r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
+}
+
+function onMessage(e, r360, customLocation, myFlatSurface) {
+  if(e.data.type === 'newPosition') {
+    customLocation.setWorldPosition(e.data.x, 4, e.data.z);
+  }
 }
 
 window.React360 = {init};

@@ -50,15 +50,15 @@ export default class example extends React.Component {
         >
           <VrButton
             onClick={() => {
-              this.state.xTarPos = -5;
-              this.state.zTarPos = 0;
+              this.state.xTarPos = 1;
+              this.state.zTarPos = 10;
             }}
           > 
             <Entity
               style={{
                   transform: [
-                  { translate: [0, 0, 5]},
-                  {scale: 1},
+                  { translate: [-1, 0.125, 3]},
+                  {scale: 0.5},
                   ],
               }}
               source={{
@@ -70,7 +70,6 @@ export default class example extends React.Component {
             />
           </VrButton>
         </View>
-
         <Lights />
         <Model />
       </View>
