@@ -61,7 +61,8 @@ export default class example extends React.Component {
           <VrButton
             onClick={() => {
               this.state.xTarPos = 1;
-              this.state.zTarPos = 10;
+              this.state.yTarPos = 0;
+              this.state.zTarPos = -3;
             }}
           > 
             <Entity
