@@ -9,8 +9,10 @@ export default class example extends React.Component {
     super();
     this.state = {
       xCurPos : -5,
+      yCurPos : 0,
       zCurPos : 0,
       xTarPos : -5,
+      yTarPos : 0,
       zTarPos : 0,
     };
     this.Lerp = this.Lerp.bind(this);
@@ -35,7 +37,15 @@ export default class example extends React.Component {
       this.setState({
         zCurPos : this.state.zCurPos * (1 - 0.05) + this.state.zTarPos * 0.05
       });
-      postMessage({type: "newPosition", x: this.state.xCurPos, z: this.state.zCurPos});
+      postMessage({type: "newPosition", x: this.state.xCurPos, y: this.state.yCurPos, z: this.state.zCurPos});
+    }
+    else if(Math.abs (this.state.yCurPos - this.state.yTarPos) > 0.3)
+    {
+      //  to match the Z coordinates
+      this.setState({
+        yCurPos : this.state.yCurPos * (1 - 0.05) + this.state.yTarPos * 0.05
+      });
+      postMessage({type: "newPosition", x: this.state.xCurPos, y: this.state.yCurPos, z: this.state.zCurPos});
     }
     requestAnimationFrame(this.Lerp);
   }
