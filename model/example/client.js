@@ -19,14 +19,14 @@ function init(bundle, parent, options = {}) {
 
   r360.runtime.executor._worker.addEventListener(
     'message',
-    (e) => onMessage(e, r360, customLocation, myFlatSurface)
+    (e) => onMessage(e, r360, customLocation)
   );
   
   // Load the initial environment
   r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
 }
 
-function onMessage(e, r360, customLocation, myFlatSurface) {
+function onMessage(e, r360, customLocation) {
   if(e.data.type === 'newPosition') {
     customLocation.setWorldPosition(e.data.x, 4, e.data.z);
   }
