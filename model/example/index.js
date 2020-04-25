@@ -53,60 +53,6 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
-
-        {/* <VrButton
-          onClick={() => {
-              this.state.xTarPos = -3;
-              this.state.zTarPos = 50;
-        }}
-        >
-          <Entity
-              style={{
-                  transform: [
-                  {translate: [3,-50,-50]},
-                  {rotateX: 250},
-                  {rotateY: 5},
-                  {rotateZ: 5},
-                  {scale: 1},
-                  ],
-              }}
-              source={{
-                  obj: asset('uploads_files_67386_carpet.obj'),
-                  mtl: asset('uploads_files_67386_carpet.mtl')
-              }}
-              lit={true}
-          />
-        </VrButton> */}
-
-        {/* <View
-          style={{
-              opacity: 0.8,
-              color: 'red'
-          }}
-        >
-          <VrButton
-            onClick={() => {
-              this.state.xTarPos = 0;
-              this.state.yTarPos = 0;
-              this.state.zTarPos = 0;
-            }}
-          > 
-            <Entity
-              style={{
-                  transform: [
-                  { translate: [0, 0, -5]},
-                  {scale: 0.5},
-                  ],
-              }}
-              source={{
-                  obj: asset('uploads_files_67386_carpet.obj'),
-                  mtl: asset('uploads_files_67386_carpet.mtl')
-              }}
-              lit={true}
-              color={'red'}
-            />
-          </VrButton>
-        </View> */}
         <VrButton
           style={styles.panel}
           onClick={() => {
