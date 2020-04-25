@@ -8,7 +8,7 @@ export default class Model extends React.Component {
             <Entity
                 style={{
                     transform: [
-                    {translate: [0, 0, 0]},
+                    {translate: [-1, -0.525, -3.5]},
                     {scale: 1},
                     ],
                 }}

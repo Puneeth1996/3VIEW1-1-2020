@@ -29,7 +29,7 @@ export default class example extends React.Component {
       this.setState({
         xCurPos : this.state.xCurPos * (1 - 0.05) + this.state.xTarPos * 0.05
       });
-      postMessage({type: "newPosition", x: this.state.xCurPos, z: this.state.zCurPos});
+      postMessage({type: "newPosition", x: this.state.xCurPos, y: this.state.yCurPos, z: this.state.zCurPos});
     }
     else if(Math.abs (this.state.zCurPos - this.state.zTarPos) > 0.3)
     {
