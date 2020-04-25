@@ -54,6 +54,7 @@ export default class MarkerButton extends React.Component {
             style={styles.panel}
             onClick={() => {
                     this.state.xTarPos = +1;
+                    this.state.yTarPos = 0;
                     this.state.zTarPos = -50;
                 }}
             >
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     panel: {
         // Fill the entire surface
         transform: [
-            {translate: [0,0,0]},
+            {translate: [-1,0,50]},
             {rotateX: 90},
             {rotateY: 0},
             {rotateZ: 0},
