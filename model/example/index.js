@@ -8,10 +8,10 @@ export default class example extends React.Component {
   constructor() {
     super();
     this.state = {
-      xCurPos : -5,
+      xCurPos : 0,
       yCurPos : 0,
       zCurPos : 0,
-      xTarPos : -5,
+      xTarPos : 0,
       yTarPos : 0,
       zTarPos : 0,
     };
@@ -62,13 +62,13 @@ export default class example extends React.Component {
             onClick={() => {
               this.state.xTarPos = 1;
               this.state.yTarPos = 0;
-              this.state.zTarPos = -3;
+              this.state.zTarPos = 0;
             }}
           > 
             <Entity
               style={{
                   transform: [
-                  { translate: [-1, 0.125, 3]},
+                  { translate: [-1, 0, 3]},
                   {scale: 0.5},
                   ],
               }}
