@@ -4,11 +4,12 @@ import Entity from 'Entity';
 
 export default class Model extends React.Component {
     render() {
+        // [-1, -0.525, -3.5]
         return (
             <Entity
                 style={{
                     transform: [
-                    {translate: [-1, -0.525, -3.5]},
+                    {translate: [-1, -10, -3.5]},
                     {scale: 1},
                     ],
                 }}

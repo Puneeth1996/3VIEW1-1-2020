@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppRegistry, View, asset, VrButton } from 'react-360';
+import { AppRegistry, View, asset, VrButton, StyleSheet, } from 'react-360';
 import Entity from 'Entity';
 import Model from './components/Model';
 import Lights from './components/Lights';
@@ -53,14 +53,40 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
-        <View
+
+        {/* <VrButton
+          onClick={() => {
+              this.state.xTarPos = -3;
+              this.state.zTarPos = 50;
+        }}
+        >
+          <Entity
+              style={{
+                  transform: [
+                  {translate: [3,-50,-50]},
+                  {rotateX: 250},
+                  {rotateY: 5},
+                  {rotateZ: 5},
+                  {scale: 1},
+                  ],
+              }}
+              source={{
+                  obj: asset('uploads_files_67386_carpet.obj'),
+                  mtl: asset('uploads_files_67386_carpet.mtl')
+              }}
+              lit={true}
+          />
+        </VrButton> */}
+
+        {/* <View
           style={{
-              opacity: 0.1,
+              opacity: 0.8,
+              color: 'red'
           }}
         >
           <VrButton
             onClick={() => {
-              this.state.xTarPos = 1;
+              this.state.xTarPos = 0;
               this.state.yTarPos = 0;
               this.state.zTarPos = 0;
             }}
@@ -68,7 +94,7 @@ export default class example extends React.Component {
             <Entity
               style={{
                   transform: [
-                  { translate: [-1, 0, 3]},
+                  { translate: [0, 0, -5]},
                   {scale: 0.5},
                   ],
               }}
@@ -80,7 +106,16 @@ export default class example extends React.Component {
               color={'red'}
             />
           </VrButton>
-        </View>
+        </View> */}
+        <VrButton
+          style={styles.panel}
+          onClick={() => {
+                  this.state.xTarPos = +1;
+                  this.state.zTarPos = -50;
+              }}
+        >
+        </VrButton>
+
         <Lights />
         <Model />
       </View>
@@ -88,6 +123,22 @@ export default class example extends React.Component {
   }
 };
 
+
+
+const styles = StyleSheet.create({
+  panel: {
+      // Fill the entire surface
+      transform: [
+          {translate: [0,0,0]},
+          {rotateX: 90},
+          {rotateY: 0},
+          {rotateZ: 0},
+          ],
+      width: 50,
+      height: 50,
+      backgroundColor: 'rgba(255, 255, 255, 0.5)'
+  }
+});
 
 
 AppRegistry.registerComponent('example', () => example);
