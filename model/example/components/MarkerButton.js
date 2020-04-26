@@ -1,17 +1,17 @@
 import React from 'react';
-import { AppRegistry, View, asset, VrButton, StyleSheet, } from 'react-360';
+import { View, asset, VrButton } from 'react-360';
 import Entity from 'Entity';
 
 export default class MarkerButton extends React.Component {
     constructor() {
         super();
         this.state = {
-        xCurPos : 0,
-        yCurPos : 0,
-        zCurPos : 0,
-        xTarPos : 0,
-        yTarPos : 0,
-        zTarPos : 0,
+            xCurPos : 0,
+            yCurPos : 0,
+            zCurPos : 0,
+            xTarPos : 0,
+            yTarPos : 0,
+            zTarPos : 0,
         };
         this.Lerp = this.Lerp.bind(this);
     }
@@ -23,7 +23,6 @@ export default class MarkerButton extends React.Component {
     Lerp() {
         if(Math.abs (this.state.xCurPos - this.state.xTarPos) > 0.3)
         {
-            //  to match the X coordinates
             this.setState({
                 xCurPos : this.state.xCurPos * (1 - 0.05) + this.state.xTarPos * 0.05
             });
@@ -31,7 +30,6 @@ export default class MarkerButton extends React.Component {
         }
         else if(Math.abs (this.state.zCurPos - this.state.zTarPos) > 0.3)
         {
-            //  to match the Z coordinates
             this.setState({
                 zCurPos : this.state.zCurPos * (1 - 0.05) + this.state.zTarPos * 0.05
             });
@@ -39,7 +37,6 @@ export default class MarkerButton extends React.Component {
         }
         else if(Math.abs (this.state.yCurPos - this.state.yTarPos) > 0.3)
         {
-            //  to match the Z coordinates
             this.setState({
                 yCurPos : this.state.yCurPos * (1 - 0.05) + this.state.yTarPos * 0.05
             });
@@ -50,7 +47,7 @@ export default class MarkerButton extends React.Component {
     
     render() {
         return (
-        <View >
+        <>
             <VrButton
                 onClick={() => {
                     this.state.xTarPos = 10;
@@ -90,7 +87,7 @@ export default class MarkerButton extends React.Component {
                     lit={true}
                 />
             </VrButton>
-        </View>
+        </>
         );
     }
 };
