@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppRegistry, View, asset, VrButton, StyleSheet, } from 'react-360';
+import Entity from 'Entity';
 
 export default class MarkerButton extends React.Component {
     constructor() {
@@ -51,13 +52,26 @@ export default class MarkerButton extends React.Component {
         return (
         <View >
             <VrButton
-            style={styles.panel}
-            onClick={() => {
+                onClick={() => {
                     this.state.xTarPos = +1;
                     this.state.yTarPos = 0;
                     this.state.zTarPos = -50;
                 }}
             >
+                <Entity
+                    style={{
+                        transform: [
+                        {rotateX: 0},
+                        {translate: [-5, 0, -20]},
+                        {scale: 0.25}
+                        ]
+                    }}
+                    source={{
+                        obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
+                        mtl: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/New Bitmap Image.mtl')
+                    }}
+                    lit={true}
+                />
             </VrButton>
         </View>
         );
@@ -66,17 +80,3 @@ export default class MarkerButton extends React.Component {
 
 
 
-const styles = StyleSheet.create({
-    panel: {
-        // Fill the entire surface
-        transform: [
-            {translate: [-1,0,50]},
-            {rotateX: 90},
-            {rotateY: 0},
-            {rotateZ: 0},
-            ],
-        width: 50,
-        height: 50,
-        backgroundColor: 'rgba(255, 255, 255, 0.5)'
-    }
-});
