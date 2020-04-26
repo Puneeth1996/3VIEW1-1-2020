@@ -53,16 +53,15 @@ export default class MarkerButton extends React.Component {
         <View >
             <VrButton
                 onClick={() => {
-                    this.state.xTarPos = +10;
+                    this.state.xTarPos = 10;
                     this.state.yTarPos = 0;
-                    this.state.zTarPos = -50;
+                    this.state.zTarPos = 0;
                 }}
             >
                 <Entity
                     style={{
                         transform: [
                         {translate: [-10, -3, -4.5]},
-                        {scale: 0.75}
                         ]
                     }}
                     source={{
@@ -81,8 +80,8 @@ export default class MarkerButton extends React.Component {
                 <Entity
                     style={{
                         transform: [
-                        {translate: [2, -3, -4.5]},
-                        {scale: 0.75}
+                        {translate: [3.5, -3, -4.5]},
+                        {scale: 1}
                         ]
                     }}
                     source={{
