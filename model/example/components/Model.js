@@ -10,7 +10,6 @@ export default class Model extends React.Component {
                 style={{
                     transform: [
                     {translate: [-1, -0.75, -3.5]},
-                    {scale: 1},
                     ],
                 }}
                 source={{
