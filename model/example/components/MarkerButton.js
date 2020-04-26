@@ -61,14 +61,12 @@ export default class MarkerButton extends React.Component {
                 <Entity
                     style={{
                         transform: [
-                        {rotateX: 0},
-                        {translate: [-5, 0, -20]},
-                        {scale: 0.25}
+                        {translate: [-5, -3, 0]},
+                        {scale: 0.5}
                         ]
                     }}
                     source={{
-                        obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
-                        mtl: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/New Bitmap Image.mtl')
+                        obj: asset('door_mat.obj'),
                     }}
                     lit={true}
                 />
