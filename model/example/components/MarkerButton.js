@@ -50,7 +50,7 @@ export default class MarkerButton extends React.Component {
 <View>
     <VrButton
         onClick={() => {
-            this.state.xTarPos = 3;
+            this.state.xTarPos = 2;
             this.state.yTarPos = 0;
             this.state.zTarPos = 0;
         }}
@@ -58,11 +58,13 @@ export default class MarkerButton extends React.Component {
         <Entity
             style={{
                 transform: [
-                {translate: [-10, -3, -4.5]},
+                {translate: [-6.5, -2, -2.5]},
+                {scale: 0.1},
+                {rotateX: 90}
                 ]
             }}
             source={{
-                obj: asset('door_mat.obj'),
+                obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
             }}
             lit={true}
         />
@@ -78,10 +80,13 @@ export default class MarkerButton extends React.Component {
             style={{
                 transform: [
                 {translate: [3.5, -3, -4.5]},
+                {scale: 0.1},
+                {rotateX: 90}
                 ]
             }}
             source={{
-                obj: asset('door_mat.obj'),
+                obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
+                mtl: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/New Bitmap Image.mtl'),
             }}
             lit={true}
         />

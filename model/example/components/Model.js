@@ -9,7 +9,7 @@ export default class Model extends React.Component {
             <Entity
                 style={{
                     transform: [
-                    {translate: [-1, -500, -3.5]},
+                    {translate: [0, -0.525, -3.5]},
                     ],
                 }}
                 source={{
