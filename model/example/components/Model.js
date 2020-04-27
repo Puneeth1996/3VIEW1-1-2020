@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, asset, } from 'react-360';
+import {  AppRegistry, View, asset, } from 'react-360';
 import Entity from 'Entity';
 
 export default class Model extends React.Component {
@@ -9,12 +9,12 @@ export default class Model extends React.Component {
             <Entity
                 style={{
                     transform: [
-                    {translate: [-1, -0.75, -3.5]},
+                    {translate: [-1, -500, -3.5]},
                     ],
                 }}
                 source={{
-                    obj: asset('TheFactory.obj'),
-                    mtl: asset('TheFactory.mtl')
+                    obj: asset('Creating the Mouse Control/Modern House_05_obj.obj'),
+                    mtl: asset('Creating the Mouse Control/Modern House_05_obj.mtl')
                 }}
                 lit={true}
             />
@@ -22,3 +22,4 @@ export default class Model extends React.Component {
     }
 };
 
+// AppRegistry.registerComponent('Model', () => Model);

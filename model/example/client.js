@@ -23,7 +23,7 @@ function init(bundle, parent, options = {}) {
   );
   
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
+  // r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
 }
 
 function onMessage(e, r360, customLocation) {

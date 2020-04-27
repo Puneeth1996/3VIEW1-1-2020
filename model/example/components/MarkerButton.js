@@ -47,47 +47,46 @@ export default class MarkerButton extends React.Component {
     
     render() {
         return (
-        <>
+            <View>
             <VrButton
                 onClick={() => {
-                    this.state.xTarPos = 10;
-                    this.state.yTarPos = 0;
-                    this.state.zTarPos = 0;
+                this.state.xTarPos = 3;
+                this.state.yTarPos = 0;
+                this.state.zTarPos = 0;
                 }}
             >
                 <Entity
-                    style={{
-                        transform: [
-                        {translate: [-10, -3, -4.5]},
-                        ]
-                    }}
-                    source={{
-                        obj: asset('door_mat.obj'),
-                    }}
-                    lit={true}
+                style={{
+                    transform: [
+                    {translate: [-10, -3, -4.5]},
+                    ]
+                }}
+                source={{
+                    obj: asset('door_mat.obj'),
+                }}
+                lit={true}
                 />
             </VrButton>
             <VrButton
                 onClick={() => {
-                    this.state.xTarPos = -2;
-                    this.state.yTarPos = 0;
-                    this.state.zTarPos = 0;
+                this.state.xTarPos = -3.5;
+                this.state.yTarPos = 0;
+                this.state.zTarPos = 0;
                 }}
             >
                 <Entity
-                    style={{
-                        transform: [
-                        {translate: [3.5, -3, -4.5]},
-                        {scale: 1}
-                        ]
-                    }}
-                    source={{
-                        obj: asset('door_mat.obj'),
-                    }}
-                    lit={true}
+                style={{
+                    transform: [
+                    {translate: [3.5, -3, -4.5]},
+                    ]
+                }}
+                source={{
+                    obj: asset('door_mat.obj'),
+                }}
+                lit={true}
                 />
             </VrButton>
-        </>
+            </View>
         );
     }
 };
