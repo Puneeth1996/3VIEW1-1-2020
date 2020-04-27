@@ -9,7 +9,7 @@ export default class Model extends React.Component {
             <Entity
                 style={{
                     transform: [
-                    {translate: [0, -0.525, -3.5]},
+                    {translate: [-1, -0.525, -3.5]},
                     ],
                 }}
                 source={{
@@ -22,4 +22,4 @@ export default class Model extends React.Component {
     }
 };
 
-// AppRegistry.registerComponent('Model', () => Model);
+AppRegistry.registerComponent('Model', () => Model);

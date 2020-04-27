@@ -50,7 +50,7 @@ export default class MarkerButton extends React.Component {
 <View>
     <VrButton
         onClick={() => {
-            this.state.xTarPos = 2;
+            this.state.xTarPos = 2.8;
             this.state.yTarPos = 0;
             this.state.zTarPos = 0;
         }}
@@ -58,7 +58,7 @@ export default class MarkerButton extends React.Component {
         <Entity
             style={{
                 transform: [
-                {translate: [-6.5, -2, -2.5]},
+                {translate: [-15, -2, -2.5]},
                 {scale: 0.1},
                 {rotateX: 90}
                 ]
@@ -69,9 +69,33 @@ export default class MarkerButton extends React.Component {
             lit={true}
         />
     </VrButton>
+    
     <VrButton
         onClick={() => {
-            this.state.xTarPos = -3.5;
+            this.state.xTarPos = 3.8;
+            this.state.yTarPos = 0;
+            this.state.zTarPos = 5.5;
+        }}
+    >
+        <Entity
+            style={{
+                transform: [
+                {translate: [-10, -2, -20]},
+                {scale: 0.1},
+                {rotateX: 90}
+                ]
+            }}
+            source={{
+                obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
+            }}
+            lit={true}
+        />
+    </VrButton>
+    
+
+    <VrButton
+        onClick={() => {
+            this.state.xTarPos = -2.5;
             this.state.yTarPos = 0;
             this.state.zTarPos = 0;
         }}
@@ -79,7 +103,30 @@ export default class MarkerButton extends React.Component {
         <Entity
             style={{
                 transform: [
-                {translate: [3.5, -3, -4.5]},
+                {translate: [-10, -3,  -2]},
+                {scale: 0.1},
+                {rotateX: 90}
+                ]
+            }}
+            source={{
+                obj: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/16859_floor_mat_V2.obj'),
+                mtl: asset('floor_mat_V2_L1.123caad68fab-42fb-46d9-ad57-a9a020419be0/New Bitmap Image.mtl'),
+            }}
+            lit={true}
+        />
+    </VrButton>
+    
+    <VrButton
+        onClick={() => {
+            this.state.xTarPos = -2.5;
+            this.state.yTarPos = 0;
+            this.state.zTarPos = 0;
+        }}
+    >
+        <Entity
+            style={{
+                transform: [
+                {translate: [0, -3, -4.5]},
                 {scale: 0.1},
                 {rotateX: 90}
                 ]
