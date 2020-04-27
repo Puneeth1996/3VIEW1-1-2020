@@ -65,12 +65,11 @@ export default class Marker extends React.Component {
                 {rotateX: 250},
                 {rotateY: 5},
                 {rotateZ: 5},
-                {scale: 0.2},
+                {scale: 2},
                 ],
             }}
             source={{
                 obj: asset('Marker.obj'),
-                mtl: asset('Marker.mtl')
             }}
             lit={true}
         />
@@ -89,12 +88,11 @@ export default class Marker extends React.Component {
                 {rotateX: 250},
                 {rotateY: -5},
                 {rotateZ: 5},
-                {scale: 0.2},
+                {scale: 2},
                 ],
             }}
             source={{
                 obj: asset('Marker.obj'),
-                mtl: asset('Marker.mtl')
             }}
             lit={true}
         />
@@ -113,12 +111,11 @@ export default class Marker extends React.Component {
                 {rotateX: 260},
                 {rotateY: 5},
                 {rotateZ: 5},
-                {scale: 0.2},
+                {scale: 2},
                 ],
             }}
             source={{
                 obj: asset('Marker.obj'),
-                mtl: asset('Marker.mtl')
             }}
             lit={true}
         />
@@ -138,12 +135,11 @@ export default class Marker extends React.Component {
                 {rotateX: 260},
                 {rotateY: 5},
                 {rotateZ: 5},
-                {scale: 0.2},
+                {scale: 2},
                 ],
             }}
             source={{
                 obj: asset('Marker.obj'),
-                mtl: asset('Marker.mtl')
             }}
             lit={true}
         />

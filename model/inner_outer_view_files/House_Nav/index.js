@@ -72,7 +72,6 @@ export default class WelcomeTo360 extends React.Component {
               }}
               source={{
                   obj: asset('Marker.obj'),
-                  mtl: asset('Marker.mtl')
               }}
               lit={true}
             />
