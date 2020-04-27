@@ -55,6 +55,7 @@ export default class example extends React.Component {
   render() {
     return (
       <View >
+        <Lights />
         {/* <MarkerButton /> */}
         <VrButton
           onClick={() => {
@@ -94,7 +95,6 @@ export default class example extends React.Component {
             lit={true}
           />
         </VrButton>
-        <Lights />
         <Model />
       </View>
     );
