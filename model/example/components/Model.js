@@ -13,8 +13,8 @@ export default class Model extends React.Component {
                     ],
                 }}
                 source={{
-                    obj: asset('Creating the Mouse Control/Modern House_05_obj.obj'),
-                    mtl: asset('Creating the Mouse Control/Modern House_05_obj.mtl')
+                    obj: asset('TheFactory.obj'),
+                    mtl: asset('TheFactory.mtl')
                 }}
                 lit={true}
             />
