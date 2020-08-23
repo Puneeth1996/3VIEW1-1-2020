@@ -4,6 +4,8 @@ import NotFound from '../NotFound'
 import SingleNewPost from '../CommonComponent/SingleNewPost'
 
 import axios from 'axios'
+
+
 export default class specificNews extends Component {
     constructor(props) {
         super(props)
