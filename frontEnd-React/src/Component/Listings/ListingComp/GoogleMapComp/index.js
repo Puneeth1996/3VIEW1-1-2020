@@ -16,7 +16,6 @@ class GoogleMapComp extends Component {
             marginLeft: '20vw',
             fontFamily: "Arial",
             zIndex: "-100",
-
         };
         const position = [51.505, -0.09]
         return (
