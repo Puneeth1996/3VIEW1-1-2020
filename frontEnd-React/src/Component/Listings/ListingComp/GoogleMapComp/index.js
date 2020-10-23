@@ -14,7 +14,9 @@ class GoogleMapComp extends Component {
             color: "white",
             backgroundColor: "#07122c",
             marginLeft: '20vw',
-            fontFamily: "Arial"
+            fontFamily: "Arial",
+            zIndex: "-100",
+
         };
         const position = [51.505, -0.09]
         return (
