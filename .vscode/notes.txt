@@ -338,3 +338,11 @@ Done the above two tasks
 27th April 2020
     7.30pm
     Still trying to make the motion logic workflow rigth 
+
+23 Oct 2020
+11.23pm
+Small Fixes in z-index
+
+
+
+
